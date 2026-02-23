@@ -44,12 +44,11 @@ export default function NewsPage() {
     const eventsData = t.raw('data.events') as any[];
     const publicationsData = t.raw('data.publications') as any[];
 
-    const categories: ('upcoming' | 'past' | 'current')[] = ['upcoming', 'past', 'current'];
 
     const events: NewsEvent[] = eventsData.map((e, i) => ({
         ...e,
         id: i + 1,
-        category: categories[i % 3] // Assign categories based on sample
+        category: e.category || 'upcoming'
     }));
 
     const publications: Publication[] = publicationsData.map((p, i) => ({

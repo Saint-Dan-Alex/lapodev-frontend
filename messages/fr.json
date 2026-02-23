@@ -347,42 +347,54 @@
         "data": {
             "events": [
                 {
-                    "title": "Colloque International sur l'Anthropologie Politique en RDC",
-                    "date": "15 Mars 2025",
-                    "location": "Hôtel Fleuve Congo, Kinshasa",
-                    "description": "Un rassemblement majeur de chercheurs pour discuter des dynamiques de pouvoir et de la gouvernance locale."
+                    "title": "Assemblée Générale constitutive du LAPODEV",
+                    "date": "2 Février 2025",
+                    "location": "Kinshasa",
+                    "category": "past",
+                    "description": "Tenue de l’Assemblée Générale constitutive du LAPODEV comme Asbl d’intérêt général et adoption de ses Statuts."
                 },
                 {
-                    "title": "Atelier de formation : Méthodologies de recherche en développement rural",
-                    "date": "10 Janvier 2025",
-                    "location": "Salle de conférence LAPODEV, UNIKIN",
-                    "description": "Session intensive sur les techniques d'enquête terrain et l'analyse de données qualitatives."
+                    "title": "Soutien institutionnel du Département d’Anthropologie",
+                    "date": "2 Mai 2025",
+                    "location": "UNIKIN",
+                    "category": "past",
+                    "description": "Obtention du soutien institutionnels du Département d’Anthropologie de l'UNIKIN au LAPODEV."
                 },
                 {
-                    "title": "Lancement du programme d'analyse des vulnérabilités urbaines",
-                    "date": "25 Février 2025",
-                    "location": "Mairie de Kinshasa",
-                    "description": "Démarrage officiel des enquêtes de terrain dans les zones péri-urbaines de la capitale."
+                    "title": "Mission de Recherche ethnographique (PAVE-Sank)",
+                    "date": "21 Juillet - 6 Août 2025",
+                    "location": "Sankuru (RDC)",
+                    "category": "past",
+                    "description": "Réalisation de la Mission de Recherche ethnographique « Patrimoine Audiovisuel et Ethnographie au Sankuru » par D. MOTTIER, B. OSOKONDA et J. INDEKA."
+                },
+                {
+                    "title": "Création officielle du Centre de Recherche",
+                    "date": "3 Septembre 2025",
+                    "location": "UNIKIN",
+                    "category": "past",
+                    "description": "Création officielle et autorisation de fonctionnement du LAPODEV par Décision Rectorale n°0412 UNIKIN/R/2025."
+                },
+                {
+                    "title": "Assemblée Générale Ordinaire du LAPODEV",
+                    "date": "25 Octobre 2025",
+                    "location": "Centre Liloba, Kinshasa",
+                    "category": "past",
+                    "description": "Tenue de l’Assemblée Générale Ordinaire et approbation de la désignation des animateurs des organes."
+                },
+                {
+                    "title": "Entrée en fonction du Conseil d'Administration",
+                    "date": "20 Novembre 2025",
+                    "location": "Kinshasa",
+                    "category": "past",
+                    "description": "Désignation des animateurs du Conseil d’Administration du LAPODEV et leur entrée en fonction."
                 }
             ],
             "publications": [
                 {
-                    "title": "Gouvernance locale et résilience communautaire dans l'Est de la RDC",
-                    "author": "Pr. INDEKA NKOSO Joseph",
-                    "date": "Dec 2024",
-                    "type": "Article Scientifique"
-                },
-                {
-                    "title": "Anthropologie politique de la rue à Kinshasa",
-                    "author": "Pr. OSOKONDA OKENGE Basile",
-                    "date": "Nov 2024",
-                    "type": "Ouvrage"
-                },
-                {
-                    "title": "Rapport annuel sur les vulnérabilités sociales en RDC 2023",
-                    "author": "Comité Scientifique LAPODEV",
-                    "date": "Jan 2024",
-                    "type": "Rapport Technique"
+                    "title": "Pratiques et engagements écoféministes en R.D. Congo. Exemple de deux associations.",
+                    "author": "Julienne KAVIRA WANGEHEMUKA",
+                    "date": "2025",
+                    "type": "Ouvrage (Editions Monange, Yaoundé)"
                 }
             ]
         }
