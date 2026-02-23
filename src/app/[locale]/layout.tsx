@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import { Header } from "@/components/layout/Header";
@@ -18,10 +18,19 @@ const geistMono = Geist_Mono({
     subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-    title: "LAPODEV - Laboratoire de Politique et Développement",
-    description: "Centre de recherche à l'Université de Kinshasa (UNIKIN) spécialisé en politique, développement, gouvernance et consultance.",
-};
+export async function generateMetadata({
+    params
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+    return {
+        title: t('title'),
+        description: t('description')
+    };
+}
 
 export default async function LocaleLayout({
     children,

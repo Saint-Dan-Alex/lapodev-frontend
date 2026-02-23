@@ -27,7 +27,9 @@ export const Footer = () => {
                             <li><Link href="/" className="hover:text-white transition-colors underline-offset-4 hover:underline">{t('home')}</Link></li>
                             <li><Link href="/about" className="hover:text-white transition-colors underline-offset-4 hover:underline">{t('about.title')}</Link></li>
                             <li><Link href="/expertise" className="hover:text-white transition-colors underline-offset-4 hover:underline">{t('expertise.title')}</Link></li>
+                            <li><Link href="/governance" className="hover:text-white transition-colors underline-offset-4 hover:underline">{t('governance.title')}</Link></li>
                             <li><Link href="/resources" className="hover:text-white transition-colors underline-offset-4 hover:underline">{t('resources.title')}</Link></li>
+                            <li><Link href="/news" className="hover:text-white transition-colors underline-offset-4 hover:underline">{t('news.title')}</Link></li>
                         </ul>
                     </div>
 
@@ -40,11 +42,11 @@ export const Footer = () => {
                             </li>
                             <li className="flex flex-col">
                                 <span className="font-bold text-white/40 text-[10px] uppercase mb-1">{ft('labels.email')}</span>
-                                <span>contact@lapodev-unikin.org</span>
+                                <span>{ft('email')}</span>
                             </li>
                             <li className="flex flex-col">
                                 <span className="font-bold text-white/40 text-[10px] uppercase mb-1">{ft('labels.phone')}</span>
-                                <span>+243 81 ...</span>
+                                <span>{ft('phone')}</span>
                             </li>
                         </ul>
                     </div>

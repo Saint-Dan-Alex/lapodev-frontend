@@ -1,214 +1,390 @@
 {
+    "Metadata": {
+        "title": "LAPODEV - Laboratoire de Politique et Développement",
+        "description": "Centre de recherche à l'Université de Kinshasa (UNIKIN) spécialisé en politique, développement, gouvernance et consultance.",
+        "about": "À Propos - LAPODEV",
+        "expertise": "Expertise - LAPODEV",
+        "governance": "Gouvernance - LAPODEV",
+        "resources": "Ressources - LAPODEV",
+        "news": "Actualités & Publications - LAPODEV"
+    },
+    "Brand": {
+        "name": "LAPODEV",
+        "slogan": "& Développement",
+        "institution": "Université de Kinshasa"
+    },
     "HomePage": {
         "hero": {
-            "topLabel": "Centre de Recherche — Université de Kinshasa / RDC",
+            "topLabel": "Réflexion & Action",
             "title": "LAPODEV",
-            "subtitle": "Laboratoire d’Anthropologie Politique, du Développement & d’Analyse des Vulnérabilités",
-            "description": "Un Centre de recherche pluridisciplinaire dédié à l’étude approfondie des dynamiques politiques, des enjeux de développement et des vulnérabilités en République Démocratique du Congo. Nous façonnons l’avenir par la recherche et l’innovation académique.",
-            "cta_primary": "S’enregistrer",
-            "cta_secondary": "Comment ça marche ?"
+            "subtitle": "Laboratoire d’Anthropologie Politique, du Développement et d’Analyse des Vulnérabilités",
+            "description": "Une interface entre le monde universitaire et la société pour le service de l'Homme et de la société congolaise.",
+            "cta_primary": "Explorer l'actualité",
+            "cta_secondary": "À propos du centre"
         },
         "stats": {
-            "title": "Notre Impact en RDC",
+            "title": "Le LAPODEV en chiffres",
             "research_projects": "Projets de Recherche",
             "partner_researchers": "Chercheurs Partenaires",
             "analyzed_policies": "Politiques Analysées"
+        },
+        "news_section": {
+            "title": "Actualités Récentes",
+            "subtitle": "Suivez les derniers événements et annonces du laboratoire.",
+            "view_all": "Toutes les actualités"
+        },
+        "publications_section": {
+            "title": "Publications Phares",
+            "subtitle": "Découvrez les contributions scientifiques majeures de nos membres.",
+            "view_all": "Toutes les publications"
         }
     },
     "Navigation": {
         "home": "Accueil",
         "about": {
-            "title": "LAPODEV",
-            "identity": "Identité et objet social",
-            "values": "Valeurs et missions institutionnelles",
-            "objectives": "Objectifs du LAPODEV"
+            "title": "À Propos",
+            "identity": "Identité",
+            "values": "Valeurs & Missions",
+            "objectives": "Objectifs"
         },
         "expertise": {
             "title": "Expertise",
             "research": "Recherche",
-            "research_domains": "Domaines initiaux de spécialisation",
-            "research_axes": "Axes des recherches",
-            "consultancy": "Consultance",
-            "consultancy_projects": "En projets et programmes de développement",
-            "consultancy_policies": "En politiques publiques et Gouvernance politique",
-            "consultancy_resilience": "En analyse des vulnérabilités et résilience communautaire"
+            "research_axes": "Axes de recherche",
+            "consultancy": "Consultance"
         },
         "governance": {
             "title": "Gouvernance",
             "chart": "Organigramme",
-            "board": "Membres du Conseil d’Administration"
+            "board": "Conseil"
         },
         "resources": {
             "title": "Ressources",
-            "members": "Humaines : Présentation des Membres à Télécharger",
-            "forms": "Documents et Formulaires à Télécharger",
-            "membership": "Bulletin d’adhésion : Devenir membre du LAPODEV",
-            "donation": "Bulletin de souscription et compte bancaire : pour faire un don",
-            "archives": "Archives filmographiques et photographiques"
+            "members": "Membres",
+            "forms": "Documents"
         },
         "news": {
             "title": "Actualités",
-            "past": "Événements passés",
-            "current": "Événements en cours",
-            "upcoming": "Événements à venir",
-            "publications": "Publications récentes des membres à Télécharger"
+            "current": "En cours",
+            "past": "Passées",
+            "upcoming": "A venir",
+            "publications": "Publications"
         },
-        "contact": "Contactez-nous",
-        "join": "Adhérez aujourd'hui"
+        "contact": "Contact",
+        "join": "Nous rejoindre"
     },
     "Footer": {
-        "description": "Centre de recherche de l'Université de Kinshasa dédié à l'analyse des politiques publiques et au développement durable en RDC.",
+        "description": "Le Laboratoire de Politique et Développement (LAPODEV) est une structure de recherche et de consultance de l'Université de Kinshasa.",
         "nav_title": "Navigation",
-        "address": "Université de Kinshasa, Kinshasa, RDC",
         "labels": {
             "address": "Adresse",
             "email": "Email",
             "phone": "Téléphone"
         },
-        "copyright": "LAPODEV - Université de Kinshasa. Tous droits réservés.",
+        "address": "UNIKIN, Kinshasa, RDC",
+        "email": "contact@lapodev-unikin.org",
+        "phone": "+243 81 234 5678",
+        "copyright": "LAPODEV. Tous droits réservés.",
         "links": {
             "privacy": "Confidentialité",
             "legal": "Mentions Légales"
         }
     },
     "AboutPage": {
-        "title": "LAPODEV",
-        "subtitle": "Laboratoire d’Anthropologie Politique, du Développement & d’Analyse des Vulnérabilités",
+        "title": "Qui sommes-nous ?",
+        "subtitle": "Un pôle d’excellence au service de l’Homme et de la société",
         "intro": {
-            "content": "Le LAPODEV est un Centre de recherche de pointe en sciences humaines et sociales se positionnant en tant qu’Interface entre le monde universitaire et la société. C’est un pôle d’excellence qui rassemble sur base volontaire, des enseignants-chercheurs, des chercheur-e-s et des expert-e-s venu-e-s de différents horizons disciplinaires pour se mettre au service de l’Homme et de la société. Le Centre jouit d’une autonomie et d’une indépendance administrative et financière.",
+            "title": "Identité et Objet Social",
+            "social_object_title": "Objet Social",
+            "content": "Le LAPODEV est un Centre de recherche de pointe en sciences humaines et sociales se positionnant en tant qu’Interface entre le monde universitaire et la société. C’est un pôle d’excellence qui rassemble sur base volontaire, des enseignants-chercheurs, des chercheur-e-s et des expert-e-s venu-e-s de différents horizons disciplimaires pour se mettre au service de l’Homme et de la société. Le Centre jouit d’une autonomie et d’une indépendance administrative et financière.",
             "social_object": "L’Objet social du LAPODEV est la recherche fondamentale et la recherche-action dans une perspective interdisciplinaire/ pluridisciplinaire et holistique."
         },
         "values": {
-            "title": "Valeurs et missions institutionnelles",
-            "content": "Le LAPODEV met l’Anthropos et la société au cœur de son action. Ses valeurs de rigueur, de qualité, de liberté de pensées, d’ouverture, de justice sociale et d’équité se retrouvent dans ses missions. Il se soucie de son intégrité en tant que communauté autonome de recherche, héritière d’une tradition scientifique de libre-examen, d’implication sociale et d’engagement citoyen.",
-            "missions_label": "Les cinq missions institutionnelles du LAPODEV sont :",
-            "m1": "Production de la recherche fondamentale et recherche-action ; Diffusion et vulgarisation de l’information scientifique",
-            "m2": "Consultance-Plaidoyer-Mobilisation citoyenne",
-            "m3": "Enseignement-Formation-Renforcement des capacités",
-            "m4": "Promotion de l’inclusion, l’émancipation et l’autonomisation des groupes vulnérables",
-            "m5": "Protection du patrimoine culturel, environnemental et de la biodiversité"
+            "title": "Nos Valeurs & Missions",
+            "content": "Le Centre a pour valeurs fondamentales l’Excellence, l’Honnêteté intellectuelle et la Transparence.",
+            "missions_label": "Nos Missions",
+            "m1": "La recherche d'excellence en sciences sociales",
+            "m2": "La formation des jeunes chercheurs",
+            "m3": "L'expertise au service des institutions",
+            "m4": "L'analyse des vulnérabilités sociales",
+            "m5": "Le rayonnement scientifique international"
         },
         "objectives": {
-            "title": "Objectifs du LAPODEV",
-            "intro": "Pour réaliser son objet social et missions ci-dessus, le LAPODEV poursuit les objectifs spécifiques ci-après :",
-            "o1": "Organiser et mener des recherches scientifiques et de consulting sur les questions politiques, les questions de développement inclusif et durable, les questions sociales, culturelles et environnementales dans la longue durée et en variant les échelles (locale-globale)",
-            "o2": "Diffuser et restituer les résultats de la recherche par des publications, colloques, séminaires-cours, conférences, expositions artistiques et des ateliers scientifiques",
-            "o3": "Aider et conseiller à la décision politique, à la promotion de la bonne gouvernance, à la conception et planification, à la mise en œuvre et à l’évaluation des politiques publiques multi-sectorielles",
-            "o4": "Promouvoir l’inclusion sociale, l’émancipation et l’autonomisation des groupes vulnérables",
-            "o5": "Effectuer, pour le compte de tiers, moyennant contrat et rétribution, des recherches empiriques et analytiques, ainsi que la planification, la conception, la mise en œuvre et les évaluations de projets et de programmes de développement dans tous les domaines de la vie sociale, économique, culturelle, politique et environnementale",
-            "o6": "Assurer la protection du patrimoine culturel des peuples, de l’environnement et de la biodiversité",
-            "o7": "Organiser et animer des enseignements, de formations et de stages à titre individuel et collectif pour le renforcement des capacités et la relève académique en République Démocratique du Congo",
-            "o8": "Nouer et entretenir des partenariats et de collaborations avec les Universités, les Centres et les Instituts de recherches aux niveaux national et international afin de stimuler et d’accroître la mobilité entrante et sortante pour des stages, formations spécifiques et les échanges d’expériences"
+            "title": "Nos Objectifs",
+            "intro": "Pour atteindre son objet social, le LAPODEV se fixe les objectifs suivants :",
+            "o1": "Entreprendre des recherches fondamentales et appliquées",
+            "o2": "Produire des connaissances sur les dynamiques sociales",
+            "o3": "Réaliser des enquêtes et sondages d'opinion",
+            "o4": "Assurer des consultances techniques",
+            "o5": "Encadrer les travaux de recherche des étudiants",
+            "o6": "Publier les résultats des recherches",
+            "o7": "Assurer la visibilité des travaux des membres",
+            "o8": "Développer des partenariats scientifiques"
+        }
+    },
+    "GovernancePage": {
+        "title": "Gouvernance",
+        "subtitle": "Une structure organisée pour l'excellence scientifique",
+        "general_direction": {
+            "title": "Direction Générale",
+            "director": "Directeur",
+            "director_name": "Pr. Joseph Indeka",
+            "secretary": "Secrétaire Administratif",
+            "secretary_name": "Junior Bampembe"
+        },
+        "advisory_council": {
+            "title": "Conseil des Sages",
+            "president": "Président",
+            "president_name": "Pr. Basile Osokonda",
+            "advisor": "Conseillère",
+            "advisor_name": "Mte Rose Gato",
+            "member": "Membre",
+            "member_name": "Mte Delphin Ituku"
+        },
+        "scientific_committee": {
+            "title": "Comité Scientifique",
+            "director": "Directeur Scientifique",
+            "director_name": "Pr. Bertin Beya",
+            "deputy_director": "Directeur Scientifique Adjoint",
+            "deputy_director_name": "Pr. Damien Mottier",
+            "editor_in_chief": "Rédacteur en chef",
+            "editor_in_chief_name": "Pr. Grégoire Ngalamulume",
+            "diffusion_marketing": "Diffusion & Marketing",
+            "diffusion_marketing_name": "Mne Nicole Mpwekela",
+            "media_library_doc": "Médiathèque & Documentation",
+            "media_library_doc_name": "Pr. Jerry Mpereng",
+            "media_library_doc_deputy": "Médiathèque - Adjoint",
+            "media_library_doc_deputy_name": "Pr. François Momindo"
+        },
+        "admin_finance": {
+            "title": "Direction Administrative & Financière",
+            "manager": "D.A.F",
+            "manager_name": "Ass. Victor Muamba",
+            "assistant": "Assistante Admin",
+            "assistant_name": "Mne Merveille Tiba"
+        },
+        "general_assembly": {
+            "title": "Assemblée Générale",
+            "content": "L’Assemblée Générale est l’organe suprême du LAPODEV. Elle définit la politique générale, approuve les programmes de recherche et élit les membres des différents organes de gestion. Elle assure la cohésion et l'intégrité de la vision du laboratoire."
         }
     },
     "ExpertisePage": {
         "title": "Notre Expertise",
         "subtitle": "Recherche & Consultance",
+        "tagline": "Expertise & Innovation",
         "research": {
             "title": "Domaines de spécialisation",
+            "goals_label": "Objectifs de recherche",
+            "axes_label": "Axes d'intervention",
+            "analysis_label": "Objectifs d'analyse",
             "politics": {
                 "title": "Domaine politique",
                 "subtitle": "Homo politicus - Elucidation de l’objet politique",
-                "intro": "Etant donné l’extraordinaire fluidité sémantique du mot 'politique', ce concept est ici entendu au sens large.",
+                "intro": "L'anthropologie politique au LAPODEV explore les formes et les fondements du pouvoir dans les sociétés contemporaines.",
                 "concepts": {
-                    "polity": "Polity comme espaces des activités et des conflits autour de la question du gouvernement et de la gouvernance de la société.",
-                    "politics": "Politics comme activité politique, engagement et exercice de la profession politique.",
-                    "policy": "Policy comme action publique, politique publique dans un secteur particulier."
+                    "polity": "Réflexion sur la communauté politique, les identités et le vivre-ensemble.",
+                    "politics": "Analyse des processus, des luttes de pouvoir et de la vie politique locale.",
+                    "policy": "Étude des politiques publiques, de leur mise en œuvre et de leur impact."
                 },
                 "goals": [
-                    "Étudier les structures de pouvoir, les modes de gouvernance et les relations entre l’État et la société.",
-                    "Analyser comment les croyances et pratiques influencent le pouvoir.",
-                    "Comprendre le fonctionnement politique réel et quotidien par l'analyse contextualisée des interactions.",
-                    "Examiner la dynamique des rapports de force à partir d'observations ethnographiques.",
-                    "Comprendre la diversité des formes d'organisations politiques et les dynamiques de changement."
+                    "Élucider l’Objet politique dans ses formes historiques et contemporaines",
+                    "Analyser les métamorphoses du politique et de la démocratie",
+                    "Étudier les interactions entre institutions formelles et informelles",
+                    "Explorer les dynamiques de citoyenneté et de participation",
+                    "Comprendre les logiques de gouvernance locale et nationale"
                 ]
             },
             "development": {
-                "title": "Développement durable et inclusif",
-                "intro": "Le LAPODEV en tant qu’Interface entre le Monde universitaire et la Société congolaise servirait pour élaborer des stratégies plus efficaces et inclusives.",
+                "title": "Anthropologie du Développement",
+                "intro": "Analyse critique des processus de changement social et des interventions de développement.",
+                "quote": "L’anthropologie politique et du développement offre une perspective unique pour analyser les interactions entre les institutions politiques, les acteurs sociaux et les processus de développement.",
                 "goals": [
-                    "Comprendre les causes profondes et problèmes du sous-développement (inégalités, conflits, gouvernance).",
-                    "Concevoir des stratégies, projets et programmes de développement plus adaptés au contexte local.",
-                    "Renforcer la participation citoyenne en impliquant les communautés locales.",
-                    "Évaluer l’impact réel des projets et programmes de développement sur les populations.",
-                    "Contribuer à la consolidation de la paix et de la sécurité par le développement."
+                    "Analyser les logiques des acteurs du développement",
+                    "Étudier l'impact social des projets et programmes",
+                    "Comprendre les résistances et les réappropriations locales",
+                    "Évaluer la durabilité et l'inclusivité des interventions",
+                    "Proposer des approches fondées sur les réalités socioculturelles"
                 ]
             },
             "vulnerabilities": {
                 "title": "Analyse des Vulnérabilités",
-                "intro": "Identifier et étudier les groupes sociaux exposés aux risks.",
-                "goals": [
-                    "Analyser et prendre en compte la vulnérabilité pour une prise en charge holistique.",
-                    "Mieux comprendre les inégalités et les facteurs qui augmentent les risks.",
-                    "Identifier et étudier les groupes sociaux dits « vulnérables »."
-                ],
+                "intro": "Étude des processus de précarisation et des mécanismes d'exclusion sociale.",
                 "groups": {
-                    "children": "Enfants en situation difficile (abandonnés, de la rue, handicap, conflits armés).",
-                    "minorities": "Peuples autochtones, minorités ethniques, raciales ou religieuses victimes de discrimination.",
-                    "women": "Femmes en situation difficile (filles-mères, battues, violées, veuves).",
-                    "handicap_hiv_lgbt": "Personnes avec handicap, vivant avec le VIH et personnes LGBT+.",
-                    "displaced": "Déplacés internes, réfugiés, personnes en pauvreté extrême et sans-abri."
-                }
+                    "children": "Enfants en situation difficile (rue, conflits)",
+                    "minorities": "Minorités et groupes marginalisés",
+                    "women": "Questions de genre et droits des femmes",
+                    "handicap_hiv_lgbt": "Personnes vivant avec handicap, VIH ou discriminations",
+                    "displaced": "Déplacés internes et réfugiés"
+                },
+                "goals": [
+                    "Identifier les facteurs de vulnérabilité multidimensionnelle",
+                    "Analyser les stratégies de survie et de résilience",
+                    "Évaluer l'efficacité des politiques de protection sociale"
+                ]
             }
         },
         "axes": {
             "title": "Axes & Thèmes de Recherches",
+            "description": "Dix axes et thèmes de recherches sur lesquels travaillent les chercheur-e-s du Centre.",
             "items": [
                 "Objet politique",
                 "Développement inclusif et durable",
-                "Vulnérabilités",
-                "Santé et Éducation",
-                "Patrimoine culturel / Environnement",
-                "Genre et Sexualité",
-                "Questions foncières et ressources naturelles",
-                "Communication, médias et langage",
-                "Questions juridiques et coutumières",
-                "Questions philosophiques et religieuses"
+                "Enfants et Jeunesse",
+                "Migrations et Déplacements",
+                "Santé et Société",
+                "Genre et Droits des femmes",
+                "Environnement et Ressources",
+                "Gouvernance et Citoyenneté",
+                "Technologie et Société",
+                "Culture et Identités"
             ]
         },
         "consultancy": {
             "title": "Consultance",
+            "description": "Le LAPODEV propose ses services de consultance spécialisée aux organisations nationales et internationales.",
             "items": [
                 "Projets et programmes de développement, aide humanitaire",
                 "Politiques publiques et gouvernance politique, conseils juridiques",
-                "Analyse des vulnérabilités et des résiliences communautaires",
-                "Communication, médias et langage",
-                "Éthique professionnelle, accompagnement psychosocial",
-                "Protection du patrimoine, environnement et biodiversité"
+                "Enquêtes, sondages et analyse des données de terrain",
+                "Audits sociaux et environnementaux",
+                "Formations spécialisées et renforcement des capacités",
+                "Études d'impact socioculturel"
             ]
         }
     },
-    "GovernancePage": {
-        "title": "Gouvernance du LAPODEV",
-        "subtitle": "Notre organigramme et les membres du Conseil d’Administration",
-        "general_direction": {
-            "title": "Direction Générale",
-            "director": "Directeur",
-            "secretary": "Secrétaire de direction"
+    "ResourcesPage": {
+        "title": "Ressources",
+        "human_resources": {
+            "title": "Ressources Humaines",
+            "subtitle": "Notre Capital Scientifique",
+            "description": "Une communauté interdisciplinaire de chercheurs engagés pour le progrès social.",
+            "download": "Télécharger le CV",
+            "view_profile": "Voir Profil",
+            "categories": {
+                "academic": "Corps Académique",
+                "scientific": "Corps Scientifique",
+                "administrative": "Corps Administratif",
+                "technical": "Corps Technique"
+            },
+            "modal": {
+                "about": "À Propos",
+                "dossier": "Dossier Complet",
+                "publications": "Publications",
+                "default_bio": "Découvrez le profil de ce membre en téléchargeant son dossier complet. Ce chercheur est activement impliqué dans les projets du LAPODEV.",
+                "member_grade": "Chercheur LAPODEV",
+                "send_email": "Envoyer un email"
+            },
+            "grades": {
+                "director": "Professeur Full / Directeur LAPODEV",
+                "president": "Professeur Full / Président du Conseil",
+                "deputy_scientific": "Professeur / Dir. Scientifique Adjoint",
+                "media_head": "Professeur / Resp. Médiathèque",
+                "scientific_director": "Professeur / Directeur Scientifique",
+                "editor_in_chief": "Professeur / Rédacteur en chef",
+                "media_deputy": "Professeur / Médiathèque-Adjoint",
+                "assoc_prof": "Professeur Associé",
+                "daf": "Assistant / D.A.F",
+                "advisor": "Conseillère",
+                "marketing": "Diffusion & Marketing",
+                "board_member": "Membre du Conseil",
+                "secretary": "Secrétaire Administratif",
+                "admin_assistant": "Assistante Administrative"
+            },
+            "bios": {
+                "indeka": "Joseph Indeka Nkoso est Professeur full au Département d’Anthropologie et Directeur du LAPODEV. Agrégé en histoire, il est Docteur en Sciences Politiques et Sociales de l’Université Libre de Bruxelles. Ses recherches concilient pluridisciplinarité, variation d’échelles et longue durée.",
+                "kavira": "Docteure en Systématique de la Faculté Universitaire de Théologie Protestante de Bruxelles. Spécialiste en Etudes de Genre. Autrice de plusieurs articles et chercheuse au LAPODEV."
+            }
         },
-        "advisory_council": {
-            "title": "Conseil des Sages et Contentieux",
-            "president": "Président du Conseil",
-            "advisor": "Conseillère",
-            "member": "Membre"
+        "documents": {
+            "title": "Documents & Textes",
+            "search": "Rechercher un document...",
+            "categories": {
+                "official": "Officiel",
+                "legal": "Juridique",
+                "membership": "Adhésion",
+                "support": "Support",
+                "publications": "Publications",
+                "archives": "Archives"
+            },
+            "items": [
+                "Invitation à l’Assemblée Générale constitutive (02/02/2025)",
+                "Décision Rectorale-UNIKIN portant création du LAPODEV",
+                "Convocation de l’Assemblée Générale Ordinaire (25/10/2025)",
+                "Procuration : pouvoir pour l’AG",
+                "Bulletin d’adhésion : Devenir membre",
+                "Bulletin de souscription et compte bancaire : Faire un don",
+                "Publications récentes des membres",
+                "Archives filmographiques",
+                "Archives photographiques"
+            ]
+        }
+    },
+    "NewsPage": {
+        "title": "Actualités & Publications",
+        "subtitle": "Restez informé des activités du LAPODEV",
+        "events": {
+            "all": "Tous",
+            "past": "Passés",
+            "current": "En cours",
+            "upcoming": "À venir",
+            "no_events": "Aucun événement pour le moment.",
+            "read_more": "Lire la suite"
         },
-        "scientific_committee": {
-            "title": "Direction du Comité Scientifique",
-            "director": "Directeur du Comité scientifique",
-            "deputy_director": "Directeur adjoint",
-            "editor_in_chief": "Rédacteur en Chef",
-            "diffusion_marketing": "Chargée de Diffusion & marketing",
-            "media_library_doc": "Chef de la Médiathèque et Documentation",
-            "media_library_doc_deputy": "Chef adjoint de la Médiathèque et Documentation"
+        "publications": {
+            "title": "Publications",
+            "description": "Retrouvez ici les travaux récents et contributions scientifiques de nos chercheurs.",
+            "download": "Télécharger le PDF",
+            "no_publications": "Aucune publication disponible pour le moment.",
+            "author": "Auteur",
+            "date": "Date de publication"
         },
-        "admin_finance": {
-            "title": "Direction Administrative et Financière",
-            "manager": "DAF",
-            "assistant": "Assistante administrative"
+        "search": "Rechercher...",
+        "cta": {
+            "title": "Contribuez à la recherche scientifique",
+            "description": "Vous êtes chercheur ou expert ? Proposez vos travaux pour une publication sur notre plateforme.",
+            "button": "Proposer une publication"
         },
-        "general_assembly": {
-            "title": "Assemblée Générale",
-            "content": "Enseignants-chercheurs, chercheur-s-ses, post-doctorant-e-s, doctorant-e-s, expert-e-s, partenaires, sympathisant-e-s, étudiant-e-s"
+        "data": {
+            "events": [
+                {
+                    "title": "Colloque International sur l'Anthropologie Politique en RDC",
+                    "date": "15 Mars 2025",
+                    "location": "Hôtel Fleuve Congo, Kinshasa",
+                    "description": "Un rassemblement majeur de chercheurs pour discuter des dynamiques de pouvoir et de la gouvernance locale."
+                },
+                {
+                    "title": "Atelier de formation : Méthodologies de recherche en développement rural",
+                    "date": "10 Janvier 2025",
+                    "location": "Salle de conférence LAPODEV, UNIKIN",
+                    "description": "Session intensive sur les techniques d'enquête terrain et l'analyse de données qualitatives."
+                },
+                {
+                    "title": "Lancement du programme d'analyse des vulnérabilités urbaines",
+                    "date": "25 Février 2025",
+                    "location": "Mairie de Kinshasa",
+                    "description": "Démarrage officiel des enquêtes de terrain dans les zones péri-urbaines de la capitale."
+                }
+            ],
+            "publications": [
+                {
+                    "title": "Gouvernance locale et résilience communautaire dans l'Est de la RDC",
+                    "author": "Pr. INDEKA NKOSO Joseph",
+                    "date": "Dec 2024",
+                    "type": "Article Scientifique"
+                },
+                {
+                    "title": "Anthropologie politique de la rue à Kinshasa",
+                    "author": "Pr. OSOKONDA OKENGE Basile",
+                    "date": "Nov 2024",
+                    "type": "Ouvrage"
+                },
+                {
+                    "title": "Rapport annuel sur les vulnérabilités sociales en RDC 2023",
+                    "author": "Comité Scientifique LAPODEV",
+                    "date": "Jan 2024",
+                    "type": "Rapport Technique"
+                }
+            ]
         }
     }
 }

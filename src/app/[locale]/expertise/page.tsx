@@ -1,4 +1,6 @@
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 import {
     ShieldCheck,
     Globe2,
@@ -14,6 +16,19 @@ import {
     Tent
 } from 'lucide-react';
 
+export async function generateMetadata({
+    params
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+    return {
+        title: t('expertise'),
+    };
+}
+
 export default function ExpertisePage() {
     const t = useTranslations('ExpertisePage');
 
@@ -25,7 +40,7 @@ export default function ExpertisePage() {
                 <div className="container mx-auto px-4 md:px-8 relative z-10">
                     <div className="max-w-4xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-                            Expertise & Innovation
+                            {t('tagline')}
                         </div>
                         <h1 className="text-5xl lg:text-7xl font-black mb-4 tracking-tighter uppercase italic drop-shadow-2xl">
                             {t('title')}
@@ -75,7 +90,7 @@ export default function ExpertisePage() {
                                 </div>
                             </div>
                             <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100">
-                                <h4 className="text-lg font-bold text-gray-900 mb-8 uppercase tracking-wider">Objectifs de recherche</h4>
+                                <h4 className="text-lg font-bold text-gray-900 mb-8 uppercase tracking-wider">{t('research.goals_label')}</h4>
                                 <ul className="space-y-6">
                                     {[0, 1, 2, 3, 4].map((i) => (
                                         <li key={i} className="flex gap-4 group">
@@ -104,12 +119,12 @@ export default function ExpertisePage() {
                                 <div className="relative p-8 bg-primary rounded-3xl text-white overflow-hidden">
                                     <Lightbulb className="absolute bottom-[-20px] right-[-20px] h-32 w-32 opacity-10" />
                                     <p className="relative z-10 text-lg font-serif">
-                                        "L’anthropologie politique et du développement offre une perspective unique pour analyser les interactions entre les institutions politiques, les acteurs sociaux et les processus de développement."
+                                        "{t('research.development.quote')}"
                                     </p>
                                 </div>
                             </div>
                             <div className="lg:order-1 bg-slate-50 p-10 rounded-[3rem] border border-slate-100">
-                                <h4 className="text-lg font-bold text-gray-900 mb-8 uppercase tracking-wider">Axes d'intervention</h4>
+                                <h4 className="text-lg font-bold text-gray-900 mb-8 uppercase tracking-wider">{t('research.axes_label')}</h4>
                                 <ul className="space-y-6">
                                     {[0, 1, 2, 3, 4].map((i) => (
                                         <li key={i} className="flex gap-4 group">
@@ -155,7 +170,7 @@ export default function ExpertisePage() {
                                 </div>
                             </div>
                             <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100">
-                                <h4 className="text-lg font-bold text-gray-900 mb-8 uppercase tracking-wider">Objectifs d'analyse</h4>
+                                <h4 className="text-lg font-bold text-gray-900 mb-8 uppercase tracking-wider">{t('research.analysis_label')}</h4>
                                 <ul className="space-y-6">
                                     {[0, 1, 2].map((i) => (
                                         <li key={i} className="flex gap-4 group">
@@ -182,7 +197,7 @@ export default function ExpertisePage() {
                                 {t('axes.title')}
                             </h2>
                             <p className="text-white/60 leading-relaxed">
-                                Dix axes et thèmes de recherches sur lesquels travaillent les chercheur-e-s du Centre.
+                                {t('axes.description')}
                             </p>
                         </div>
                         <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
@@ -209,7 +224,7 @@ export default function ExpertisePage() {
                                 {t('consultancy.title')}
                             </h2>
                             <p className="text-gray-600 leading-relaxed">
-                                Le LAPODEV propose ses services de consultance spécialisée aux organisations nationales et internationales.
+                                {t('consultancy.description')}
                             </p>
                         </div>
                         <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">

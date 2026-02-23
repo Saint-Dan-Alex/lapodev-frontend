@@ -1,214 +1,391 @@
 {
+    "Metadata": {
+        "title": "LAPODEV - Laboratory of Politics and Development",
+        "description": "Research center at the University of Kinshasa (UNIKIN) specialized in politics, development, governance and consultancy.",
+        "about": "About - LAPODEV",
+        "expertise": "Expertise - LAPODEV",
+        "governance": "Governance - LAPODEV",
+        "resources": "Resources - LAPODEV",
+        "news": "News & Publications - LAPODEV"
+    },
+    "Brand": {
+        "name": "LAPODEV",
+        "slogan": "& Development",
+        "institution": "University of Kinshasa"
+    },
     "HomePage": {
         "hero": {
-            "topLabel": "Research Center — University of Kinshasa / DRC",
+            "topLabel": "Reflection & Action",
             "title": "LAPODEV",
-            "subtitle": "Laboratory of Political Anthropology, Development & Vulnerability Analysis",
-            "description": "A multidisciplinary research center dedicated to the in-depth study of political dynamics, development issues, and vulnerabilities in the Democratic Republic of Congo. We shape the future through research and academic innovation.",
-            "cta_primary": "Register",
-            "cta_secondary": "How it works?"
+            "subtitle": "Laboratory of Political Anthropology, Development and Vulnerability Analysis",
+            "description": "An interface between the academic world and society for the service of Man and Congolese society.",
+            "cta_primary": "Explore News",
+            "cta_secondary": "About the center"
         },
         "stats": {
-            "title": "Our Impact in DRC",
+            "title": "LAPODEV in figures",
             "research_projects": "Research Projects",
             "partner_researchers": "Partner Researchers",
             "analyzed_policies": "Analyzed Policies"
+        },
+        "news_section": {
+            "title": "Latest News",
+            "subtitle": "Follow the latest events and announcements from the laboratory.",
+            "view_all": "View all news"
+        },
+        "publications_section": {
+            "title": "Featured Publications",
+            "subtitle": "Discover the major scientific contributions of our members.",
+            "view_all": "View all publications"
         }
     },
     "Navigation": {
         "home": "Home",
         "about": {
-            "title": "LAPODEV",
-            "identity": "Identity and Purpose",
-            "values": "Institutional Values & Missions",
-            "objectives": "LAPODEV Objectives"
+            "title": "About",
+            "identity": "Identity",
+            "values": "Values & Missions",
+            "objectives": "Objectives"
         },
         "expertise": {
             "title": "Expertise",
             "research": "Research",
-            "research_domains": "Initial Specialization Domains",
             "research_axes": "Research Axes",
-            "consultancy": "Consultancy",
-            "consultancy_projects": "Development Projects & Programs",
-            "consultancy_policies": "Public Policies & Governance",
-            "consultancy_resilience": "Vulnerability & Resilience Analysis"
+            "consultancy": "Consultancy"
         },
         "governance": {
             "title": "Governance",
-            "chart": "Organizational Chart",
-            "board": "Board of Directors"
+            "chart": "Organigramme",
+            "board": "Board"
         },
         "resources": {
             "title": "Resources",
-            "members": "Human: Member Profiles to Download",
-            "forms": "Documents & Forms to Download",
-            "membership": "Membership Bulletin: Join LAPODEV",
-            "donation": "Subscription Bulletin & Bank Account: Donate",
-            "archives": "Film & Photo Archives"
+            "members": "Members",
+            "forms": "Documents"
         },
         "news": {
             "title": "News",
-            "past": "Past Events",
-            "current": "Current Events",
-            "upcoming": "Upcoming Events",
-            "publications": "Recent Publications to Download"
+            "current": "Current",
+            "past": "Past",
+            "upcoming": "Upcoming",
+            "publications": "Publications"
         },
-        "contact": "Contact Us",
-        "join": "Join Today"
+        "contact": "Contact",
+        "join": "Join us"
     },
     "Footer": {
-        "description": "University of Kinshasa research center dedicated to public policy analysis and sustainable development in the DRC.",
+        "description": "The Laboratory of Politics and Development (LAPODEV) is a research and consultancy structure of the University of Kinshasa.",
         "nav_title": "Navigation",
-        "address": "University of Kinshasa, Kinshasa, DRC",
         "labels": {
             "address": "Address",
             "email": "Email",
             "phone": "Phone"
         },
-        "copyright": "LAPODEV - University of Kinshasa. All rights reserved.",
+        "address": "UNIKIN, Kinshasa, DRC",
+        "email": "contact@lapodev-unikin.org",
+        "phone": "+243 81 234 5678",
+        "copyright": "LAPODEV. All rights reserved.",
         "links": {
             "privacy": "Privacy Policy",
-            "legal": "Legal Notice"
+            "legal": "Legal Mentions"
         }
     },
     "AboutPage": {
-        "title": "LAPODEV",
-        "subtitle": "Laboratory of Political Anthropology, Development & Vulnerability Analysis",
+        "title": "Who are we?",
+        "subtitle": "A pole of excellence in the service of Man and society",
         "intro": {
+            "title": "Identity and Social Purpose",
+            "social_object_title": "Social Purpose",
             "content": "LAPODEV is a cutting-edge research center in human and social sciences positioned as an interface between the academic world and society. It is a center of excellence that brings together, on a voluntary basis, teacher-researchers, researchers and experts from different disciplinary backgrounds to serve humanity and society. The center enjoys administrative and financial autonomy and independence.",
             "social_object": "LAPODEV's social object is fundamental research and action research from an interdisciplinary / multidisciplinary and holistic perspective."
         },
         "values": {
-            "title": "Institutional Values and Missions",
-            "content": "LAPODEV puts humanity and society at the heart of its action. Its values of rigor, quality, freedom of thought, openness, social justice and equity are reflected in its missions. It is concerned about its integrity as an autonomous research community, heir to a scientific tradition of free inquiry, social involvement and civic engagement.",
-            "missions_label": "The five institutional missions of LAPODEV are:",
-            "m1": "Production of fundamental research and action research; Diffusion and popularization of scientific information",
-            "m2": "Consultancy-Advocacy-Citizen Mobilization",
-            "m3": "Teaching-Training-Capacity Building",
-            "m4": "Promotion of inclusion, empowerment and self-reliance of vulnerable groups",
-            "m5": "Protection of cultural, environmental heritage and biodiversity"
+            "title": "Our Values & Missions",
+            "content": "The Center's fundamental values are Excellence, Intellectual Honesty and Transparency.",
+            "missions_label": "Our Missions",
+            "m1": "Excellence in social science research",
+            "m2": "Training of young researchers",
+            "m3": "Expertise for institutions",
+            "m4": "Analysis of social vulnerabilities",
+            "m5": "International scientific influence"
         },
         "objectives": {
-            "title": "LAPODEV Objectives",
-            "intro": "To achieve its social object and missions above, LAPODEV pursues the following specific objectives:",
-            "o1": "Organize and conduct scientific research and consulting on political issues, inclusive and sustainable development issues, social, cultural and environmental issues in the long term and by varying scales (local-global)",
-            "o2": "Disseminate and restore research results through publications, symposia, seminar-courses, conferences, artistic exhibitions and scientific workshops",
-            "o3": "Help and advise political decision-making, the promotion of good governance, the design and planning, the implementation and evaluation of multi-sectoral public policies",
-            "o4": "Promote social inclusion, emancipation and empowerment of vulnerable groups",
-            "o5": "Carry out, on behalf of third parties, subject to contract and remuneration, empirical and analytical research, as well as the planning, design, implementation and evaluations of development projects and programs in all areas of social, economic, cultural, political and environmental life",
-            "o6": "Ensure the protection of peoples' cultural heritage, the environment and biodiversity",
-            "o7": "Organize and lead teachings, trainings and internships on an individual and collective basis for capacity building and academic succession in the Democratic Republic of Congo",
-            "o8": "Build and maintain partnerships and collaborations with Universities, Centers and Research Institutes at national and international levels to stimulate and increase inward and outward mobility for internships, specific training and exchange of experiences"
+            "title": "Our Objectives",
+            "intro": "To achieve its social object, LAPODEV sets the following objectives:",
+            "o1": "Undertake fundamental and applied research",
+            "o2": "Produce knowledge on social dynamics",
+            "o3": "Conduct surveys and opinion polls",
+            "o4": "Provide technical consultancies",
+            "o5": "Supervise student research work",
+            "o6": "Publish research results",
+            "o7": "Ensure visibility of members' work",
+            "o8": "Develop scientific partnerships"
+        }
+    },
+    "GovernancePage": {
+        "title": "Governance",
+        "subtitle": "An organized structure for scientific excellence",
+        "general_direction": {
+            "title": "General Direction",
+            "director": "Director",
+            "director_name": "Pr. Joseph Indeka",
+            "secretary": "Administrative Secretary",
+            "secretary_name": "Junior Bampembe"
+        },
+        "advisory_council": {
+            "title": "Advisory Council",
+            "president": "President",
+            "president_name": "Pr. Basile Osokonda",
+            "advisor": "Advisor",
+            "advisor_name": "Mte Rose Gato",
+            "member": "Member",
+            "member_name": "Mte Delphin Ituku"
+        },
+        "scientific_committee": {
+            "title": "Scientific Committee",
+            "director": "Scientific Director",
+            "director_name": "Pr. Bertin Beya",
+            "deputy_director": "Deputy Scientific Director",
+            "deputy_director_name": "Pr. Damien Mottier",
+            "editor_in_chief": "Editor-in-chief",
+            "editor_in_chief_name": "Pr. Grégoire Ngalamulume",
+            "diffusion_marketing": "Diffusion & Marketing",
+            "diffusion_marketing_name": "Mne Nicole Mpwekela",
+            "media_library_doc": "Media Library & Documentation",
+            "media_library_doc_name": "Pr. Jerry Mpereng",
+            "media_library_doc_deputy": "Media Library - Deputy",
+            "media_library_doc_deputy_name": "Pr. François Momindo"
+        },
+        "admin_finance": {
+            "title": "Administrative & Financial Direction",
+            "manager": "D.A.F",
+            "manager_name": "Ass. Victor Muamba",
+            "assistant": "Admin Assistant",
+            "assistant_name": "Mne Merveille Tiba"
+        },
+        "general_assembly": {
+            "title": "General Assembly",
+            "content": "The General Assembly is the supreme body of LAPODEV. It defines the general policy, approves research programs and elects members of the various management bodies. It ensures the cohesion and integrity of the laboratory's vision."
         }
     },
     "ExpertisePage": {
         "title": "Our Expertise",
         "subtitle": "Research & Consultancy",
+        "tagline": "Expertise & Innovation",
         "research": {
             "title": "Specialization Domains",
+            "goals_label": "Research Objectives",
+            "axes_label": "Intervention Axes",
+            "analysis_label": "Analysis Objectives",
             "politics": {
                 "title": "Political Domain",
                 "subtitle": "Homo politicus - Elucidation of the political object",
-                "intro": "Given the extraordinary semantic fluidity of the word 'politics', this concept is understood here in a broad sense.",
+                "intro": "Political anthropology at LAPODEV explores the forms and foundations of power in contemporary societies.",
                 "concepts": {
-                    "polity": "Polity as spaces of activities and conflicts around the question of government and governance of society.",
-                    "politics": "Politics as political activity, engagement and exercise of the political profession.",
-                    "policy": "Policy as public action, public policy in a particular sector."
+                    "polity": "Reflection on the political community, identities and living together.",
+                    "politics": "Analysis of processes, power struggles and local political life.",
+                    "policy": "Study of public policies, their implementation and impact."
                 },
                 "goals": [
-                    "Study power structures, governance modes and relationships between the State and society.",
-                    "Analyze how beliefs and practices influence power and authority.",
-                    "Understand real and daily political functioning through contextualized interaction analysis.",
-                    "Examine the dynamics of political power relations through ethnographic observation.",
-                    "Understand the diversity of political organizations and dynamics of change."
+                    "Elucidate the political object in its historical and contemporary forms",
+                    "Analyze the metamorphoses of politics and democracy",
+                    "Study interactions between formal and informal institutions",
+                    "Explore dynamics of citizenship and participation",
+                    "Understand local and national governance logics"
                 ]
             },
             "development": {
-                "title": "Sustainable and Inclusive Development",
-                "intro": "LAPODEV as an Interface between the Academic World and Congolese Society would be pertinent for developing more effective strategies.",
+                "title": "Development Anthropology",
+                "intro": "Critical analysis of social change processes and development interventions.",
+                "quote": "Political and development anthropology offers a unique perspective for analyzing interactions between political institutions, social actors and development processes.",
                 "goals": [
-                    "Understand deep causes and problems of underdevelopment (inequalities, conflicts, governance).",
-                    "Design strategies, projects and development programs better adapted to local context.",
-                    "Strengthen citizen participation by involving local communities.",
-                    "Evaluate real impact of development projects and programs on populations.",
-                    "Contribute to peace consolidation and security through development."
+                    "Analyze development actors' logics",
+                    "Study social impact of projects and programs",
+                    "Understand local resistance and reappropriation",
+                    "Evaluate sustainability and inclusivity of interventions",
+                    "Submit approaches based on sociocultural realities"
                 ]
             },
             "vulnerabilities": {
                 "title": "Vulnerability Analysis",
-                "intro": "Identifying and studying social groups exposed to risks.",
-                "goals": [
-                    "Analyze and take into account vulnerability for holistic care.",
-                    "Better understand inequalities and factors that increase risks.",
-                    "Identify and study so-called 'vulnerable' social groups."
-                ],
+                "intro": "Study of precaritization processes and social exclusion mechanisms.",
                 "groups": {
-                    "children": "Children in difficult situations (abandoned, street children, handicap, armed conflict).",
-                    "minorities": "Indigenous peoples, ethnic, racial or religious minorities victims of discrimination.",
-                    "women": "Women in difficult situations (teen mothers, battered, raped, widows).",
-                    "handicap_hiv_lgbt": "People with disabilities, living with HIV and LGBT+ people.",
-                    "displaced": "IDPs, refugees, people in extreme poverty and homeless."
-                }
+                    "children": "Children in difficult situations (street, conflict)",
+                    "minorities": "Minorities and marginalized groups",
+                    "women": "Gender issues and women's rights",
+                    "handicap_hiv_lgbt": "People living with disabilities, HIV or discrimination",
+                    "displaced": "Internally displaced persons and refugees"
+                },
+                "goals": [
+                    "Identify factors of multidimensional vulnerability",
+                    "Analyze survival and resilience strategies",
+                    "Evaluate effectiveness of social protection policies"
+                ]
             }
         },
         "axes": {
             "title": "Research Axes & Themes",
+            "description": "Ten axes and research themes on which the Center's researchers work.",
             "items": [
                 "Political Object",
                 "Inclusive and Sustainable Development",
-                "Vulnerabilities",
-                "Health and Education",
-                "Cultural Heritage / Environment",
-                "Gender and Sexuality",
-                "Land Issues and Natural Resources",
-                "Communication, Media and Language",
-                "Legal and Customary Questions",
-                "Philosophical and Religious Questions"
+                "Children and Youth",
+                "Migration and Displacement",
+                "Health and Society",
+                "Gender and Women's Rights",
+                "Environment and Resources",
+                "Governance and Citizenship",
+                "Technology and Society",
+                "Culture and Identities"
             ]
         },
         "consultancy": {
             "title": "Consultancy",
+            "description": "LAPODEV offers specialized consultancy services to national and international organizations.",
             "items": [
                 "Development projects and programs, humanitarian aid",
                 "Public policies and political governance, legal advice",
-                "Vulnerability and community resilience analysis",
-                "Communication, Media and Language",
-                "Professional ethics, psychosocial support",
-                "Heritage protection, environment and biodiversity"
+                "Surveys, polls and field data analysis",
+                "Social and environmental audits",
+                "Specialized training and capacity building",
+                "Sociocultural impact studies"
             ]
         }
     },
-    "GovernancePage": {
-        "title": "LAPODEV Governance",
-        "subtitle": "Our Organizational Chart and Board Members",
-        "general_direction": {
-            "title": "General Direction",
-            "director": "Director",
-            "secretary": "Executive Secretary"
+    "ResourcesPage": {
+        "title": "Resources",
+        "human_resources": {
+            "title": "Human Resources",
+            "subtitle": "Our Scientific Capital",
+            "description": "An interdisciplinary community of researchers committed to social progress.",
+            "download": "Download CV",
+            "view_profile": "View Profile",
+            "categories": {
+                "academic": "Academic Staff",
+                "scientific": "Scientific Staff",
+                "administrative": "Administrative Staff",
+                "technical": "Technical Staff"
+            },
+            "modal": {
+                "about": "About",
+                "dossier": "Full Dossier",
+                "publications": "Publications",
+                "default_bio": "Discover this member's profile by downloading their full dossier. This researcher is actively involved in LAPODEV projects.",
+                "member_grade": "LAPODEV Researcher",
+                "send_email": "Send an email"
+            },
+            "grades": {
+                "director": "Full Professor / LAPODEV Director",
+                "president": "Full Professor / Council President",
+                "deputy_scientific": "Professor / Deputy Scientific Dir.",
+                "media_head": "Professor / Mediatheque Head",
+                "scientific_director": "Professor / Scientific Director",
+                "editor_in_chief": "Professor / Editor-in-chief",
+                "media_deputy": "Professor / Mediatheque Deputy",
+                "assoc_prof": "Associate Professor",
+                "daf": "Assistant / D.A.F",
+                "advisor": "Advisor",
+                "marketing": "Diffusion & Marketing",
+                "board_member": "Board Member",
+                "secretary": "Administrative Secretary",
+                "admin_assistant": "Administrative Assistant"
+            },
+            "bios": {
+                "indeka": "Joseph Indeka Nkoso is a Full Professor in the Department of Anthropology and Director of LAPODEV. Aggregated in history, he holds a PhD in Political and Social Sciences from the Université Libre de Bruxelles. His research reconciles multidisciplinarity, scale variation, and long duration.",
+                "kavira": "PhD in Systematics from the Faculté Universitaire de Théologie Protestante de Bruxelles. Specialist in Gender Studies. Author of several articles and researcher at LAPODEV."
+            }
         },
-        "advisory_council": {
-            "title": "Council of Elders and Litigation",
-            "president": "President of the Council",
-            "advisor": "Advisor",
-            "member": "Member"
+        "documents": {
+            "title": "Documents & Texts",
+            "search": "Search for a document...",
+            "categories": {
+                "official": "Official",
+                "legal": "Legal",
+                "membership": "Membership",
+                "support": "Support",
+                "publications": "Publications",
+                "archives": "Archives"
+            },
+            "subtitle": "Documents to Download",
+            "items": [
+                "Invitation to the Constitutive General Assembly (02/02/2025)",
+                "Rectoral Decision-UNIKIN establishing LAPODEV",
+                "Notice of Ordinary General Assembly (25/10/2025)",
+                "Proxy: power of attorney for the GA",
+                "Membership form: Become a member",
+                "Subscription form and bank account: Make a donation",
+                "Members' recent publications",
+                "Filmographic archives",
+                "Photographic archives"
+            ]
+        }
+    },
+    "NewsPage": {
+        "title": "News & Publications",
+        "subtitle": "Stay informed about LAPODEV activities",
+        "events": {
+            "all": "All",
+            "past": "Past",
+            "current": "Current",
+            "upcoming": "Upcoming",
+            "no_events": "No events at the moment.",
+            "read_more": "Read more"
         },
-        "scientific_committee": {
-            "title": "Scientific Committee Direction",
-            "director": "Scientific Committee Director",
-            "deputy_director": "Deputy Director",
-            "editor_in_chief": "Editor-in-Chief",
-            "diffusion_marketing": "Diffusion & Marketing Officer",
-            "media_library_doc": "Head of Media Library and Documentation",
-            "media_library_doc_deputy": "Deputy Head of Media Library and Documentation"
+        "publications": {
+            "title": "Publications",
+            "description": "Find recent works and scientific contributions from our researchers here.",
+            "download": "Download PDF",
+            "no_publications": "No publications available at the moment.",
+            "author": "Author",
+            "date": "Publication Date"
         },
-        "admin_finance": {
-            "title": "Administrative and Financial Direction",
-            "manager": "DAF",
-            "assistant": "Administrative Assistant"
+        "search": "Search...",
+        "cta": {
+            "title": "Contribute to scientific research",
+            "description": "Are you a researcher or expert? Propose your work for publication on our platform.",
+            "button": "Propose a publication"
         },
-        "general_assembly": {
-            "title": "General Assembly",
-            "content": "Teacher-researchers, researchers, post-docs, doctoral students, experts, partners, sympathizers, students"
+        "data": {
+            "events": [
+                {
+                    "title": "International Symposium on Political Anthropology in DRC",
+                    "date": "March 15, 2025",
+                    "location": "Fleuve Congo Hotel, Kinshasa",
+                    "description": "A major gathering of researchers to discuss power dynamics and local governance."
+                },
+                {
+                    "title": "Training Workshop: Research Methodologies in Rural Development",
+                    "date": "January 10, 2025",
+                    "location": "LAPODEV Conference Room, UNIKIN",
+                    "description": "Intensive session on field survey techniques and qualitative data analysis."
+                },
+                {
+                    "title": "Launch of the Urban Vulnerability Analysis Program",
+                    "date": "February 25, 2025",
+                    "location": "Kinshasa City Hall",
+                    "description": "Official start of field surveys in peri-urban areas of the capital."
+                }
+            ],
+            "publications": [
+                {
+                    "title": "Local Governance and Community Resilience in Eastern DRC",
+                    "author": "Pr. INDEKA NKOSO Joseph",
+                    "date": "Dec 2024",
+                    "type": "Scientific Article"
+                },
+                {
+                    "title": "Political Anthropology of the Street in Kinshasa",
+                    "author": "Pr. OSOKONDA OKENGE Basile",
+                    "date": "Nov 2024",
+                    "type": "Book"
+                },
+                {
+                    "title": "Annual Report on Social Vulnerabilities in DRC 2023",
+                    "author": "LAPODEV Scientific Committee",
+                    "date": "Jan 2024",
+                    "type": "Technical Report"
+                }
+            ]
         }
     }
 }

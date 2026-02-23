@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 
 interface LogoProps {
@@ -8,6 +9,7 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ className, variant = 'default' }) => {
     const isLight = variant === 'light';
+    const t = useTranslations('Brand');
 
     return (
         <div className={cn("flex items-center gap-3", className)}>
@@ -31,20 +33,20 @@ export const Logo: React.FC<LogoProps> = ({ className, variant = 'default' }) =>
                             "text-sm font-bold uppercase tracking-tight leading-tight",
                             isLight ? "text-white" : "text-primary"
                         )}>
-                            LAPODEV
+                            {t('name')}
                         </span>
                     </div>
                     <span className={cn(
                         "text-[9px] font-medium uppercase tracking-widest leading-tight opacity-80",
                         isLight ? "text-white/80" : "text-muted-foreground"
                     )}>
-                        & Développement
+                        {t('slogan')}
                     </span>
                     <span className={cn(
                         "text-[8px] font-normal uppercase tracking-[0.2em] leading-tight opacity-60",
                         isLight ? "text-white/60" : "text-muted-foreground/60"
                     )}>
-                        Université de Kinshasa
+                        {t('institution')}
                     </span>
                 </div>
             </div>

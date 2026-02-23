@@ -1,5 +1,20 @@
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 import { BookOpen, Users, Shield, Globe, Award, Target, Landmark, Heart } from 'lucide-react';
+
+export async function generateMetadata({
+    params
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+    return {
+        title: t('about'),
+    };
+}
 
 export default function AboutPage() {
     const t = useTranslations('AboutPage');
@@ -46,7 +61,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                         <div className="space-y-8">
                             <h2 className="text-3xl font-black text-gray-900 uppercase tracking-tight">
-                                Identité et Objet Social
+                                {t('intro.title')}
                             </h2>
                             <div className="h-1.5 w-20 bg-primary rounded-full"></div>
                             <p className="text-lg text-gray-700 leading-relaxed first-letter:text-5xl first-letter:font-black first-letter:mr-3 first-letter:float-left first-letter:text-primary">
@@ -58,7 +73,7 @@ export default function AboutPage() {
                                 <div className="p-3 bg-primary/10 rounded-xl text-primary">
                                     <Target className="h-8 w-8" />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900">Objet Social</h3>
+                                <h3 className="text-xl font-bold text-gray-900">{t('intro.social_object_title')}</h3>
                             </div>
                             <p className="text-gray-600 leading-relaxed italic text-lg">
                                 "{t('intro.social_object')}"

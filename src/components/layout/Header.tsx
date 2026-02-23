@@ -76,17 +76,17 @@ export const Header = () => {
         {
             title: t('resources.title'),
             items: [
-                { title: t('resources.members'), href: '/resources/members' },
-                { title: t('resources.forms'), href: '/resources/forms' },
+                { title: t('resources.members'), href: '/resources' },
+                { title: t('resources.forms'), href: '/resources' },
             ]
         },
         {
             title: t('news.title'),
             items: [
-                { title: t('news.current'), href: '/news/current' },
-                { title: t('news.past'), href: '/news/past' },
-                { title: t('news.upcoming'), href: '/news/upcoming' },
-                { title: t('news.publications'), href: '/news/publications' },
+                { title: t('news.current'), href: '/news' },
+                { title: t('news.past'), href: '/news' },
+                { title: t('news.upcoming'), href: '/news' },
+                { title: t('news.publications'), href: '/news' },
             ]
         }
     ];
@@ -127,7 +127,7 @@ export const Header = () => {
                                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-[#4c1d95] border border-white/10 text-white">
                                             {menu.items.map((item) => (
                                                 <ListItem
-                                                    key={item.href}
+                                                    key={item.title}
                                                     title={item.title}
                                                     href={item.href}
                                                 >
@@ -191,7 +191,7 @@ export const Header = () => {
                                             <AccordionContent className="flex flex-col gap-1 ml-4 border-l border-white/10 pl-4 py-2">
                                                 {menu.items.map((item) => (
                                                     <Link
-                                                        key={item.href}
+                                                        key={item.title}
                                                         href={item.href as any}
                                                         className="text-xs font-bold uppercase py-2 opacity-80 hover:opacity-100"
                                                     >

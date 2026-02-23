@@ -1,5 +1,20 @@
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 import { Mail, User, Users, GraduationCap, Gavel, Beaker, Briefcase } from 'lucide-react';
+
+export async function generateMetadata({
+    params
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+    return {
+        title: t('governance'),
+    };
+}
 
 export default function GovernancePage() {
     const t = useTranslations('GovernancePage');
@@ -36,7 +51,7 @@ export default function GovernancePage() {
                                     </div>
                                     <div>
                                         <p className="text-xs font-black text-primary uppercase tracking-tighter">{t('general_direction.director')}</p>
-                                        <p className="font-bold text-gray-900">Pr. Joseph Indeka</p>
+                                        <p className="font-bold text-gray-900">{t('general_direction.director_name')}</p>
                                         <a href="mailto:joseph.indeka@gmail.com" className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1">
                                             <Mail className="h-3 w-3" /> joseph.indeka@gmail.com
                                         </a>
@@ -48,7 +63,7 @@ export default function GovernancePage() {
                                     </div>
                                     <div>
                                         <p className="text-xs font-black text-primary uppercase tracking-tighter">{t('general_direction.secretary')}</p>
-                                        <p className="font-bold text-gray-900">Junior Bampembe</p>
+                                        <p className="font-bold text-gray-900">{t('general_direction.secretary_name')}</p>
                                         <a href="mailto:bampembearthur@gmail.com" className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1">
                                             <Mail className="h-3 w-3" /> bampembearthur@gmail.com
                                         </a>
@@ -69,9 +84,9 @@ export default function GovernancePage() {
                                 </div>
                                 <div className="space-y-6">
                                     {[
-                                        { label: t('advisory_council.president'), name: 'Pr. Basile Osokonda', email: 'basile.osokonda@gmail.com', icon: Gavel },
-                                        { label: t('advisory_council.advisor'), name: 'Mte Rose Gato', email: 'rose.gato@unikin.ac.cd', icon: User },
-                                        { label: t('advisory_council.member'), name: 'Mte Delphin Ituku', email: 'delphinituku@gmail.com', icon: User }
+                                        { label: t('advisory_council.president'), name: t('advisory_council.president_name'), email: 'basile.osokonda@gmail.com', icon: Gavel },
+                                        { label: t('advisory_council.advisor'), name: t('advisory_council.advisor_name'), email: 'rose.gato@unikin.ac.cd', icon: User },
+                                        { label: t('advisory_council.member'), name: t('advisory_council.member_name'), email: 'delphinituku@gmail.com', icon: User }
                                     ].map((person, i) => (
                                         <div key={i} className="flex gap-4">
                                             <person.icon className="h-5 w-5 text-slate-400 shrink-0 mt-1" />
@@ -94,12 +109,12 @@ export default function GovernancePage() {
                                 </div>
                                 <div className="space-y-6">
                                     {[
-                                        { label: t('scientific_committee.director'), name: 'Pr. Bertin Beya', email: 'abertinbeya@yahoo.fr', icon: Beaker },
-                                        { label: t('scientific_committee.deputy_director'), name: 'Pr. Damien Mottier', email: 'damienmottier@gmail.com', icon: GraduationCap },
-                                        { label: t('scientific_committee.editor_in_chief'), name: 'Pr. Grégoire Ngalamulume', email: 'gregoire.ngalamulume@gmail.com', icon: GraduationCap },
-                                        { label: t('scientific_committee.diffusion_marketing'), name: 'Mne Nicole Mpwekela', email: 'nicole.mpwekela@unikin.ac.cd', icon: Globe2 },
-                                        { label: t('scientific_committee.media_library_doc'), name: 'Pr. Jerry Mpereng', email: 'mpereng.jerry@gmail.com', icon: GraduationCap },
-                                        { label: t('scientific_committee.media_library_doc_deputy'), name: 'Pr. François Momindo', email: 'francoismomindo@gmail.com', icon: GraduationCap }
+                                        { label: t('scientific_committee.director'), name: t('scientific_committee.director_name'), email: 'abertinbeya@yahoo.fr', icon: Beaker },
+                                        { label: t('scientific_committee.deputy_director'), name: t('scientific_committee.deputy_director_name'), email: 'damienmottier@gmail.com', icon: GraduationCap },
+                                        { label: t('scientific_committee.editor_in_chief'), name: t('scientific_committee.editor_in_chief_name'), email: 'gregoire.ngalamulume@gmail.com', icon: GraduationCap },
+                                        { label: t('scientific_committee.diffusion_marketing'), name: t('scientific_committee.diffusion_marketing_name'), email: 'nicole.mpwekela@unikin.ac.cd', icon: Globe2 },
+                                        { label: t('scientific_committee.media_library_doc'), name: t('scientific_committee.media_library_doc_name'), email: 'mpereng.jerry@gmail.com', icon: GraduationCap },
+                                        { label: t('scientific_committee.media_library_doc_deputy'), name: t('scientific_committee.media_library_doc_deputy_name'), email: 'francoismomindo@gmail.com', icon: GraduationCap }
                                     ].map((person, i) => (
                                         <div key={i} className="flex gap-4">
                                             <person.icon className="h-4 w-4 text-primary shrink-0 mt-1" />
@@ -122,8 +137,8 @@ export default function GovernancePage() {
                                 </div>
                                 <div className="space-y-6">
                                     {[
-                                        { label: t('admin_finance.manager'), name: 'Ass. Victor Muamba', email: 'victor.muamba@unikin.ac.cd', icon: Briefcase },
-                                        { label: t('admin_finance.assistant'), name: 'Mne Merveille Tiba', email: 'merveilletib@gmail.com', icon: User }
+                                        { label: t('admin_finance.manager'), name: t('admin_finance.manager_name'), email: 'victor.muamba@unikin.ac.cd', icon: Briefcase },
+                                        { label: t('admin_finance.assistant'), name: t('admin_finance.assistant_name'), email: 'merveilletib@gmail.com', icon: User }
                                     ].map((person, i) => (
                                         <div key={i} className="flex gap-4">
                                             <person.icon className="h-5 w-5 text-slate-400 shrink-0 mt-1" />
