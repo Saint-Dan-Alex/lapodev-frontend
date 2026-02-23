@@ -198,7 +198,6 @@ export default function HomePage() {
                                         </p>
                                     </div>
                                     <Button
-                                        onClick={() => alert(`${newsT('publications.download')} : ${pub.title}`)}
                                         variant="ghost" size="icon" className="rounded-full hover:bg-white hover:shadow-lg"
                                     >
                                         <Download className="h-5 w-5 text-slate-400" />

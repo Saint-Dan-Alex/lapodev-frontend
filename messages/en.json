@@ -6,7 +6,8 @@
         "expertise": "Expertise - LAPODEV",
         "governance": "Governance - LAPODEV",
         "resources": "Resources - LAPODEV",
-        "news": "News & Publications - LAPODEV"
+        "news": "News & Publications - LAPODEV",
+        "contact": "Contact - LAPODEV"
     },
     "Brand": {
         "name": "LAPODEV",
@@ -81,9 +82,9 @@
             "email": "Email",
             "phone": "Phone"
         },
-        "address": "UNIKIN, Kinshasa, DRC",
-        "email": "contact@lapodev-unikin.org",
-        "phone": "+243 81 234 5678",
+        "address": "Local C30/B11, Bloc C/ Cave du Home 30, UNIKIN, B.P. 127, Kinshasa XI, DRC",
+        "email": "lapodev.univ@gmail.com",
+        "phone": "+243 891892209",
         "copyright": "LAPODEV. All rights reserved.",
         "links": {
             "privacy": "Privacy Policy",
@@ -320,10 +321,34 @@
             ]
         }
     },
+    "ContactPage": {
+        "title": "Contact Us",
+        "subtitle": "Useful information and addresses",
+        "physical_addresses": {
+            "title": "Physical Addresses",
+            "general_direction": {
+                "title": "LAPODEV General Direction",
+                "content": "Local C30/B11, Block C/ Home 30 Cave, University of Kinshasa, B.P. 127-Kinshasa-XI, D.R.C."
+            },
+            "admin_finance": {
+                "title": "Administrative and Financial Direction",
+                "content": "LAPODEV SPACE, Block C/ Home 30 Cave, University of Kinshasa, B.P. 127-Kinshasa-XI-DRC"
+            }
+        },
+        "email": {
+            "title": "E-mail",
+            "value": "lapodev.univ@gmail.com"
+        },
+        "phone": {
+            "title": "Phone",
+            "value": "+243 891892209"
+        }
+    },
     "NewsPage": {
         "title": "News & Publications",
         "subtitle": "Stay informed about LAPODEV activities",
         "events": {
+            "title": "Events",
             "all": "All",
             "past": "Past",
             "current": "Current",

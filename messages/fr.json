@@ -6,7 +6,8 @@
         "expertise": "Expertise - LAPODEV",
         "governance": "Gouvernance - LAPODEV",
         "resources": "Ressources - LAPODEV",
-        "news": "Actualités & Publications - LAPODEV"
+        "news": "Actualités & Publications - LAPODEV",
+        "contact": "Contact - LAPODEV"
     },
     "Brand": {
         "name": "LAPODEV",
@@ -81,9 +82,9 @@
             "email": "Email",
             "phone": "Téléphone"
         },
-        "address": "UNIKIN, Kinshasa, RDC",
-        "email": "contact@lapodev-unikin.org",
-        "phone": "+243 81 234 5678",
+        "address": "Local C30/B11, Bloc C/ Cave du Home 30, UNIKIN, B.P. 127, Kinshasa XI, RDC",
+        "email": "lapodev.univ@gmail.com",
+        "phone": "+243 891892209",
         "copyright": "LAPODEV. Tous droits réservés.",
         "links": {
             "privacy": "Confidentialité",
@@ -319,10 +320,34 @@
             ]
         }
     },
+    "ContactPage": {
+        "title": "Contactez-nous",
+        "subtitle": "Informations et adresses utiles",
+        "physical_addresses": {
+            "title": "Adresses physiques",
+            "general_direction": {
+                "title": "Direction Générale du LAPODEV",
+                "content": "Local C30/B11, Bloc C/ Cave du Home 30, Université de Kinshasa, B.P. 127-Kinshasa-XI, R.D.C."
+            },
+            "admin_finance": {
+                "title": "Direction Administrative et Financière",
+                "content": "ESPACE LAPODEV, Bloc C/ Cave du Home 30, Université de Kinshasa, B.P. 127-Kinshasa-XI-RDC"
+            }
+        },
+        "email": {
+            "title": "E-mail",
+            "value": "lapodev.univ@gmail.com"
+        },
+        "phone": {
+            "title": "Téléphone",
+            "value": "+243 891892209"
+        }
+    },
     "NewsPage": {
         "title": "Actualités & Publications",
         "subtitle": "Restez informé des activités du LAPODEV",
         "events": {
+            "title": "Événements",
             "all": "Tous",
             "past": "Passés",
             "current": "En cours",
