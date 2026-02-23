@@ -25,10 +25,10 @@ export default function GovernancePage() {
             <section className="relative pt-32 pb-20 bg-[#5b1887] text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
-                    <h1 className="text-4xl lg:text-6xl font-black mb-4 tracking-tighter uppercase italic">
+                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-black mb-4 tracking-tighter uppercase italic">
                         {t('title')}
                     </h1>
-                    <p className="text-lg lg:text-xl font-serif font-light text-white/80 max-w-2xl mx-auto">
+                    <p className="text-base md:text-lg lg:text-xl font-serif font-light text-white/80 max-w-2xl mx-auto">
                         {t('subtitle')}
                     </p>
                 </div>

@@ -42,10 +42,10 @@ export default function ExpertisePage() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                             {t('tagline')}
                         </div>
-                        <h1 className="text-5xl lg:text-7xl font-black mb-4 tracking-tighter uppercase italic drop-shadow-2xl">
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-black mb-4 tracking-tighter uppercase italic drop-shadow-2xl">
                             {t('title')}
                         </h1>
-                        <p className="text-xl lg:text-2xl font-serif font-light text-white/90 leading-relaxed max-w-2xl border-l-4 border-[#ee1c25] pl-6">
+                        <p className="text-lg md:text-xl lg:text-2xl font-serif font-light text-white/90 leading-relaxed max-w-2xl border-l-4 border-[#ee1c25] pl-6">
                             {t('subtitle')}
                         </p>
                     </div>

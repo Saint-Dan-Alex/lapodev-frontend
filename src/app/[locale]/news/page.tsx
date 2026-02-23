@@ -92,17 +92,17 @@ export default function NewsPage() {
             {/* CONTENT SECTION */}
             <div className="container mx-auto px-4 md:px-8 -mt-10 mb-20 relative z-20">
                 <Tabs defaultValue="events" className="w-full">
-                    <div className="bg-white p-2 rounded-3xl shadow-2xl shadow-purple-900/10 border border-slate-100 flex flex-wrap items-center justify-between gap-4 mb-12">
-                        <TabsList className="bg-transparent h-auto p-0 flex flex-wrap gap-2">
+                    <div className="bg-white p-2 rounded-3xl shadow-2xl shadow-purple-900/10 border border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4 mb-12 overflow-hidden">
+                        <TabsList className="bg-transparent h-auto p-0 flex w-full md:w-auto overflow-x-auto no-scrollbar scroll-smooth p-1 gap-2">
                             <TabsTrigger
                                 value="events"
-                                className="px-8 py-3 rounded-2xl data-[state=active]:bg-[#5b1887] data-[state=active]:text-white text-slate-500 font-black uppercase tracking-widest text-xs transition-all"
+                                className="px-6 md:px-8 py-3 rounded-2xl data-[state=active]:bg-[#5b1887] data-[state=active]:text-white text-slate-500 font-black uppercase tracking-widest text-[10px] md:text-xs transition-all flex-shrink-0"
                             >
                                 {t('events.title')}
                             </TabsTrigger>
                             <TabsTrigger
                                 value="publications"
-                                className="px-8 py-3 rounded-2xl data-[state=active]:bg-[#5b1887] data-[state=active]:text-white text-slate-500 font-black uppercase tracking-widest text-xs transition-all"
+                                className="px-6 md:px-8 py-3 rounded-2xl data-[state=active]:bg-[#5b1887] data-[state=active]:text-white text-slate-500 font-black uppercase tracking-widest text-[10px] md:text-xs transition-all flex-shrink-0"
                             >
                                 {t('publications.title')}
                             </TabsTrigger>

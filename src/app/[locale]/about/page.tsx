@@ -45,10 +45,10 @@ export default function AboutPage() {
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 <div className="container mx-auto px-4 md:px-8 relative z-10">
                     <div className="max-w-4xl">
-                        <h1 className="text-5xl lg:text-7xl font-black mb-4 tracking-tighter uppercase italic drop-shadow-2xl">
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-black mb-4 tracking-tighter uppercase italic drop-shadow-2xl">
                             {t('title')}
                         </h1>
-                        <p className="text-xl lg:text-2xl font-serif font-light text-white/90 leading-relaxed max-w-2xl border-l-4 border-[#fdb913] pl-6">
+                        <p className="text-lg md:text-xl lg:text-2xl font-serif font-light text-white/90 leading-relaxed max-w-2xl border-l-4 border-[#fdb913] pl-6">
                             {t('subtitle')}
                         </p>
                     </div>

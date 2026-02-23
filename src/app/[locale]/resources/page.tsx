@@ -115,28 +115,26 @@ export default function ResourcesPage() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Header Section */}
-            <section className="relative pt-32 pb-20 bg-[#5b1887] text-white">
+            <section className="relative pt-32 pb-20 bg-[#5b1887] text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 <div className="container mx-auto px-4 md:px-8 relative z-10">
-                    <h1 className="text-4xl lg:text-6xl font-black mb-4 tracking-tighter uppercase italic">
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-4 tracking-tighter uppercase italic">
                         {t('title')}
                     </h1>
-                    <div className="h-1.5 w-24 bg-[#fdb913] rounded-full"></div>
+                    <div className="h-1.5 w-20 md:w-24 bg-[#fdb913] rounded-full"></div>
                 </div>
             </section>
 
             <div className="container mx-auto px-4 md:px-8 py-16">
                 <Tabs defaultValue="members" className="w-full">
-                    <TabsList className="grid w-full grid-cols-2 mb-12 bg-slate-100 p-1 h-14 rounded-2xl">
-                        <TabsTrigger value="members" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-xs transition-all">
+                    <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 mb-12 bg-slate-100 p-1 h-auto sm:h-14 rounded-2xl gap-1">
+                        <TabsTrigger value="members" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 sm:py-0">
                             {t('human_resources.title')}
                         </TabsTrigger>
-                        <TabsTrigger value="documents" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-xs transition-all">
+                        <TabsTrigger value="documents" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 sm:py-0">
                             {t('documents.title')}
                         </TabsTrigger>
                     </TabsList>
-
-                    {/* HUMAN RESOURCES CONTENT */}
                     <TabsContent value="members" className="space-y-12">
                         <div className="max-w-3xl mb-12">
                             <h2 className="text-3xl font-black text-gray-900 mb-4 uppercase">
@@ -220,11 +218,12 @@ export default function ResourcesPage() {
                             ))}
                         </div>
                     </TabsContent>
-                </Tabs>
-            </div>
+                </Tabs >
+            </div >
 
             {/* MEMBER MODAL */}
-            <Dialog open={!!selectedMember} onOpenChange={(open) => !open && setSelectedMember(null)}>
+            < Dialog open={!!selectedMember
+            } onOpenChange={(open) => !open && setSelectedMember(null)}>
                 <DialogContent className="sm:max-w-2xl p-0 overflow-hidden rounded-[2rem] border-none shadow-2xl">
                     {selectedMember && (
                         <div className="flex flex-col">
@@ -296,8 +295,8 @@ export default function ResourcesPage() {
                         </div>
                     )}
                 </DialogContent>
-            </Dialog>
-        </div>
+            </Dialog >
+        </div >
     );
 }
 

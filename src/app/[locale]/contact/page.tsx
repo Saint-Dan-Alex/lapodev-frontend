@@ -46,10 +46,10 @@ export default function ContactPage() {
             <section className="relative py-20 bg-[#5b1887] text-white">
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 <div className="container mx-auto px-4 md:px-8 relative z-10">
-                    <h1 className="text-4xl md:text-6xl font-black mb-4 uppercase italic tracking-tighter">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 uppercase italic tracking-tighter">
                         {t('title')}
                     </h1>
-                    <p className="text-lg text-white/80 max-w-2xl font-medium">
+                    <p className="text-base md:text-lg lg:text-xl font-serif font-light text-white/80 max-w-2xl">
                         {t('subtitle')}
                     </p>
                 </div>
