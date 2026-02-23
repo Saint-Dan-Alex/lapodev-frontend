@@ -55,5 +55,20 @@
         },
         "contact": "Contact Us",
         "join": "Join Today"
+    },
+    "Footer": {
+        "description": "University of Kinshasa research center dedicated to public policy analysis and sustainable development in the DRC.",
+        "nav_title": "Navigation",
+        "address": "University of Kinshasa, Kinshasa, DRC",
+        "labels": {
+            "address": "Address",
+            "email": "Email",
+            "phone": "Phone"
+        },
+        "copyright": "LAPODEV - University of Kinshasa. All rights reserved.",
+        "links": {
+            "privacy": "Privacy Policy",
+            "legal": "Legal Notice"
+        }
     }
 }

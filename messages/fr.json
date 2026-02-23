@@ -55,5 +55,20 @@
         },
         "contact": "Contactez-nous",
         "join": "Adhérez aujourd'hui"
+    },
+    "Footer": {
+        "description": "Centre de recherche de l'Université de Kinshasa dédié à l'analyse des politiques publiques et au développement durable en RDC.",
+        "nav_title": "Navigation",
+        "address": "Université de Kinshasa, Kinshasa, RDC",
+        "labels": {
+            "address": "Adresse",
+            "email": "Email",
+            "phone": "Téléphone"
+        },
+        "copyright": "LAPODEV - Université de Kinshasa. Tous droits réservés.",
+        "links": {
+            "privacy": "Confidentialité",
+            "legal": "Mentions Légales"
+        }
     }
 }
