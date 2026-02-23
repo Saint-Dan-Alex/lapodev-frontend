@@ -47,9 +47,9 @@ export default function JoinPage() {
     }
 
     return (
-        <div className="flex flex-col min-h-screen pt-32 pb-20">
+        <div className="flex flex-col min-h-screen">
             {/* Header section */}
-            <section className="relative py-20 bg-[#5b1887] text-white overflow-hidden mb-12">
+            <section className="relative pt-32 pb-20 bg-[#5b1887] text-white overflow-hidden mb-12">
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 <div className="container mx-auto px-4 md:px-8 relative z-10">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 uppercase italic tracking-tighter">

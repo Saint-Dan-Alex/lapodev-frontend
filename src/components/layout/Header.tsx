@@ -15,7 +15,7 @@ import {
     NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { Menu, ChevronDown } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
@@ -46,8 +46,17 @@ const ListItem = React.forwardRef<
 })
 ListItem.displayName = "ListItem"
 
-export const Header = () => {
+export function Header() {
     const t = useTranslations('Navigation');
+    const [isScrolled, setIsScrolled] = React.useState(false);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const menuItems = [
         {
@@ -92,12 +101,17 @@ export const Header = () => {
     ];
 
     return (
-        <header className="absolute top-0 z-50 w-full border-b border-white/10 bg-transparent py-4 text-white">
+        <header className={cn(
+            "fixed top-0 z-50 w-full transition-all duration-300 py-3",
+            isScrolled
+                ? "bg-white/90 backdrop-blur-md shadow-lg border-b border-slate-200 text-gray-900 py-2"
+                : "bg-transparent text-white"
+        )}>
             <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
                 {/* Logo Section */}
-                <div className="flex-none">
-                    <Link href="/" className="flex items-center gap-2">
-                        <Logo variant="light" />
+                <div className="flex items-center gap-8">
+                    <Link href="/" className="transition-transform hover:scale-105 active:scale-95">
+                        <Logo variant={isScrolled ? "default" : "light"} />
                     </Link>
                 </div>
 
@@ -110,7 +124,10 @@ export const Header = () => {
                                 <NavigationMenuLink asChild>
                                     <Link
                                         href="/"
-                                        className="group inline-flex h-9 w-max items-center justify-center rounded-md px-2.5 text-[11px] font-bold uppercase tracking-wide transition-colors hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white bg-transparent"
+                                        className={cn(
+                                            "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-black uppercase tracking-wider transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                                            isScrolled ? "text-slate-700 hover:text-primary" : "text-white hover:text-white/70"
+                                        )}
                                     >
                                         {t('home')}
                                     </Link>
@@ -120,7 +137,12 @@ export const Header = () => {
                             {/* Dropdowns */}
                             {menuItems.map((menu) => (
                                 <NavigationMenuItem key={menu.title}>
-                                    <NavigationMenuTrigger className="bg-transparent hover:bg-white/10 focus:bg-white/10 text-white data-[state=open]:bg-white/10 uppercase text-[11px] font-bold tracking-wide h-9 px-2.5">
+                                    <NavigationMenuTrigger className={cn(
+                                        "bg-transparent h-10 px-4 transition-colors uppercase text-sm font-black tracking-wider",
+                                        isScrolled
+                                            ? "text-slate-700 hover:text-primary data-[state=open]:text-primary"
+                                            : "text-white hover:text-white/70 data-[state=open]:bg-white/10"
+                                    )}>
                                         {menu.title}
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
@@ -144,7 +166,10 @@ export const Header = () => {
                                 <NavigationMenuLink asChild>
                                     <Link
                                         href="/contact"
-                                        className="group inline-flex h-9 w-max items-center justify-center rounded-md px-2.5 text-[11px] font-bold uppercase tracking-wide transition-colors hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white bg-transparent"
+                                        className={cn(
+                                            "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-black uppercase tracking-wider transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                                            isScrolled ? "text-slate-700 hover:text-primary" : "text-white hover:text-white/70"
+                                        )}
                                     >
                                         {t('contact')}
                                     </Link>
@@ -156,10 +181,18 @@ export const Header = () => {
 
                 {/* Right Section: Button & i18n */}
                 <div className="hidden items-center gap-2 lg:flex">
-                    <LanguageSwitcher />
-                    <div className="border-l border-white/20 pl-2">
+                    <LanguageSwitcher variant={isScrolled ? "default" : "light"} />
+                    <div className={cn(
+                        "border-l pl-2 transition-colors",
+                        isScrolled ? "border-slate-200" : "border-white/20"
+                    )}>
                         <Button
-                            className="bg-white text-primary hover:bg-white/90 font-black text-[10px] uppercase tracking-wider px-4 h-9 rounded-sm shadow-xl shadow-black/20"
+                            className={cn(
+                                "font-black text-[10px] uppercase tracking-wider px-4 h-9 rounded-sm shadow-xl transition-all",
+                                isScrolled
+                                    ? "bg-primary text-white hover:bg-primary/90 shadow-primary/20"
+                                    : "bg-white text-primary hover:bg-white/90 shadow-black/20"
+                            )}
                             asChild
                         >
                             <Link href="/join">{t('join')}</Link>
@@ -169,14 +202,21 @@ export const Header = () => {
 
                 {/* Mobile View */}
                 <div className="flex items-center gap-3 lg:hidden">
-                    <LanguageSwitcher />
+                    <LanguageSwitcher variant={isScrolled ? "default" : "light"} />
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+                            <Button variant="ghost" size="icon" className={cn(
+                                "hover:bg-black/5 transition-colors",
+                                isScrolled ? "text-slate-900" : "text-white"
+                            )}>
                                 <Menu className="h-6 w-6" />
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="right" className="bg-[#4c1d95] text-white border-white/10 overflow-y-auto w-[85vw] sm:w-[400px]">
+                            <SheetHeader className="sr-only">
+                                <SheetTitle>Menu</SheetTitle>
+                                <SheetDescription>Navigation principale du site</SheetDescription>
+                            </SheetHeader>
                             <div className="mt-8 flex flex-col gap-2">
                                 <Link href="/" className="text-sm font-black uppercase tracking-widest p-2 hover:bg-white/10 rounded-md">
                                     {t('home')}

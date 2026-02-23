@@ -242,6 +242,9 @@ export default function ResourcesPage() {
                                         <DialogTitle className="text-3xl font-black text-gray-900 tracking-tighter uppercase leading-tight">
                                             {selectedMember.name}
                                         </DialogTitle>
+                                        <DialogDescription className="sr-only">
+                                            Détails pour {selectedMember.name}
+                                        </DialogDescription>
                                         {selectedMember.email && (
                                             <Button variant="ghost" size="sm" asChild className="rounded-full h-8 text-primary">
                                                 <a href={`mailto:${selectedMember.email}`} title={t('human_resources.modal.send_email')}>
