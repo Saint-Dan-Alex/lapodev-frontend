@@ -1,22 +1,30 @@
 {
     "HomePage": {
-        "title": "LAPODEV",
-        "description": "Laboratory of Politics and Development - University of Kinshasa",
         "hero": {
-            "title": "Scientific Research & Development Expertise",
-            "subtitle": "Serving governance and public policies in DRC."
+            "topLabel": "Research Center — University of Kinshasa / DRC",
+            "title": "LAPODEV",
+            "subtitle": "Laboratory of Political Anthropology, Development & Vulnerability Analysis",
+            "description": "A multidisciplinary research center dedicated to the in-depth study of political dynamics, development issues, and vulnerabilities in the Democratic Republic of Congo. We shape the future through research and academic innovation.",
+            "cta_primary": "Register",
+            "cta_secondary": "How it works?"
+        },
+        "stats": {
+            "title": "Our Impact in DRC",
+            "research_projects": "Research Projects",
+            "partner_researchers": "Partner Researchers",
+            "analyzed_policies": "Analyzed Policies"
         }
     },
     "Navigation": {
         "home": "Home",
         "about": {
-            "title": "LAPODEV in Brief",
+            "title": "LAPODEV",
             "identity": "Identity and Purpose",
             "values": "Institutional Values & Missions",
             "objectives": "LAPODEV Objectives"
         },
         "expertise": {
-            "title": "Our Expertise: Research & Consultancy",
+            "title": "Expertise",
             "research": "Research",
             "research_domains": "Initial Specialization Domains",
             "research_axes": "Research Axes",
@@ -26,7 +34,7 @@
             "consultancy_resilience": "Vulnerability & Resilience Analysis"
         },
         "governance": {
-            "title": "LAPODEV Governance",
+            "title": "Governance",
             "chart": "Organizational Chart",
             "board": "Board of Directors"
         },
@@ -39,7 +47,7 @@
             "archives": "Film & Photo Archives"
         },
         "news": {
-            "title": "Follow our activities & news",
+            "title": "News",
             "past": "Past Events",
             "current": "Current Events",
             "upcoming": "Upcoming Events",

@@ -1,22 +1,30 @@
 {
     "HomePage": {
-        "title": "LAPODEV",
-        "description": "Laboratoire de Politique et Développement - Université de Kinshasa",
         "hero": {
-            "title": "Recherche Scientifique & Expertise en Développement",
-            "subtitle": "Au service de la gouvernance et des politiques publiques en RDC."
+            "topLabel": "Centre de Recherche — Université de Kinshasa / RDC",
+            "title": "LAPODEV",
+            "subtitle": "Laboratoire d’Anthropologie Politique, du Développement & d’Analyse des Vulnérabilités",
+            "description": "Un Centre de recherche pluridisciplinaire dédié à l’étude approfondie des dynamiques politiques, des enjeux de développement et des vulnérabilités en République Démocratique du Congo. Nous façonnons l’avenir par la recherche et l’innovation académique.",
+            "cta_primary": "S’enregistrer",
+            "cta_secondary": "Comment ça marche ?"
+        },
+        "stats": {
+            "title": "Notre Impact en RDC",
+            "research_projects": "Projets de Recherche",
+            "partner_researchers": "Chercheurs Partenaires",
+            "analyzed_policies": "Politiques Analysées"
         }
     },
     "Navigation": {
         "home": "Accueil",
         "about": {
-            "title": "LAPODEV en poche",
+            "title": "LAPODEV",
             "identity": "Identité et objet social",
             "values": "Valeurs et missions institutionnelles",
             "objectives": "Objectifs du LAPODEV"
         },
         "expertise": {
-            "title": "Notre Expertise : Recherche & Consultance",
+            "title": "Expertise",
             "research": "Recherche",
             "research_domains": "Domaines initiaux de spécialisation",
             "research_axes": "Axes des recherches",
@@ -26,7 +34,7 @@
             "consultancy_resilience": "En analyse des vulnérabilités et résilience communautaire"
         },
         "governance": {
-            "title": "Gouvernance du LAPODEV",
+            "title": "Gouvernance",
             "chart": "Organigramme",
             "board": "Membres du Conseil d’Administration"
         },
@@ -39,7 +47,7 @@
             "archives": "Archives filmographiques et photographiques"
         },
         "news": {
-            "title": "Suivre nos activités et actualités",
+            "title": "Actualités",
             "past": "Événements passés",
             "current": "Événements en cours",
             "upcoming": "Événements à venir",

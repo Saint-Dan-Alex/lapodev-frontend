@@ -101,15 +101,15 @@ export const Header = () => {
                 </div>
 
                 {/* Center Navigation - Desktop */}
-                <div className="hidden flex-1 justify-center lg:flex ml-4">
+                <div className="hidden flex-1 justify-center lg:flex ml-1">
                     <NavigationMenu>
-                        <NavigationMenuList className="gap-1">
+                        <NavigationMenuList className="gap-0">
                             {/* Home */}
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
                                     <Link
                                         href="/"
-                                        className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-[11px] font-bold uppercase tracking-widest transition-colors hover:text-white/80 focus:text-white/80 bg-transparent"
+                                        className="group inline-flex h-9 w-max items-center justify-center rounded-md px-2.5 text-[11px] font-bold uppercase tracking-wide transition-colors hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white bg-transparent"
                                     >
                                         {t('home')}
                                     </Link>
@@ -119,7 +119,7 @@ export const Header = () => {
                             {/* Dropdowns */}
                             {menuItems.map((menu) => (
                                 <NavigationMenuItem key={menu.title}>
-                                    <NavigationMenuTrigger className="bg-transparent hover:bg-white/10 focus:bg-white/10 text-white data-[state=open]:bg-white/10 uppercase text-[11px] font-bold tracking-widest h-9 px-4">
+                                    <NavigationMenuTrigger className="bg-transparent hover:bg-white/10 focus:bg-white/10 text-white data-[state=open]:bg-white/10 uppercase text-[11px] font-bold tracking-wide h-9 px-2.5">
                                         {menu.title}
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
@@ -143,7 +143,7 @@ export const Header = () => {
                                 <NavigationMenuLink asChild>
                                     <Link
                                         href="/contact"
-                                        className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-[11px] font-bold uppercase tracking-widest transition-colors hover:text-white/80 focus:text-white/80 bg-transparent"
+                                        className="group inline-flex h-9 w-max items-center justify-center rounded-md px-2.5 text-[11px] font-bold uppercase tracking-wide transition-colors hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white bg-transparent"
                                     >
                                         {t('contact')}
                                     </Link>
@@ -154,11 +154,11 @@ export const Header = () => {
                 </div>
 
                 {/* Right Section: Button & i18n */}
-                <div className="hidden items-center gap-4 lg:flex">
+                <div className="hidden items-center gap-2 lg:flex">
                     <LanguageSwitcher />
-                    <div className="border-l border-white/20 pl-4">
+                    <div className="border-l border-white/20 pl-2">
                         <Button
-                            className="bg-white text-primary hover:bg-white/90 font-black text-[10px] uppercase tracking-[0.15em] px-5 h-10 rounded-sm shadow-xl shadow-black/20"
+                            className="bg-white text-primary hover:bg-white/90 font-black text-[10px] uppercase tracking-wider px-4 h-9 rounded-sm shadow-xl shadow-black/20"
                             asChild
                         >
                             <Link href="/join">{t('join')}</Link>

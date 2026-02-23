@@ -17,33 +17,42 @@ export default function HomePage() {
                 <div className="container mx-auto px-4 md:px-8 relative z-10 py-20">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         {/* Left Content */}
-                        <div className="max-w-xl">
-                            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-4 animate-in fade-in slide-in-from-left-8 duration-1000">
+                        <div className="max-w-2xl">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-bold uppercase tracking-[0.2em] mb-6 animate-in fade-in slide-in-from-left-4 duration-700">
+                                <span className="w-2 h-2 rounded-full bg-[#fdb913] animate-pulse"></span>
+                                {t('hero.topLabel')}
+                            </div>
+
+                            <h1 className="text-6xl lg:text-8xl font-black leading-none mb-2 animate-in fade-in slide-in-from-left-8 duration-1000">
                                 {t('hero.title')}
                             </h1>
 
+                            <h2 className="text-xl lg:text-2xl font-serif font-light leading-snug mb-6 text-white/90 max-w-xl animate-in fade-in slide-in-from-left-10 duration-1000 delay-200">
+                                {t('hero.subtitle')}
+                            </h2>
+
                             {/* Reference Style Color Bar (DRC Flag colors) */}
-                            <div className="flex h-1.5 w-40 mb-10 overflow-hidden rounded-full animate-in fade-in slide-in-from-left-4 duration-700 delay-300">
+                            <div className="flex h-1 w-32 mb-8 overflow-hidden rounded-full animate-in fade-in slide-in-from-left-4 duration-700 delay-300">
                                 <div className="w-1/3 bg-[#00a2ed]"></div> {/* Blue */}
                                 <div className="w-1/3 bg-[#fdb913]"></div> {/* Yellow */}
                                 <div className="w-1/3 bg-[#ee1c25]"></div> {/* Red */}
                             </div>
 
-                            <p className="text-xl text-white/80 mb-12 leading-relaxed animate-in fade-in slide-in-from-left-12 duration-1000 delay-500">
-                                {t('hero.subtitle')}
+                            <p className="text-base lg:text-lg text-white/70 mb-10 leading-relaxed max-w-xl animate-in fade-in slide-in-from-left-12 duration-1000 delay-500">
+                                {t('hero.description')}
                             </p>
 
                             <div className="flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700">
-                                <Button asChild size="lg" className="h-14 px-8 text-base font-bold bg-primary text-white hover:bg-primary/90 rounded-md transition-all shadow-lg shadow-primary/20">
+                                <Button asChild size="lg" className="h-14 px-8 text-sm font-black uppercase tracking-widest bg-white text-primary hover:bg-white/90 rounded-sm transition-all shadow-2xl shadow-black/20">
                                     <Link href="/join" className="flex items-center gap-2">
-                                        <span>S'enregistrer</span>
+                                        <span>{t('hero.cta_primary')}</span>
                                         <ArrowRight className="h-5 w-5" />
                                     </Link>
                                 </Button>
-                                <Button asChild variant="outline" size="lg" className="h-14 px-8 text-base font-bold border-white/20 text-white hover:bg-white/10 rounded-md bg-white/5 backdrop-blur-sm">
+                                <Button asChild variant="outline" size="lg" className="h-14 px-8 text-sm font-black uppercase tracking-widest border-white/30 text-white hover:bg-white/10 rounded-sm bg-white/5 backdrop-blur-md">
                                     <Link href="/about" className="flex items-center gap-2">
                                         <Play className="h-4 w-4 fill-current" />
-                                        <span>Comment ça marche?</span>
+                                        <span>{t('hero.cta_secondary')}</span>
                                     </Link>
                                 </Button>
                             </div>
@@ -85,24 +94,26 @@ export default function HomePage() {
             </section>
 
             {/* Stats Section */}
-            <section className="bg-white py-24">
-                <div className="container mx-auto px-4 md:px-8">
+            <section className="bg-slate-50 py-24 relative overflow-hidden">
+                <div className="container mx-auto px-4 md:px-8 relative z-10">
                     <div className="text-center max-w-3xl mx-auto mb-20">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Notre Impact en RDC</h2>
-                        <div className="h-1 w-20 bg-primary mx-auto"></div>
+                        <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-4 uppercase tracking-tighter italic">
+                            {t('stats.title')}
+                        </h2>
+                        <div className="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { label: "Projets de Recherche", value: "25+", icon: BookOpen },
-                            { label: "Chercheurs Partenaires", value: "150+", icon: Users },
-                            { label: "Politiques Analysées", value: "12", icon: BarChart3 }
+                            { label: t('stats.research_projects'), value: "25+", icon: BookOpen },
+                            { label: t('stats.partner_researchers'), value: "150+", icon: Users },
+                            { label: t('stats.analyzed_policies'), value: "12", icon: BarChart3 }
                         ].map((stat, i) => (
-                            <div key={i} className="p-8 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:shadow-lg transition-all">
-                                <div className="inline-flex p-4 bg-primary/10 rounded-xl text-primary mb-6">
-                                    <stat.icon className="h-8 w-8" />
+                            <div key={i} className="group p-10 rounded-3xl bg-white border border-slate-200 text-center hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500">
+                                <div className="inline-flex p-5 bg-primary/5 rounded-2xl text-primary mb-8 group-hover:scale-110 transition-transform">
+                                    <stat.icon className="h-10 w-10" />
                                 </div>
-                                <div className="text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                                <div className="text-muted-foreground font-medium">{stat.label}</div>
+                                <div className="text-5xl font-black text-gray-900 mb-3 tracking-tighter">{stat.value}</div>
+                                <div className="text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground">{stat.label}</div>
                             </div>
                         ))}
                     </div>
