@@ -7,7 +7,8 @@
         "governance": "Governance - LAPODEV",
         "resources": "Resources - LAPODEV",
         "news": "News & Publications - LAPODEV",
-        "contact": "Contact - LAPODEV"
+        "contact": "Contact - LAPODEV",
+        "join": "Join Us - LAPODEV"
     },
     "Brand": {
         "name": "LAPODEV",
@@ -423,6 +424,52 @@
                     "type": "Book (Monange Editions, Yaoundé)"
                 }
             ]
+        }
+    },
+    "JoinPage": {
+        "title": "Join LAPODEV",
+        "subtitle": "Membership form to become a member",
+        "form": {
+            "identity": {
+                "title": "1. Identity",
+                "last_name": "Last Name",
+                "post_name": "Post-name",
+                "first_name": "First Name"
+            },
+            "contacts": {
+                "title": "2. Contacts",
+                "email": "Email",
+                "mobile": "Mobile / WhatsApp",
+                "address": "Mailing Address",
+                "street": "Ave/Street",
+                "quarter": "Q/",
+                "cell": "C//",
+                "city": "City",
+                "zip": "Zip Code",
+                "box": "Box"
+            },
+            "studies": {
+                "title": "3. Studies and Profession",
+                "degree": "Degree (highest)",
+                "grade": "Current Rank",
+                "institution": "Establishment/ Affiliation Institution"
+            },
+            "research": {
+                "title": "4. Research",
+                "description": "Axes/ domains/ research themes",
+                "placeholder": "Describe your research themes..."
+            },
+            "declaration": {
+                "content": "I hereby declare my wish to become a member of LAPODEV. I have taken note of the rights and duties of LAPODEV members, and agree to pay my annual fee as fixed by the General Assembly.",
+                "agree": "I accept the membership terms and conditions"
+            },
+            "submit": "Send my membership request",
+            "place": "Done at",
+            "date": "Date"
+        },
+        "success": {
+            "title": "Request sent!",
+            "message": "Thank you for your interest. We will review your request and contact you soon."
         }
     }
 }

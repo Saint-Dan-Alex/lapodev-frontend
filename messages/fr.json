@@ -7,7 +7,8 @@
         "governance": "Gouvernance - LAPODEV",
         "resources": "Ressources - LAPODEV",
         "news": "Actualités & Publications - LAPODEV",
-        "contact": "Contact - LAPODEV"
+        "contact": "Contact - LAPODEV",
+        "join": "Rejoignez-nous - LAPODEV"
     },
     "Brand": {
         "name": "LAPODEV",
@@ -422,6 +423,52 @@
                     "type": "Ouvrage (Editions Monange, Yaoundé)"
                 }
             ]
+        }
+    },
+    "JoinPage": {
+        "title": "Adhérez au LAPODEV",
+        "subtitle": "Bulletin d'adhésion pour devenir membre",
+        "form": {
+            "identity": {
+                "title": "1. Identité",
+                "last_name": "Nom",
+                "post_name": "Post-nom",
+                "first_name": "Prénom"
+            },
+            "contacts": {
+                "title": "2. Contacts",
+                "email": "Email",
+                "mobile": "Mobile / WhatsApp",
+                "address": "Adresse postale",
+                "street": "Av/Rue",
+                "quarter": "Q/",
+                "cell": "C//",
+                "city": "Ville",
+                "zip": "Code postal",
+                "box": "Boite"
+            },
+            "studies": {
+                "title": "3. Etudes et profession",
+                "degree": "Diplôme (plus élevé)",
+                "grade": "Grade actuel",
+                "institution": "Etablissement/ Institution d'attache"
+            },
+            "research": {
+                "title": "4. Recherche",
+                "description": "Axes/ domaines/ thèmes des recherches",
+                "placeholder": "Décrivez vos thèmes de recherche..."
+            },
+            "declaration": {
+                "content": "Je déclare par la présente souhaiter devenir membre du LAPODEV. J'ai pris connaissance des droits et devoirs des membres du LAPODEV, et accepte de verser ma cotisation annuelle telle que fixée par l'Assemblée Générale.",
+                "agree": "J'accepte les termes et conditions d'adhésion"
+            },
+            "submit": "Envoyer ma demande d'adhésion",
+            "place": "Fait à",
+            "date": "Date"
+        },
+        "success": {
+            "title": "Demande envoyée !",
+            "message": "Merci pour votre intérêt. Nous examinerons votre demande et vous contacterons bientôt."
         }
     }
 }
