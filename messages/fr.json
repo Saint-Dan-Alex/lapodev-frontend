@@ -136,10 +136,10 @@
             },
             "vulnerabilities": {
                 "title": "Analyse des Vulnérabilités",
-                "intro": "Identifier et étudier les groupes sociaux exposés aux risques.",
+                "intro": "Identifier et étudier les groupes sociaux exposés aux risks.",
                 "goals": [
                     "Analyser et prendre en compte la vulnérabilité pour une prise en charge holistique.",
-                    "Mieux comprendre les inégalités et les facteurs qui augmentent les risques.",
+                    "Mieux comprendre les inégalités et les facteurs qui augmentent les risks.",
                     "Identifier et étudier les groupes sociaux dits « vulnérables »."
                 ],
                 "groups": {
@@ -176,6 +176,39 @@
                 "Éthique professionnelle, accompagnement psychosocial",
                 "Protection du patrimoine, environnement et biodiversité"
             ]
+        }
+    },
+    "GovernancePage": {
+        "title": "Gouvernance du LAPODEV",
+        "subtitle": "Notre organigramme et les membres du Conseil d’Administration",
+        "general_direction": {
+            "title": "Direction Générale",
+            "director": "Directeur",
+            "secretary": "Secrétaire de direction"
+        },
+        "advisory_council": {
+            "title": "Conseil des Sages et Contentieux",
+            "president": "Président du Conseil",
+            "advisor": "Conseillère",
+            "member": "Membre"
+        },
+        "scientific_committee": {
+            "title": "Direction du Comité Scientifique",
+            "director": "Directeur du Comité scientifique",
+            "deputy_director": "Directeur adjoint",
+            "editor_in_chief": "Rédacteur en Chef",
+            "diffusion_marketing": "Chargée de Diffusion & marketing",
+            "media_library_doc": "Chef de la Médiathèque et Documentation",
+            "media_library_doc_deputy": "Chef adjoint de la Médiathèque et Documentation"
+        },
+        "admin_finance": {
+            "title": "Direction Administrative et Financière",
+            "manager": "DAF",
+            "assistant": "Assistante administrative"
+        },
+        "general_assembly": {
+            "title": "Assemblée Générale",
+            "content": "Enseignants-chercheurs, chercheur-s-ses, post-doctorant-e-s, doctorant-e-s, expert-e-s, partenaires, sympathisant-e-s, étudiant-e-s"
         }
     }
 }

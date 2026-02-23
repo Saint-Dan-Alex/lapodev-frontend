@@ -177,5 +177,38 @@
                 "Heritage protection, environment and biodiversity"
             ]
         }
+    },
+    "GovernancePage": {
+        "title": "LAPODEV Governance",
+        "subtitle": "Our Organizational Chart and Board Members",
+        "general_direction": {
+            "title": "General Direction",
+            "director": "Director",
+            "secretary": "Executive Secretary"
+        },
+        "advisory_council": {
+            "title": "Council of Elders and Litigation",
+            "president": "President of the Council",
+            "advisor": "Advisor",
+            "member": "Member"
+        },
+        "scientific_committee": {
+            "title": "Scientific Committee Direction",
+            "director": "Scientific Committee Director",
+            "deputy_director": "Deputy Director",
+            "editor_in_chief": "Editor-in-Chief",
+            "diffusion_marketing": "Diffusion & Marketing Officer",
+            "media_library_doc": "Head of Media Library and Documentation",
+            "media_library_doc_deputy": "Deputy Head of Media Library and Documentation"
+        },
+        "admin_finance": {
+            "title": "Administrative and Financial Direction",
+            "manager": "DAF",
+            "assistant": "Administrative Assistant"
+        },
+        "general_assembly": {
+            "title": "General Assembly",
+            "content": "Teacher-researchers, researchers, post-docs, doctoral students, experts, partners, sympathizers, students"
+        }
     }
 }
