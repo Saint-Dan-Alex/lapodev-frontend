@@ -61,8 +61,9 @@ export const Header = () => {
         {
             title: t('expertise.title'),
             items: [
-                { title: t('expertise.research'), href: '/expertise/research', description: t('expertise.research_domains') },
-                { title: t('expertise.consultancy'), href: '/expertise/consultancy', description: t('expertise.consultancy_projects') },
+                { title: t('expertise.research'), href: '/expertise#research' },
+                { title: t('expertise.research_axes'), href: '/expertise#axes' },
+                { title: t('expertise.consultancy'), href: '/expertise#consultancy' },
             ]
         },
         {

@@ -100,5 +100,82 @@
             "o7": "Organiser et animer des enseignements, de formations et de stages à titre individuel et collectif pour le renforcement des capacités et la relève académique en République Démocratique du Congo",
             "o8": "Nouer et entretenir des partenariats et de collaborations avec les Universités, les Centres et les Instituts de recherches aux niveaux national et international afin de stimuler et d’accroître la mobilité entrante et sortante pour des stages, formations spécifiques et les échanges d’expériences"
         }
+    },
+    "ExpertisePage": {
+        "title": "Notre Expertise",
+        "subtitle": "Recherche & Consultance",
+        "research": {
+            "title": "Domaines de spécialisation",
+            "politics": {
+                "title": "Domaine politique",
+                "subtitle": "Homo politicus - Elucidation de l’objet politique",
+                "intro": "Etant donné l’extraordinaire fluidité sémantique du mot 'politique', ce concept est ici entendu au sens large.",
+                "concepts": {
+                    "polity": "Polity comme espaces des activités et des conflits autour de la question du gouvernement et de la gouvernance de la société.",
+                    "politics": "Politics comme activité politique, engagement et exercice de la profession politique.",
+                    "policy": "Policy comme action publique, politique publique dans un secteur particulier."
+                },
+                "goals": [
+                    "Étudier les structures de pouvoir, les modes de gouvernance et les relations entre l’État et la société.",
+                    "Analyser comment les croyances et pratiques influencent le pouvoir.",
+                    "Comprendre le fonctionnement politique réel et quotidien par l'analyse contextualisée des interactions.",
+                    "Examiner la dynamique des rapports de force à partir d'observations ethnographiques.",
+                    "Comprendre la diversité des formes d'organisations politiques et les dynamiques de changement."
+                ]
+            },
+            "development": {
+                "title": "Développement durable et inclusif",
+                "intro": "Le LAPODEV en tant qu’Interface entre le Monde universitaire et la Société congolaise servirait pour élaborer des stratégies plus efficaces et inclusives.",
+                "goals": [
+                    "Comprendre les causes profondes et problèmes du sous-développement (inégalités, conflits, gouvernance).",
+                    "Concevoir des stratégies, projets et programmes de développement plus adaptés au contexte local.",
+                    "Renforcer la participation citoyenne en impliquant les communautés locales.",
+                    "Évaluer l’impact réel des projets et programmes de développement sur les populations.",
+                    "Contribuer à la consolidation de la paix et de la sécurité par le développement."
+                ]
+            },
+            "vulnerabilities": {
+                "title": "Analyse des Vulnérabilités",
+                "intro": "Identifier et étudier les groupes sociaux exposés aux risques.",
+                "goals": [
+                    "Analyser et prendre en compte la vulnérabilité pour une prise en charge holistique.",
+                    "Mieux comprendre les inégalités et les facteurs qui augmentent les risques.",
+                    "Identifier et étudier les groupes sociaux dits « vulnérables »."
+                ],
+                "groups": {
+                    "children": "Enfants en situation difficile (abandonnés, de la rue, handicap, conflits armés).",
+                    "minorities": "Peuples autochtones, minorités ethniques, raciales ou religieuses victimes de discrimination.",
+                    "women": "Femmes en situation difficile (filles-mères, battues, violées, veuves).",
+                    "handicap_hiv_lgbt": "Personnes avec handicap, vivant avec le VIH et personnes LGBT+.",
+                    "displaced": "Déplacés internes, réfugiés, personnes en pauvreté extrême et sans-abri."
+                }
+            }
+        },
+        "axes": {
+            "title": "Axes & Thèmes de Recherches",
+            "items": [
+                "Objet politique",
+                "Développement inclusif et durable",
+                "Vulnérabilités",
+                "Santé et Éducation",
+                "Patrimoine culturel / Environnement",
+                "Genre et Sexualité",
+                "Questions foncières et ressources naturelles",
+                "Communication, médias et langage",
+                "Questions juridiques et coutumières",
+                "Questions philosophiques et religieuses"
+            ]
+        },
+        "consultancy": {
+            "title": "Consultance",
+            "items": [
+                "Projets et programmes de développement, aide humanitaire",
+                "Politiques publiques et gouvernance politique, conseils juridiques",
+                "Analyse des vulnérabilités et des résiliences communautaires",
+                "Communication, médias et langage",
+                "Éthique professionnelle, accompagnement psychosocial",
+                "Protection du patrimoine, environnement et biodiversité"
+            ]
+        }
     }
 }

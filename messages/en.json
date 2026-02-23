@@ -100,5 +100,82 @@
             "o7": "Organize and lead teachings, trainings and internships on an individual and collective basis for capacity building and academic succession in the Democratic Republic of Congo",
             "o8": "Build and maintain partnerships and collaborations with Universities, Centers and Research Institutes at national and international levels to stimulate and increase inward and outward mobility for internships, specific training and exchange of experiences"
         }
+    },
+    "ExpertisePage": {
+        "title": "Our Expertise",
+        "subtitle": "Research & Consultancy",
+        "research": {
+            "title": "Specialization Domains",
+            "politics": {
+                "title": "Political Domain",
+                "subtitle": "Homo politicus - Elucidation of the political object",
+                "intro": "Given the extraordinary semantic fluidity of the word 'politics', this concept is understood here in a broad sense.",
+                "concepts": {
+                    "polity": "Polity as spaces of activities and conflicts around the question of government and governance of society.",
+                    "politics": "Politics as political activity, engagement and exercise of the political profession.",
+                    "policy": "Policy as public action, public policy in a particular sector."
+                },
+                "goals": [
+                    "Study power structures, governance modes and relationships between the State and society.",
+                    "Analyze how beliefs and practices influence power and authority.",
+                    "Understand real and daily political functioning through contextualized interaction analysis.",
+                    "Examine the dynamics of political power relations through ethnographic observation.",
+                    "Understand the diversity of political organizations and dynamics of change."
+                ]
+            },
+            "development": {
+                "title": "Sustainable and Inclusive Development",
+                "intro": "LAPODEV as an Interface between the Academic World and Congolese Society would be pertinent for developing more effective strategies.",
+                "goals": [
+                    "Understand deep causes and problems of underdevelopment (inequalities, conflicts, governance).",
+                    "Design strategies, projects and development programs better adapted to local context.",
+                    "Strengthen citizen participation by involving local communities.",
+                    "Evaluate real impact of development projects and programs on populations.",
+                    "Contribute to peace consolidation and security through development."
+                ]
+            },
+            "vulnerabilities": {
+                "title": "Vulnerability Analysis",
+                "intro": "Identifying and studying social groups exposed to risks.",
+                "goals": [
+                    "Analyze and take into account vulnerability for holistic care.",
+                    "Better understand inequalities and factors that increase risks.",
+                    "Identify and study so-called 'vulnerable' social groups."
+                ],
+                "groups": {
+                    "children": "Children in difficult situations (abandoned, street children, handicap, armed conflict).",
+                    "minorities": "Indigenous peoples, ethnic, racial or religious minorities victims of discrimination.",
+                    "women": "Women in difficult situations (teen mothers, battered, raped, widows).",
+                    "handicap_hiv_lgbt": "People with disabilities, living with HIV and LGBT+ people.",
+                    "displaced": "IDPs, refugees, people in extreme poverty and homeless."
+                }
+            }
+        },
+        "axes": {
+            "title": "Research Axes & Themes",
+            "items": [
+                "Political Object",
+                "Inclusive and Sustainable Development",
+                "Vulnerabilities",
+                "Health and Education",
+                "Cultural Heritage / Environment",
+                "Gender and Sexuality",
+                "Land Issues and Natural Resources",
+                "Communication, Media and Language",
+                "Legal and Customary Questions",
+                "Philosophical and Religious Questions"
+            ]
+        },
+        "consultancy": {
+            "title": "Consultancy",
+            "items": [
+                "Development projects and programs, humanitarian aid",
+                "Public policies and political governance, legal advice",
+                "Vulnerability and community resilience analysis",
+                "Communication, Media and Language",
+                "Professional ethics, psychosocial support",
+                "Heritage protection, environment and biodiversity"
+            ]
+        }
     }
 }
