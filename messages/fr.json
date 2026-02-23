@@ -70,5 +70,35 @@
             "privacy": "Confidentialité",
             "legal": "Mentions Légales"
         }
+    },
+    "AboutPage": {
+        "title": "LAPODEV",
+        "subtitle": "Laboratoire d’Anthropologie Politique, du Développement & d’Analyse des Vulnérabilités",
+        "intro": {
+            "content": "Le LAPODEV est un Centre de recherche de pointe en sciences humaines et sociales se positionnant en tant qu’Interface entre le monde universitaire et la société. C’est un pôle d’excellence qui rassemble sur base volontaire, des enseignants-chercheurs, des chercheur-e-s et des expert-e-s venu-e-s de différents horizons disciplinaires pour se mettre au service de l’Homme et de la société. Le Centre jouit d’une autonomie et d’une indépendance administrative et financière.",
+            "social_object": "L’Objet social du LAPODEV est la recherche fondamentale et la recherche-action dans une perspective interdisciplinaire/ pluridisciplinaire et holistique."
+        },
+        "values": {
+            "title": "Valeurs et missions institutionnelles",
+            "content": "Le LAPODEV met l’Anthropos et la société au cœur de son action. Ses valeurs de rigueur, de qualité, de liberté de pensées, d’ouverture, de justice sociale et d’équité se retrouvent dans ses missions. Il se soucie de son intégrité en tant que communauté autonome de recherche, héritière d’une tradition scientifique de libre-examen, d’implication sociale et d’engagement citoyen.",
+            "missions_label": "Les cinq missions institutionnelles du LAPODEV sont :",
+            "m1": "Production de la recherche fondamentale et recherche-action ; Diffusion et vulgarisation de l’information scientifique",
+            "m2": "Consultance-Plaidoyer-Mobilisation citoyenne",
+            "m3": "Enseignement-Formation-Renforcement des capacités",
+            "m4": "Promotion de l’inclusion, l’émancipation et l’autonomisation des groupes vulnérables",
+            "m5": "Protection du patrimoine culturel, environnemental et de la biodiversité"
+        },
+        "objectives": {
+            "title": "Objectifs du LAPODEV",
+            "intro": "Pour réaliser son objet social et missions ci-dessus, le LAPODEV poursuit les objectifs spécifiques ci-après :",
+            "o1": "Organiser et mener des recherches scientifiques et de consulting sur les questions politiques, les questions de développement inclusif et durable, les questions sociales, culturelles et environnementales dans la longue durée et en variant les échelles (locale-globale)",
+            "o2": "Diffuser et restituer les résultats de la recherche par des publications, colloques, séminaires-cours, conférences, expositions artistiques et des ateliers scientifiques",
+            "o3": "Aider et conseiller à la décision politique, à la promotion de la bonne gouvernance, à la conception et planification, à la mise en œuvre et à l’évaluation des politiques publiques multi-sectorielles",
+            "o4": "Promouvoir l’inclusion sociale, l’émancipation et l’autonomisation des groupes vulnérables",
+            "o5": "Effectuer, pour le compte de tiers, moyennant contrat et rétribution, des recherches empiriques et analytiques, ainsi que la planification, la conception, la mise en œuvre et les évaluations de projets et de programmes de développement dans tous les domaines de la vie sociale, économique, culturelle, politique et environnementale",
+            "o6": "Assurer la protection du patrimoine culturel des peuples, de l’environnement et de la biodiversité",
+            "o7": "Organiser et animer des enseignements, de formations et de stages à titre individuel et collectif pour le renforcement des capacités et la relève académique en République Démocratique du Congo",
+            "o8": "Nouer et entretenir des partenariats et de collaborations avec les Universités, les Centres et les Instituts de recherches aux niveaux national et international afin de stimuler et d’accroître la mobilité entrante et sortante pour des stages, formations spécifiques et les échanges d’expériences"
+        }
     }
 }

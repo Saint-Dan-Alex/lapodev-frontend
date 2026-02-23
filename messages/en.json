@@ -70,5 +70,35 @@
             "privacy": "Privacy Policy",
             "legal": "Legal Notice"
         }
+    },
+    "AboutPage": {
+        "title": "LAPODEV",
+        "subtitle": "Laboratory of Political Anthropology, Development & Vulnerability Analysis",
+        "intro": {
+            "content": "LAPODEV is a cutting-edge research center in human and social sciences positioned as an interface between the academic world and society. It is a center of excellence that brings together, on a voluntary basis, teacher-researchers, researchers and experts from different disciplinary backgrounds to serve humanity and society. The center enjoys administrative and financial autonomy and independence.",
+            "social_object": "LAPODEV's social object is fundamental research and action research from an interdisciplinary / multidisciplinary and holistic perspective."
+        },
+        "values": {
+            "title": "Institutional Values and Missions",
+            "content": "LAPODEV puts humanity and society at the heart of its action. Its values of rigor, quality, freedom of thought, openness, social justice and equity are reflected in its missions. It is concerned about its integrity as an autonomous research community, heir to a scientific tradition of free inquiry, social involvement and civic engagement.",
+            "missions_label": "The five institutional missions of LAPODEV are:",
+            "m1": "Production of fundamental research and action research; Diffusion and popularization of scientific information",
+            "m2": "Consultancy-Advocacy-Citizen Mobilization",
+            "m3": "Teaching-Training-Capacity Building",
+            "m4": "Promotion of inclusion, empowerment and self-reliance of vulnerable groups",
+            "m5": "Protection of cultural, environmental heritage and biodiversity"
+        },
+        "objectives": {
+            "title": "LAPODEV Objectives",
+            "intro": "To achieve its social object and missions above, LAPODEV pursues the following specific objectives:",
+            "o1": "Organize and conduct scientific research and consulting on political issues, inclusive and sustainable development issues, social, cultural and environmental issues in the long term and by varying scales (local-global)",
+            "o2": "Disseminate and restore research results through publications, symposia, seminar-courses, conferences, artistic exhibitions and scientific workshops",
+            "o3": "Help and advise political decision-making, the promotion of good governance, the design and planning, the implementation and evaluation of multi-sectoral public policies",
+            "o4": "Promote social inclusion, emancipation and empowerment of vulnerable groups",
+            "o5": "Carry out, on behalf of third parties, subject to contract and remuneration, empirical and analytical research, as well as the planning, design, implementation and evaluations of development projects and programs in all areas of social, economic, cultural, political and environmental life",
+            "o6": "Ensure the protection of peoples' cultural heritage, the environment and biodiversity",
+            "o7": "Organize and lead teachings, trainings and internships on an individual and collective basis for capacity building and academic succession in the Democratic Republic of Congo",
+            "o8": "Build and maintain partnerships and collaborations with Universities, Centers and Research Institutes at national and international levels to stimulate and increase inward and outward mobility for internships, specific training and exchange of experiences"
+        }
     }
 }
