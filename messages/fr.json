@@ -1,0 +1,51 @@
+{
+    "HomePage": {
+        "title": "LAPODEV",
+        "description": "Laboratoire de Politique et Développement - Université de Kinshasa",
+        "hero": {
+            "title": "Recherche Scientifique & Expertise en Développement",
+            "subtitle": "Au service de la gouvernance et des politiques publiques en RDC."
+        }
+    },
+    "Navigation": {
+        "home": "Accueil",
+        "about": {
+            "title": "LAPODEV en poche",
+            "identity": "Identité et objet social",
+            "values": "Valeurs et missions institutionnelles",
+            "objectives": "Objectifs du LAPODEV"
+        },
+        "expertise": {
+            "title": "Notre Expertise : Recherche & Consultance",
+            "research": "Recherche",
+            "research_domains": "Domaines initiaux de spécialisation",
+            "research_axes": "Axes des recherches",
+            "consultancy": "Consultance",
+            "consultancy_projects": "En projets et programmes de développement",
+            "consultancy_policies": "En politiques publiques et Gouvernance politique",
+            "consultancy_resilience": "En analyse des vulnérabilités et résilience communautaire"
+        },
+        "governance": {
+            "title": "Gouvernance du LAPODEV",
+            "chart": "Organigramme",
+            "board": "Membres du Conseil d’Administration"
+        },
+        "resources": {
+            "title": "Ressources",
+            "members": "Humaines : Présentation des Membres à Télécharger",
+            "forms": "Documents et Formulaires à Télécharger",
+            "membership": "Bulletin d’adhésion : Devenir membre du LAPODEV",
+            "donation": "Bulletin de souscription et compte bancaire : pour faire un don",
+            "archives": "Archives filmographiques et photographiques"
+        },
+        "news": {
+            "title": "Suivre nos activités et actualités",
+            "past": "Événements passés",
+            "current": "Événements en cours",
+            "upcoming": "Événements à venir",
+            "publications": "Publications récentes des membres à Télécharger"
+        },
+        "contact": "Contactez-nous",
+        "join": "Adhérez aujourd'hui"
+    }
+}

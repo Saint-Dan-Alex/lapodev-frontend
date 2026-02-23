@@ -1,0 +1,51 @@
+{
+    "HomePage": {
+        "title": "LAPODEV",
+        "description": "Laboratory of Politics and Development - University of Kinshasa",
+        "hero": {
+            "title": "Scientific Research & Development Expertise",
+            "subtitle": "Serving governance and public policies in DRC."
+        }
+    },
+    "Navigation": {
+        "home": "Home",
+        "about": {
+            "title": "LAPODEV in Brief",
+            "identity": "Identity and Purpose",
+            "values": "Institutional Values & Missions",
+            "objectives": "LAPODEV Objectives"
+        },
+        "expertise": {
+            "title": "Our Expertise: Research & Consultancy",
+            "research": "Research",
+            "research_domains": "Initial Specialization Domains",
+            "research_axes": "Research Axes",
+            "consultancy": "Consultancy",
+            "consultancy_projects": "Development Projects & Programs",
+            "consultancy_policies": "Public Policies & Governance",
+            "consultancy_resilience": "Vulnerability & Resilience Analysis"
+        },
+        "governance": {
+            "title": "LAPODEV Governance",
+            "chart": "Organizational Chart",
+            "board": "Board of Directors"
+        },
+        "resources": {
+            "title": "Resources",
+            "members": "Human: Member Profiles to Download",
+            "forms": "Documents & Forms to Download",
+            "membership": "Membership Bulletin: Join LAPODEV",
+            "donation": "Subscription Bulletin & Bank Account: Donate",
+            "archives": "Film & Photo Archives"
+        },
+        "news": {
+            "title": "Follow our activities & news",
+            "past": "Past Events",
+            "current": "Current Events",
+            "upcoming": "Upcoming Events",
+            "publications": "Recent Publications to Download"
+        },
+        "contact": "Contact Us",
+        "join": "Join Today"
+    }
+}
