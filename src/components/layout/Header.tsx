@@ -109,14 +109,14 @@ export function Header() {
         )}>
             <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
                 {/* Logo Section */}
-                <div className="flex items-center gap-8">
-                    <Link href="/" className="transition-transform hover:scale-105 active:scale-95">
+                <div className="flex items-center gap-4 xl:gap-8">
+                    <Link href="/" className="transition-transform hover:scale-105 active:scale-95 shrink-0">
                         <Logo variant={isScrolled ? "default" : "light"} />
                     </Link>
                 </div>
 
                 {/* Center Navigation - Desktop */}
-                <div className="hidden flex-1 justify-center lg:flex ml-1">
+                <div className="hidden flex-1 justify-center xl:flex ml-1">
                     <NavigationMenu>
                         <NavigationMenuList className="gap-0">
                             {/* Home */}
@@ -180,7 +180,7 @@ export function Header() {
                 </div>
 
                 {/* Right Section: Button & i18n */}
-                <div className="hidden items-center gap-2 lg:flex">
+                <div className="hidden items-center gap-2 xl:flex">
                     <LanguageSwitcher variant={isScrolled ? "default" : "light"} />
                     <div className={cn(
                         "border-l pl-2 transition-colors",
@@ -201,7 +201,7 @@ export function Header() {
                 </div>
 
                 {/* Mobile View */}
-                <div className="flex items-center gap-3 lg:hidden">
+                <div className="flex items-center gap-3 xl:hidden">
                     <LanguageSwitcher variant={isScrolled ? "default" : "light"} />
                     <Sheet>
                         <SheetTrigger asChild>

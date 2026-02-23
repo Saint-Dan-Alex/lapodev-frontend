@@ -73,7 +73,7 @@ export default function GovernancePage() {
                         </div>
 
                         {/* Mid Row with 3 Boxes */}
-                        <div id="board" className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full relative">
+                        <div id="board" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full relative">
                             {/* Decorative Lines for Desktop */}
                             <div className="hidden lg:block absolute -top-12 left-1/2 -translate-x-1/2 w-px h-12 bg-primary/20"></div>
 
