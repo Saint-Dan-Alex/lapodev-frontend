@@ -153,7 +153,7 @@ export function Header() {
                                                     title={item.title}
                                                     href={item.href}
                                                 >
-                                                    {'description' in item ? item.description : null}
+                                                    {(item as any).description}
                                                 </ListItem>
                                             ))}
                                         </ul>
