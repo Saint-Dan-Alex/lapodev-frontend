@@ -132,27 +132,27 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
                                         )}
                                     </AnimatePresence>
 
-                                    <div className="hidden lg:flex justify-center relative">
+                                    <div className="hidden lg:flex justify-end relative">
                                         <AnimatePresence mode="wait">
                                             {selectedIndex === index && (
                                                 <motion.div
-                                                    className="relative w-full max-w-md aspect-square"
-                                                    initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-                                                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                                                    exit={{ opacity: 0, scale: 0.9, rotate: 5 }}
+                                                    className="relative w-full max-w-sm aspect-square"
+                                                    initial={{ opacity: 0, scale: 0.8, x: 20 }}
+                                                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                                                    exit={{ opacity: 0, scale: 0.9, x: 10 }}
                                                     transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                                                 >
-                                                    <div className="absolute inset-0 border-[60px] border-white/5 rounded-[4rem] animate-pulse"></div>
-                                                    <div className="absolute inset-10 border-[1px] border-white/20 rounded-[3rem]"></div>
+                                                    <div className="absolute inset-0 border-[40px] border-white/5 rounded-[3rem] animate-pulse"></div>
+                                                    <div className="absolute inset-8 border-[1px] border-white/20 rounded-[2.5rem]"></div>
                                                     <div className="absolute inset-0 flex items-center justify-center">
                                                         <div className="relative">
-                                                            <div className="text-[18rem] text-white opacity-10 font-serif font-black select-none pointer-events-none">L</div>
+                                                            <div className="text-[12rem] text-white opacity-10 font-serif font-black select-none pointer-events-none">L</div>
                                                             <div className="absolute inset-0 flex items-center justify-center">
-                                                                <div className="grid grid-cols-2 gap-6 p-10 bg-white/5 backdrop-blur-xl rounded-[3rem] border border-white/10 shadow-3xl">
-                                                                    <div className="bg-white/10 p-6 rounded-2xl hover:bg-white/20 transition-colors"><BarChart3 className="h-10 w-10 text-[#a855f7]" /></div>
-                                                                    <div className="bg-white/10 p-6 rounded-2xl hover:bg-white/20 transition-colors"><Users className="h-10 w-10 text-[#fdb913]" /></div>
-                                                                    <div className="bg-white/10 p-6 rounded-2xl hover:bg-white/20 transition-colors"><BookOpen className="h-10 w-10 text-[#ee1c25]" /></div>
-                                                                    <div className="bg-white/10 p-6 rounded-2xl hover:bg-white/20 transition-colors"><LandmarkIcon className="h-10 w-10 text-white" /></div>
+                                                                <div className="grid grid-cols-2 gap-4 p-8 bg-white/5 backdrop-blur-2xl rounded-[2.5rem] border border-white/10 shadow-3xl">
+                                                                    <div className="bg-white/10 p-5 rounded-xl hover:bg-white/20 transition-colors"><BarChart3 className="h-8 w-8 text-[#a855f7]" /></div>
+                                                                    <div className="bg-white/10 p-5 rounded-xl hover:bg-white/20 transition-colors"><Users className="h-8 w-8 text-[#fdb913]" /></div>
+                                                                    <div className="bg-white/10 p-5 rounded-xl hover:bg-white/20 transition-colors"><BookOpen className="h-8 w-8 text-[#ee1c25]" /></div>
+                                                                    <div className="bg-white/10 p-5 rounded-xl hover:bg-white/20 transition-colors"><LandmarkIcon className="h-8 w-8 text-white" /></div>
                                                                 </div>
                                                             </div>
                                                         </div>
