@@ -25,7 +25,7 @@ export default function AutoScrollCarousel({
         <div className={`overflow-hidden ${className}`} ref={emblaRef}>
             <div className="flex">
                 {React.Children.map(children, (child, index) => (
-                    <div key={index} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] px-3 md:px-4">
+                    <div key={index} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] px-2 sm:px-3 md:px-4">
                         {child}
                     </div>
                 ))}

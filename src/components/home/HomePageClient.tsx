@@ -70,9 +70,9 @@ export default function HomePageClient({ newsData, pubsData }: HomePageClientPro
             <HeroCarousel slides={slides} />
 
             {/* Stats Section */}
-            <section className="bg-slate-50 py-24 relative overflow-hidden">
+            <section className="bg-slate-50 py-12 sm:py-24 relative overflow-hidden">
                 <div className="container mx-auto px-4 md:px-8 relative z-10">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 mb-32">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 mb-20 sm:mb-32">
                         <StatsCounter
                             label={t('stats.research_projects')}
                             value="25+"
@@ -95,14 +95,14 @@ export default function HomePageClient({ newsData, pubsData }: HomePageClientPro
 
                     {/* Latest News Preview */}
                     <div className="mb-24">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-16">
                             <div className="max-w-xl">
-                                <h2 className="text-5xl font-black text-gray-900 mb-6 uppercase tracking-tighter italic leading-none">
+                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-6 uppercase tracking-tighter italic leading-none">
                                     {t('news_section.title')}
                                 </h2>
-                                <p className="text-slate-500 font-medium text-lg">{t('news_section.subtitle')}</p>
+                                <p className="text-slate-500 font-medium text-base sm:text-lg">{t('news_section.subtitle')}</p>
                             </div>
-                            <Button variant="link" asChild className="text-[#5b1887] font-black uppercase tracking-widest text-sm gap-2 p-0 h-auto hover:gap-4 transition-all">
+                            <Button variant="link" asChild className="text-[#5b1887] font-black uppercase tracking-widest text-sm gap-2 p-0 h-auto hover:gap-4 transition-all w-fit">
                                 <Link href="/news">
                                     {t('news_section.view_all')}
                                     <ArrowRight className="h-5 w-5" />
@@ -112,7 +112,7 @@ export default function HomePageClient({ newsData, pubsData }: HomePageClientPro
 
                         <AutoScrollCarousel autoplayDelay={4000}>
                             {newsData.map((item, i) => (
-                                <div key={i} className="group bg-white rounded-[2.5rem] p-10 border border-slate-100 hover:shadow-2xl hover:shadow-primary/5 transition-all h-full flex flex-col">
+                                <div key={i} className="group bg-white rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 border border-slate-100 hover:shadow-2xl hover:shadow-primary/5 transition-all h-full flex flex-col">
                                     <div className="flex items-center gap-2 text-[#5b1887] font-black text-[11px] uppercase tracking-widest mb-8">
                                         <Calendar className="h-4 w-4" />
                                         {item.date}
@@ -134,15 +134,15 @@ export default function HomePageClient({ newsData, pubsData }: HomePageClientPro
                     </div>
 
                     {/* Featured Publications Preview */}
-                    <div className="bg-white rounded-[4rem] p-12 md:p-20 border border-slate-100 shadow-2xl shadow-slate-200/50">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20">
+                    <div className="bg-white rounded-[2rem] sm:rounded-[4rem] p-6 sm:p-12 md:p-20 border border-slate-100 shadow-2xl shadow-slate-200/50">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-20">
                             <div className="max-w-xl">
-                                <h2 className="text-5xl font-black text-gray-900 mb-6 uppercase tracking-tighter italic leading-none">
+                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-6 uppercase tracking-tighter italic leading-none">
                                     {t('publications_section.title')}
                                 </h2>
-                                <p className="text-slate-500 font-medium text-lg">{t('publications_section.subtitle')}</p>
+                                <p className="text-slate-500 font-medium text-base sm:text-lg">{t('publications_section.subtitle')}</p>
                             </div>
-                            <Button variant="link" asChild className="text-[#5b1887] font-black uppercase tracking-widest text-sm gap-2 p-0 h-auto hover:gap-4 transition-all">
+                            <Button variant="link" asChild className="text-[#5b1887] font-black uppercase tracking-widest text-sm gap-2 p-0 h-auto hover:gap-4 transition-all w-fit">
                                 <Link href="/news">
                                     {t('publications_section.view_all')}
                                     <ArrowRight className="h-5 w-5" />
@@ -152,7 +152,7 @@ export default function HomePageClient({ newsData, pubsData }: HomePageClientPro
 
                         <AutoScrollCarousel autoplayDelay={5000} options={{ loop: true, align: 'start' }}>
                             {pubsData.map((pub, i) => (
-                                <div key={i} className="flex flex-col p-8 rounded-[2.5rem] border border-slate-50 bg-slate-50/30 hover:bg-white hover:border-primary/20 hover:shadow-xl transition-all group h-full">
+                                <div key={i} className="flex flex-col p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] border border-slate-50 bg-slate-50/30 hover:bg-white hover:border-primary/20 hover:shadow-xl transition-all group h-full">
                                     <div className="h-16 w-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all mb-8 shadow-inner">
                                         <FileText className="h-8 w-8" />
                                     </div>
