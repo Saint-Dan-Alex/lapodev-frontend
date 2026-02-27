@@ -396,6 +396,7 @@
                 {
                     "title": "Assemblée Générale constitutive du LAPODEV",
                     "date": "2 Février 2025",
+                    "isoDate": "2025-02-02",
                     "location": "Kinshasa",
                     "category": "past",
                     "description": "Tenue de l’Assemblée Générale constitutive du LAPODEV comme Asbl d’intérêt général et adoption de ses Statuts."
@@ -403,6 +404,7 @@
                 {
                     "title": "Soutien institutionnel du Département d’Anthropologie",
                     "date": "2 Mai 2025",
+                    "isoDate": "2025-05-02",
                     "location": "UNIKIN",
                     "category": "past",
                     "description": "Obtention du soutien institutionnels du Département d’Anthropologie de l'UNIKIN au LAPODEV."
@@ -410,6 +412,7 @@
                 {
                     "title": "Mission de Recherche ethnographique (PAVE-Sank)",
                     "date": "21 Juillet - 6 Août 2025",
+                    "isoDate": "2025-07-21",
                     "location": "Sankuru (RDC)",
                     "category": "past",
                     "description": "Réalisation de la Mission de Recherche ethnographique « Patrimoine Audiovisuel et Ethnographie au Sankuru » par D. MOTTIER, B. OSOKONDA et J. INDEKA."
@@ -417,6 +420,7 @@
                 {
                     "title": "Création officielle du Centre de Recherche",
                     "date": "3 Septembre 2025",
+                    "isoDate": "2025-09-03",
                     "location": "UNIKIN",
                     "category": "past",
                     "description": "Création officielle et autorisation de fonctionnement du LAPODEV par Décision Rectorale n°0412 UNIKIN/R/2025."
@@ -424,6 +428,7 @@
                 {
                     "title": "Assemblée Générale Ordinaire du LAPODEV",
                     "date": "25 Octobre 2025",
+                    "isoDate": "2025-10-25",
                     "location": "Centre Liloba, Kinshasa",
                     "category": "past",
                     "description": "Tenue de l’Assemblée Générale Ordinaire et approbation de la désignation des animateurs des organes."

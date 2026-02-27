@@ -386,6 +386,7 @@
                 {
                     "title": "Constitutive General Assembly of LAPODEV",
                     "date": "February 2, 2025",
+                    "isoDate": "2025-02-02",
                     "location": "Kinshasa",
                     "category": "past",
                     "description": "Holding of the Constitutive General Assembly of LAPODEV as a non-profit of general interest and adoption of its Statutes."
@@ -393,6 +394,7 @@
                 {
                     "title": "Institutional support from the Anthropology Department",
                     "date": "May 2, 2025",
+                    "isoDate": "2025-05-02",
                     "location": "UNIKIN",
                     "category": "past",
                     "description": "Obtaining institutional support from the Anthropology Department of UNIKIN for LAPODEV."
@@ -400,6 +402,7 @@
                 {
                     "title": "Ethnographic Research Mission (PAVE-Sank)",
                     "date": "July 21 - August 6, 2025",
+                    "isoDate": "2025-07-21",
                     "location": "Sankuru (DRC)",
                     "category": "past",
                     "description": "Realization of the Ethnographic Research Mission 'Audiovisual Heritage and Ethnography in Sankuru' by D. MOTTIER, B. OSOKONDA and J. INDEKA."
@@ -407,6 +410,7 @@
                 {
                     "title": "Official Creation of the Research Center",
                     "date": "September 3, 2025",
+                    "isoDate": "2025-09-03",
                     "location": "UNIKIN",
                     "category": "past",
                     "description": "Official creation and authorization of LAPODEV by Rectoral Decision n°0412 UNIKIN/R/2025."
@@ -414,6 +418,7 @@
                 {
                     "title": "Ordinary General Assembly of LAPODEV",
                     "date": "October 25, 2025",
+                    "isoDate": "2025-10-25",
                     "location": "Liloba Center, Kinshasa",
                     "category": "past",
                     "description": "Holding of the Ordinary General Assembly and approval of the designation of organ leaders."
@@ -421,6 +426,7 @@
                 {
                     "title": "Taking Office of the Board of Directors",
                     "date": "November 20, 2025",
+                    "isoDate": "2025-11-20",
                     "location": "Kinshasa",
                     "category": "past",
                     "description": "Designation of the leaders of the LAPODEV Board of Directors and their taking office."

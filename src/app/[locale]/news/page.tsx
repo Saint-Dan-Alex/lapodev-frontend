@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import {
-    Calendar,
+    Calendar as CalendarIcon,
     ArrowRight,
     FileText,
     Download,
@@ -11,17 +11,25 @@ import {
     Filter,
     Clock,
     MapPin,
+    ChevronLeft,
     ChevronRight,
-    TrendingUp
+    TrendingUp,
+    X
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface NewsEvent {
     id: number;
     title: string;
     date: string;
+    isoDate: string;
     location: string;
     category: 'past' | 'current' | 'upcoming';
     description: string;
@@ -39,11 +47,26 @@ interface Publication {
 export default function NewsPage() {
     const t = useTranslations('NewsPage');
     const [activeEventTab, setActiveEventTab] = useState<'all' | 'past' | 'current' | 'upcoming'>('all');
+    const [selectedEvent, setSelectedEvent] = useState<NewsEvent | null>(null);
+    const [currentDate, setCurrentDate] = useState(new Date());
+
+    // Embla Carousel setup
+    const [emblaRef, emblaApi] = useEmblaCarousel({
+        loop: true,
+        align: 'start',
+        slidesToScroll: 1,
+        breakpoints: {
+            '(min-width: 768px)': { slidesToScroll: 2 },
+            '(min-width: 1024px)': { slidesToScroll: 3 }
+        }
+    }, [Autoplay({ delay: 5000, stopOnInteraction: false })]);
+
+    const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+    const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
     // Use raw data from translations for events and publications
     const eventsData = t.raw('data.events') as any[];
     const publicationsData = t.raw('data.publications') as any[];
-
 
     const events: NewsEvent[] = eventsData.map((e, i) => ({
         ...e,
@@ -68,6 +91,48 @@ export default function NewsPage() {
             default: return 'bg-blue-500/10 text-blue-600 border-blue-200';
         }
     };
+
+    // Calendar logic
+    const daysInMonth = (year: number, month: number) => new Date(year, month + 1, 0).getDate();
+    const firstDayOfMonth = (year: number, month: number) => {
+        const day = new Date(year, month, 1).getDay();
+        return day === 0 ? 6 : day - 1; // Adjust for Monday start
+    };
+
+    const renderCalendar = () => {
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth();
+        const days = [];
+        const totalDays = daysInMonth(year, month);
+        const startDay = firstDayOfMonth(year, month);
+
+        // Previous month days
+        const prevMonthTotalDays = daysInMonth(year, month - 1);
+        for (let i = startDay - 1; i >= 0; i--) {
+            days.push({ day: prevMonthTotalDays - i, currentMonth: false });
+        }
+
+        // Current month days
+        for (let i = 1; i <= totalDays; i++) {
+            days.push({ day: i, currentMonth: true });
+        }
+
+        // Next month days
+        const remainingCells = 42 - days.length;
+        for (let i = 1; i <= remainingCells; i++) {
+            days.push({ day: i, currentMonth: false });
+        }
+
+        return days;
+    };
+
+    const getEventsForDate = (day: number, isCurrentMonth: boolean) => {
+        if (!isCurrentMonth) return [];
+        const formattedDate = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        return events.filter(e => e.isoDate === formattedDate);
+    };
+
+    const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
 
     return (
         <main className="min-h-screen bg-[#fafafa]">
@@ -121,75 +186,183 @@ export default function NewsPage() {
                     </div>
 
                     {/* EVENTS CONTENT */}
-                    <TabsContent value="events" className="mt-0 outline-none">
-                        <div className="flex flex-wrap gap-3 mb-12">
-                            {['all', 'current', 'upcoming', 'past'].map((tab) => (
-                                <button
-                                    key={tab}
-                                    onClick={() => setActiveEventTab(tab as any)}
-                                    className={`px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all border ${activeEventTab === tab
-                                        ? 'bg-[#5b1887] text-white border-[#5b1887] shadow-lg shadow-purple-900/20'
-                                        : 'bg-white text-slate-500 border-slate-200 hover:border-primary/30'
-                                        }`}
-                                >
-                                    {t(`events.${tab}`)}
-                                </button>
-                            ))}
-                        </div>
+                    <TabsContent value="events" className="mt-0 outline-none space-y-16">
+                        {/* CALENDAR & INFO SECTION */}
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                            {/* MINI CALENDAR */}
+                            <div className="lg:col-span-4 bg-white rounded-[2.5rem] p-8 shadow-2xl shadow-purple-900/5 border border-slate-100">
+                                <div className="flex items-center justify-between mb-8">
+                                    <h3 className="font-black uppercase tracking-widest text-xs text-slate-400">Calendrier</h3>
+                                    <div className="flex gap-2">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="h-8 w-8 rounded-full"
+                                            onClick={() => {
+                                                const d = new Date(currentDate);
+                                                d.setMonth(d.getMonth() - 1);
+                                                setCurrentDate(d);
+                                            }}
+                                        >
+                                            <ChevronLeft className="h-4 w-4" />
+                                        </Button>
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="h-8 w-8 rounded-full"
+                                            onClick={() => {
+                                                const d = new Date(currentDate);
+                                                d.setMonth(d.getMonth() + 1);
+                                                setCurrentDate(d);
+                                            }}
+                                        >
+                                            <ChevronRight className="h-4 w-4" />
+                                        </Button>
+                                    </div>
+                                </div>
 
-                        {filteredEvents.length > 0 ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {filteredEvents.map((event) => (
-                                    <div key={event.id} className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all duration-500 flex flex-col h-full">
-                                        {/* Image Placeholder */}
-                                        <div className="h-52 bg-slate-100 relative overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-[#5b1887]/5 to-[#8b2fc9]/20 group-hover:scale-110 transition-transform duration-700"></div>
-                                            <div className="absolute top-6 left-6">
-                                                <Badge className={`px-4 py-1.5 border backdrop-blur-md font-black uppercase tracking-widest text-[10px] ${getStatusColor(event.category)}`}>
-                                                    {t(`events.${event.category}`)}
-                                                </Badge>
-                                            </div>
-                                            <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity">
-                                                <Calendar className="w-24 h-24 text-slate-900" />
-                                            </div>
-                                        </div>
+                                <div className="text-center mb-6">
+                                    <span className="text-2xl font-black uppercase tracking-tighter text-[#5b1887]">
+                                        {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
+                                    </span>
+                                </div>
 
-                                        <div className="p-8 flex flex-col flex-grow">
-                                            <div className="flex items-center gap-2 text-[#5b1887] font-black text-[10px] uppercase tracking-[0.2em] mb-4">
-                                                <Calendar className="h-3.5 w-3.5" />
-                                                {event.date}
-                                            </div>
+                                <div className="grid grid-cols-7 gap-2 mb-4 text-center">
+                                    {['L', 'M', 'M', 'J', 'V', 'S', 'D'].map((d, i) => (
+                                        <span key={i} className="text-[10px] font-black text-slate-300 uppercase">{d}</span>
+                                    ))}
+                                </div>
 
-                                            <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors leading-tight line-clamp-2">
-                                                {event.title}
-                                            </h3>
+                                <div className="grid grid-cols-7 gap-2">
+                                    {renderCalendar().map((item, idx) => {
+                                        const dateEvents = getEventsForDate(item.day, item.currentMonth);
+                                        const hasEvents = dateEvents.length > 0;
 
-                                            <p className="text-slate-500 text-sm leading-relaxed mb-8 flex-grow line-clamp-3">
-                                                {event.description}
-                                            </p>
+                                        return (
+                                            <button
+                                                key={idx}
+                                                onClick={() => hasEvents && setSelectedEvent(dateEvents[0])}
+                                                disabled={!hasEvents}
+                                                className={cn(
+                                                    "aspect-square rounded-xl text-xs font-bold flex items-center justify-center transition-all relative",
+                                                    item.currentMonth ? "text-slate-700" : "text-slate-300 opacity-20",
+                                                    hasEvents && "bg-[#5b1887] text-white shadow-lg shadow-purple-900/30 cursor-pointer hover:scale-110",
+                                                    !hasEvents && "hover:bg-slate-50"
+                                                )}
+                                            >
+                                                {item.day}
+                                                {hasEvents && (
+                                                    <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-400 rounded-full border-2 border-[#5b1887]"></span>
+                                                )}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            </div>
 
-                                            <div className="flex items-center gap-4 pt-6 border-t border-slate-50">
-                                                <div className="flex items-center gap-2 text-slate-400 text-xs font-medium uppercase tracking-wider">
-                                                    <MapPin className="h-3.5 w-3.5" />
-                                                    {event.location}
+                            {/* ACTIVITÉS / CAROUSEL */}
+                            <div className="lg:col-span-8 flex flex-col gap-8">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex flex-wrap gap-3">
+                                        {['all', 'current', 'upcoming', 'past'].map((tab) => (
+                                            <button
+                                                key={tab}
+                                                onClick={() => setActiveEventTab(tab as any)}
+                                                className={cn(
+                                                    "px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all border",
+                                                    activeEventTab === tab
+                                                        ? 'bg-[#5b1887] text-white border-[#5b1887] shadow-lg shadow-purple-900/20'
+                                                        : 'bg-white text-slate-500 border-slate-200 hover:border-primary/30'
+                                                )}
+                                            >
+                                                {t(`events.${tab}`)}
+                                            </button>
+                                        ))}
+                                    </div>
+
+                                    <div className="hidden sm:flex gap-2">
+                                        <Button
+                                            variant="outline"
+                                            size="icon"
+                                            className="h-12 w-12 rounded-2xl border-slate-200 hover:bg-slate-50"
+                                            onClick={scrollPrev}
+                                        >
+                                            <ChevronLeft className="h-5 w-5" />
+                                        </Button>
+                                        <Button
+                                            variant="outline"
+                                            size="icon"
+                                            className="h-12 w-12 rounded-2xl border-slate-200 hover:bg-slate-50"
+                                            onClick={scrollNext}
+                                        >
+                                            <ChevronRight className="h-5 w-5" />
+                                        </Button>
+                                    </div>
+                                </div>
+
+                                {filteredEvents.length > 0 ? (
+                                    <div className="overflow-hidden" ref={emblaRef}>
+                                        <div className="flex">
+                                            {filteredEvents.map((event) => (
+                                                <div key={event.id} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_50%] pl-6 first:pl-0 min-w-0">
+                                                    <div className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 transition-all duration-500 flex flex-col h-full">
+                                                        {/* Image Placeholder */}
+                                                        <div className="h-52 bg-slate-100 relative overflow-hidden">
+                                                            <div className="absolute inset-0 bg-gradient-to-br from-[#5b1887]/5 to-[#8b2fc9]/20 group-hover:scale-110 transition-transform duration-700"></div>
+                                                            <div className="absolute top-6 left-6">
+                                                                <Badge className={cn("px-4 py-1.5 border backdrop-blur-md font-black uppercase tracking-widest text-[10px]", getStatusColor(event.category))}>
+                                                                    {t(`events.${event.category}`)}
+                                                                </Badge>
+                                                            </div>
+                                                            <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity">
+                                                                <CalendarIcon className="w-24 h-24 text-slate-900" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="p-8 flex flex-col flex-grow">
+                                                            <div className="flex items-center gap-2 text-[#5b1887] font-black text-[10px] uppercase tracking-[0.2em] mb-4">
+                                                                <CalendarIcon className="h-3.5 w-3.5" />
+                                                                {event.date}
+                                                            </div>
+
+                                                            <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors leading-tight line-clamp-2">
+                                                                {event.title}
+                                                            </h3>
+
+                                                            <p className="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow line-clamp-2">
+                                                                {event.description}
+                                                            </p>
+
+                                                            <div className="flex items-center gap-4 pt-6 border-t border-slate-50">
+                                                                <div className="flex items-center gap-2 text-slate-400 text-xs font-medium uppercase tracking-wider">
+                                                                    <MapPin className="h-3.5 w-3.5" />
+                                                                    {event.location}
+                                                                </div>
+                                                                <Button
+                                                                    variant="ghost"
+                                                                    onClick={() => setSelectedEvent(event)}
+                                                                    className="ml-auto rounded-full group/btn text-[#5b1887] font-black uppercase text-[10px] tracking-widest gap-2"
+                                                                >
+                                                                    {t('events.read_more')}
+                                                                    <ChevronRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                                                                </Button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <Button variant="ghost" className="ml-auto rounded-full group/btn text-[#5b1887] font-black uppercase text-[10px] tracking-widest gap-2">
-                                                    {t('events.read_more')}
-                                                    <ChevronRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                                                </Button>
-                                            </div>
+                                            ))}
                                         </div>
                                     </div>
-                                ))}
+                                ) : (
+                                    <div className="bg-white rounded-[2.5rem] p-20 text-center border border-dashed border-slate-300">
+                                        <Clock className="h-16 w-16 text-slate-200 mx-auto mb-6" />
+                                        <h3 className="text-2xl font-black text-slate-400 uppercase tracking-tighter">
+                                            {t('events.no_events')}
+                                        </h3>
+                                    </div>
+                                )}
                             </div>
-                        ) : (
-                            <div className="bg-white rounded-[2.5rem] p-20 text-center border border-dashed border-slate-300">
-                                <Clock className="h-16 w-16 text-slate-200 mx-auto mb-6" />
-                                <h3 className="text-2xl font-black text-slate-400 uppercase tracking-tighter">
-                                    {t('events.no_events')}
-                                </h3>
-                            </div>
-                        )}
+                        </div>
                     </TabsContent>
 
                     {/* PUBLICATIONS CONTENT */}
@@ -263,6 +436,58 @@ export default function NewsPage() {
                     </div>
                 </div>
             </div>
+
+            {/* EVENT DETAIL MODAL */}
+            <Dialog open={!!selectedEvent} onOpenChange={(open) => !open && setSelectedEvent(null)}>
+                <DialogContent className="sm:max-w-2xl p-0 overflow-hidden rounded-[2.5rem] border-none shadow-2xl">
+                    {selectedEvent && (
+                        <div className="flex flex-col">
+                            {/* Header Image/Gradient */}
+                            <div className="h-48 bg-gradient-to-br from-[#5b1887] to-[#8b2fc9] relative">
+                                <div className="absolute top-8 left-8">
+                                    <Badge className={cn("px-4 py-1.5 border backdrop-blur-md font-black uppercase tracking-widest text-[10px]", getStatusColor(selectedEvent.category))}>
+                                        {t(`events.${selectedEvent.category}`)}
+                                    </Badge>
+                                </div>
+                                <div className="absolute -bottom-8 right-12 w-20 h-20 bg-white rounded-3xl shadow-xl flex items-center justify-center text-[#5b1887]">
+                                    <CalendarIcon className="w-10 h-10" />
+                                </div>
+                            </div>
+
+                            <div className="p-10 pt-12">
+                                <div className="flex items-center gap-2 text-[#5b1887] font-black text-xs uppercase tracking-[0.3em] mb-4">
+                                    <Clock className="h-4 w-4" />
+                                    {selectedEvent.date}
+                                </div>
+
+                                <DialogTitle className="text-3xl font-black text-gray-900 tracking-tighter uppercase mb-6 leading-tight">
+                                    {selectedEvent.title}
+                                </DialogTitle>
+
+                                <div className="flex items-center gap-2 text-slate-400 text-sm font-bold uppercase tracking-widest mb-8">
+                                    <MapPin className="h-4 w-4 text-primary" />
+                                    {selectedEvent.location}
+                                </div>
+
+                                <div className="prose prose-slate max-w-none mb-10">
+                                    <DialogDescription className="text-gray-600 text-lg leading-relaxed font-medium">
+                                        {selectedEvent.description}
+                                    </DialogDescription>
+                                </div>
+
+                                <div className="flex justify-end gap-4">
+                                    <Button
+                                        className="h-14 px-8 rounded-2xl bg-[#5b1887] hover:bg-[#8b2fc9] text-white font-black uppercase tracking-widest text-xs transition-all shadow-xl shadow-purple-900/20"
+                                        onClick={() => setSelectedEvent(null)}
+                                    >
+                                        Fermer
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </DialogContent>
+            </Dialog>
         </main>
     );
 }
