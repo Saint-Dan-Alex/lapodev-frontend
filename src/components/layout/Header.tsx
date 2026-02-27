@@ -21,8 +21,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 
 const ListItem = React.forwardRef<
     React.ElementRef<"a">,
-    React.ComponentPropsWithoutRef<"a"> & { title: string; href: string }
->(({ className, title, children, href, ...props }, ref) => {
+    React.ComponentPropsWithoutRef<"a"> & { title: string; href: string, isScrolled?: boolean }
+>(({ className, title, children, href, isScrolled, ...props }, ref) => {
     return (
         <li>
             <NavigationMenuLink asChild>
@@ -30,15 +30,29 @@ const ListItem = React.forwardRef<
                     href={href as any}
                     ref={ref as any}
                     className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white",
+                        "group block select-none space-y-1 rounded-lg p-4 leading-none no-underline outline-none transition-all duration-300",
+                        isScrolled
+                            ? "hover:bg-primary/5 text-slate-700 hover:text-primary"
+                            : "hover:bg-white/10 text-white hover:text-white",
                         className
                     )}
                     {...props}
                 >
-                    <div className="text-sm font-bold leading-none uppercase tracking-wider">{title}</div>
-                    <p className="line-clamp-2 text-xs leading-snug text-white/60 mt-1">
-                        {children}
-                    </p>
+                    <div className="flex items-center justify-between">
+                        <div className="text-[13px] font-bold leading-none uppercase tracking-widest">{title}</div>
+                        <div className={cn(
+                            "h-1.5 w-1.5 rounded-full transition-all duration-300 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100",
+                            isScrolled ? "bg-primary" : "bg-white"
+                        )} />
+                    </div>
+                    {children && (
+                        <p className={cn(
+                            "line-clamp-2 text-xs leading-snug mt-2 transition-colors duration-300",
+                            isScrolled ? "text-slate-500" : "text-white/60"
+                        )}>
+                            {children}
+                        </p>
+                    )}
                 </Link>
             </NavigationMenuLink>
         </li>
@@ -102,9 +116,9 @@ export function Header() {
 
     return (
         <header className={cn(
-            "fixed top-0 z-50 w-full transition-all duration-300 py-3",
+            "fixed top-0 z-50 w-full transition-all duration-500 py-3",
             isScrolled
-                ? "bg-white/90 backdrop-blur-md shadow-lg border-b border-slate-200 text-gray-900 py-2"
+                ? "bg-white/95 backdrop-blur-md shadow-2xl border-b border-slate-200 text-gray-900 py-2"
                 : "bg-transparent text-white"
         )}>
             <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
@@ -117,19 +131,23 @@ export function Header() {
 
                 {/* Center Navigation - Desktop */}
                 <div className="hidden flex-1 justify-center xl:flex ml-1">
-                    <NavigationMenu>
-                        <NavigationMenuList className="gap-0">
+                    <NavigationMenu viewport={false}>
+                        <NavigationMenuList className="gap-2">
                             {/* Home */}
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
                                     <Link
                                         href="/"
                                         className={cn(
-                                            "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-black uppercase tracking-wider transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50",
-                                            isScrolled ? "text-slate-700 hover:text-primary" : "text-white hover:text-white/70"
+                                            "group inline-flex h-11 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[13px] font-black uppercase tracking-widest transition-all duration-300 focus:outline-none relative overflow-hidden",
+                                            isScrolled ? "text-slate-700 hover:text-primary" : "text-white hover:text-white/80"
                                         )}
                                     >
                                         {t('home')}
+                                        <span className={cn(
+                                            "absolute bottom-2 left-4 right-4 h-0.5 scale-x-0 transition-transform duration-300 group-hover:scale-x-100",
+                                            isScrolled ? "bg-primary" : "bg-white"
+                                        )} />
                                     </Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
@@ -138,20 +156,31 @@ export function Header() {
                             {menuItems.map((menu) => (
                                 <NavigationMenuItem key={menu.title}>
                                     <NavigationMenuTrigger className={cn(
-                                        "bg-transparent h-10 px-4 transition-colors uppercase text-sm font-black tracking-wider",
+                                        "bg-transparent h-11 px-4 transition-all duration-300 uppercase text-[13px] font-black tracking-widest group relative",
                                         isScrolled
                                             ? "text-slate-700 hover:text-primary data-[state=open]:text-primary"
-                                            : "text-white hover:text-white/70 data-[state=open]:bg-white/10"
+                                            : "text-white hover:text-white/80 data-[state=open]:text-white/100"
                                     )}>
                                         {menu.title}
+                                        <span className={cn(
+                                            "absolute bottom-2 left-4 right-8 h-0.5 scale-x-0 transition-transform duration-300 group-hover:scale-x-100 data-[state=open]:scale-x-100",
+                                            isScrolled ? "bg-primary" : "bg-white"
+                                        )} />
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
-                                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-[#4c1d95] border border-white/10 text-white">
+                                        <ul className={cn(
+                                            "grid gap-1 p-3 transition-all duration-500 rounded-xl overflow-hidden shadow-2xl border w-[280px]",
+                                            menu.items.length > 4 ? "md:w-[500px] md:grid-cols-2 lg:w-[600px]" : "md:w-[320px] grid-cols-1",
+                                            isScrolled
+                                                ? "bg-white border-slate-200 text-slate-900"
+                                                : "bg-[#4c1d95]/98 backdrop-blur-xl border-white/10 text-white"
+                                        )}>
                                             {menu.items.map((item) => (
                                                 <ListItem
                                                     key={item.title}
                                                     title={item.title}
                                                     href={item.href}
+                                                    isScrolled={isScrolled}
                                                 >
                                                     {(item as any).description}
                                                 </ListItem>
@@ -162,17 +191,21 @@ export function Header() {
                             ))}
 
                             {/* Contact */}
-                            
+
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
                                     <Link
                                         href="/contact"
                                         className={cn(
-                                            "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-black uppercase tracking-wider transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50",
-                                            isScrolled ? "text-slate-700 hover:text-primary" : "text-white hover:text-white/70"
+                                            "group inline-flex h-11 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[13px] font-black uppercase tracking-widest transition-all duration-300 focus:outline-none relative overflow-hidden",
+                                            isScrolled ? "text-slate-700 hover:text-primary" : "text-white hover:text-white/80"
                                         )}
                                     >
                                         {t('contact')}
+                                        <span className={cn(
+                                            "absolute bottom-2 left-4 right-4 h-0.5 scale-x-0 transition-transform duration-300 group-hover:scale-x-100",
+                                            isScrolled ? "bg-primary" : "bg-white"
+                                        )} />
                                     </Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
