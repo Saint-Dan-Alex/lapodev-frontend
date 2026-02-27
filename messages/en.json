@@ -316,10 +316,20 @@
                 "Proxy: power of attorney for the GA",
                 "Membership form: Become a member",
                 "Subscription form and bank account: Make a donation",
-                "Members' recent publications",
-                "Filmographic archives",
-                "Photographic archives"
+                "Members' recent publications"
             ]
+        },
+        "gallery": {
+            "title": "Gallery",
+            "subtitle": "LAPODEV in pictures",
+            "description": "Discover the highlights of our activities, conferences and field missions.",
+            "categories": {
+                "all": "All",
+                "events": "Events",
+                "research": "Research",
+                "team": "Team"
+            },
+            "no_images": "No images available at the moment."
         }
     },
     "ContactPage": {

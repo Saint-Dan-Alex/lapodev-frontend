@@ -13,8 +13,10 @@ import {
     Settings,
     ChevronRight,
     ExternalLink,
-    Mail
+    Mail,
+    Image as ImageIcon
 } from 'lucide-react';
+import Image from 'next/image';
 import {
     Dialog,
     DialogContent,
@@ -24,6 +26,7 @@ import {
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from '@/components/ui/button';
+import { cn } from "@/lib/utils";
 
 interface Member {
     id: number;
@@ -41,6 +44,7 @@ export default function ResourcesPage() {
     const t = useTranslations('ResourcesPage');
     const [selectedMember, setSelectedMember] = useState<Member | null>(null);
     const [activeModalTab, setActiveModalTab] = useState('identity');
+    const [selectedGalleryImage, setSelectedGalleryImage] = useState<{ title: string; image: string; category: string } | null>(null);
 
     const members: Member[] = [
         // ACADEMIC
@@ -119,9 +123,21 @@ export default function ResourcesPage() {
         { title: t('documents.items.4'), category: t('documents.categories.membership') },
         { title: t('documents.items.5'), category: t('documents.categories.support') },
         { title: t('documents.items.6'), category: t('documents.categories.publications') },
-        { title: t('documents.items.7'), category: t('documents.categories.archives') },
-        { title: t('documents.items.8'), category: t('documents.categories.archives') },
     ];
+
+    const galleryItems = [
+        { id: 1, title: "Session de Travail", category: "team", image: "/Carousel/1.jpeg" },
+        { id: 2, title: "Mission de Recherche", category: "research", image: "/Carousel/2.jpeg" },
+        { id: 3, title: "Assemblée Générale", category: "events", image: "/Carousel/3.jpeg" },
+        { id: 4, title: "Conférence Scientifique", category: "events", image: "/Carousel/1.jpeg" },
+        { id: 5, title: "Analyse de Terrain", category: "research", image: "/Carousel/2.jpeg" },
+        { id: 6, title: "Réunion DG", category: "team", image: "/Carousel/3.jpeg" },
+    ];
+
+    const [galleryFilter, setGalleryFilter] = useState('all');
+    const filteredGallery = galleryFilter === 'all'
+        ? galleryItems
+        : galleryItems.filter(item => item.category === galleryFilter);
 
     const filterMembers = (cat: string) => members.filter(m => m.category === cat);
 
@@ -140,12 +156,15 @@ export default function ResourcesPage() {
 
             <div className="container mx-auto px-4 md:px-8 py-16">
                 <Tabs defaultValue="members" className="w-full">
-                    <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 mb-12 bg-slate-100 p-1 h-auto sm:h-14 rounded-2xl gap-1">
+                    <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 mb-12 bg-slate-100 p-1 h-auto sm:h-14 rounded-2xl gap-1">
                         <TabsTrigger value="members" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 sm:py-0">
                             {t('human_resources.title')}
                         </TabsTrigger>
                         <TabsTrigger value="documents" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 sm:py-0">
                             {t('documents.title')}
+                        </TabsTrigger>
+                        <TabsTrigger value="gallery" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 sm:py-0 text-center">
+                            {t('gallery.title')}
                         </TabsTrigger>
                     </TabsList>
                     <TabsContent value="members" className="space-y-12">
@@ -234,8 +253,113 @@ export default function ResourcesPage() {
                             ))}
                         </div>
                     </TabsContent>
+
+                    {/* GALLERY CONTENT */}
+                    <TabsContent value="gallery" className="space-y-12">
+                        <div className="max-w-3xl">
+                            <h2 className="text-3xl font-black text-gray-900 mb-4 uppercase">
+                                {t('gallery.subtitle')}
+                            </h2>
+                            <p className="text-gray-600 leading-relaxed font-medium italic">
+                                "{t('gallery.description')}"
+                            </p>
+                        </div>
+
+                        {/* Category Filter */}
+                        <div className="flex flex-wrap gap-2">
+                            {['all', 'events', 'research', 'team'].map((cat) => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setGalleryFilter(cat)}
+                                    className={cn(
+                                        "px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all",
+                                        galleryFilter === cat
+                                            ? "bg-primary text-white shadow-lg shadow-primary/20"
+                                            : "bg-slate-100 text-slate-500 hover:bg-slate-200"
+                                    )}
+                                >
+                                    {t(`gallery.categories.${cat}`)}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Image Grid */}
+                        {filteredGallery.length > 0 ? (
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {filteredGallery.map((item) => (
+                                    <div
+                                        key={item.id}
+                                        onClick={() => setSelectedGalleryImage(item)}
+                                        className="group relative aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100 shadow-xl shadow-slate-200/40 cursor-zoom-in"
+                                    >
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                                            <span className="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                                {t(`gallery.categories.${item.category}`)}
+                                            </span>
+                                            <h4 className="text-white font-black text-xl uppercase tracking-tighter transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+                                                {item.title}
+                                            </h4>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="py-20 text-center bg-slate-50 rounded-[3rem] border-2 border-dashed border-slate-200">
+                                <ImageIcon className="h-12 w-12 text-slate-300 mx-auto mb-4" />
+                                <p className="text-slate-500 font-medium italic">
+                                    {t('gallery.no_images')}
+                                </p>
+                            </div>
+                        )}
+                    </TabsContent>
                 </Tabs >
             </div >
+
+            {/* GALLERY LIGHTBOX */}
+            <Dialog open={!!selectedGalleryImage} onOpenChange={(open) => !open && setSelectedGalleryImage(null)}>
+                <DialogContent className="max-w-[95vw] md:max-w-5xl p-0 overflow-hidden rounded-[2rem] border-none bg-black/95 shadow-2xl">
+                    {selectedGalleryImage && (
+                        <div className="relative group">
+                            <div className="relative aspect-[16/10] w-full">
+                                <Image
+                                    src={selectedGalleryImage.image}
+                                    alt={selectedGalleryImage.title}
+                                    fill
+                                    className="object-contain"
+                                    priority
+                                />
+                            </div>
+
+                            {/* Overlay Info */}
+                            <div className="absolute bottom-0 inset-x-0 p-8 pt-20 bg-gradient-to-t from-black via-black/40 to-transparent">
+                                <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em] mb-2 block animate-in fade-in slide-in-from-bottom-2 duration-500">
+                                    {t(`gallery.categories.${selectedGalleryImage.category}`)}
+                                </span>
+                                <DialogTitle className="text-white text-2xl md:text-3xl font-black uppercase tracking-tighter animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+                                    {selectedGalleryImage.title}
+                                </DialogTitle>
+                                <DialogDescription className="sr-only">
+                                    Vue agrandie de {selectedGalleryImage.title}
+                                </DialogDescription>
+                            </div>
+
+                            {/* Close hint */}
+                            <button
+                                onClick={() => setSelectedGalleryImage(null)}
+                                className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all hover:rotate-90"
+                            >
+                                <Settings className="w-5 h-5 rotate-45" /> {/* Use settings for an X-like look if X is missing, but better X later */}
+                            </button>
+                        </div>
+                    )}
+                </DialogContent>
+            </Dialog>
 
             {/* MEMBER MODAL */}
             <Dialog open={!!selectedMember} onOpenChange={(open) => !open && setSelectedMember(null)}>

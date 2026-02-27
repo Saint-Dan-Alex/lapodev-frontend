@@ -326,10 +326,20 @@
                 "Procuration : pouvoir pour l’AG",
                 "Bulletin d’adhésion : Devenir membre",
                 "Bulletin de souscription et compte bancaire : Faire un don",
-                "Publications récentes des membres",
-                "Archives filmographiques",
-                "Archives photographiques"
+                "Publications récentes des membres"
             ]
+        },
+        "gallery": {
+            "title": "Galerie",
+            "subtitle": "Le LAPODEV en images",
+            "description": "Découvrez les moments forts de nos activités, conférences et missions de terrain.",
+            "categories": {
+                "all": "Tout",
+                "events": "Événements",
+                "research": "Recherche",
+                "team": "Équipe"
+            },
+            "no_images": "Aucune image disponible pour le moment."
         }
     },
     "ContactPage": {
