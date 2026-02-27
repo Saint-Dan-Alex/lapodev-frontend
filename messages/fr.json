@@ -270,11 +270,16 @@
             },
             "modal": {
                 "about": "À Propos",
+                "identity": "Identité",
+                "biography": "Biographie",
+                "bibliography": "Bibliographie",
                 "dossier": "Dossier Complet",
                 "publications": "Publications",
                 "default_bio": "Découvrez le profil de ce membre en téléchargeant son dossier complet. Ce chercheur est activement impliqué dans les projets du LAPODEV.",
                 "member_grade": "Chercheur LAPODEV",
-                "send_email": "Envoyer un email"
+                "send_email": "Envoyer un email",
+                "office": "Bureau",
+                "dossier_not_available": "Le dossier complet n'est pas encore disponible en ligne pour ce chercheur."
             },
             "grades": {
                 "director": "Professeur Full / Directeur LAPODEV",
@@ -293,8 +298,14 @@
                 "admin_assistant": "Assistante Administrative"
             },
             "bios": {
-                "indeka": "Joseph Indeka Nkoso est Professeur full au Département d’Anthropologie et Directeur du LAPODEV. Agrégé en histoire, il est Docteur en Sciences Politiques et Sociales de l’Université Libre de Bruxelles. Ses recherches concilient pluridisciplinarité, variation d’échelles et longue durée.",
+                "indeka": "Joseph Indeka Nkoso est Professeur full au Département d’Anthropologie et Directeur du LAPODEV (Laboratoire d’Anthropologie Politique, du Développement et d’analyse des Vulnérabilités), Centre de recherche à l’Université de Kinshasa en République Démocratique du Congo. Agrégé en histoire, il est Docteur en Sciences Politiques et Sociales, orientation Socio-Anthropologie, titre obtenu en novembre 2013 à l’Université Libre de Bruxelles après soutenance publique d’une thèse originale intitulée : « Les Chefferies ndengese en conflits. Dans les interstices de la tradition et de l’Etat (R.D.Congo )». Ses recherches fondamentales et appliquées concilient pluridisciplinarité (socio-anthropologie, histoire, sciences politiques), variation d’échelles (locale-globale) et longue durée (précoloniale, coloniale et postcoloniale). Cinq axes en constituent les centres d’intérêt :\n- Pouvoirs politiques, Conflits , Gouvernance et Politiques publiques ;\n- Interventions de développement (projets et programmes) et Actions humanitaires ;\n- Handicap, Inclusion sociale et Emancipation ;\n- Invention de traditions, Ethnicité et Autochtonie ;\n- Méthodologie : Ethnographie et Recherche qualitative.",
                 "kavira": "Docteure en Systématique de la Faculté Universitaire de Théologie Protestante de Bruxelles. Spécialiste en Etudes de Genre. Autrice de plusieurs articles et chercheuse au LAPODEV."
+            },
+            "bibliographies": {
+                "indeka": "### Chapitre d’un ouvrage collectif\n- 2023, « Une ethnographie des pratiques duresives des rois et chefs sur leur rôle contemporain », In Batibonak, S. et Batibonak, P. (dir.), Gouvernabilité, territorialité et statolité africaines en crise. Nouvelles intellections de la gouvernance en Afrique, Yaoundé, Editions Monange, pp.230-269.\n\n### Articles dans des revues scientifiques internationales avec Comité de lecture\n- 2023, « Chefs et projet de conservation de la nature à Dekese. Négociations sur fond de tensions », In Revue Africaine Inter-Disciplinaire-RAID, n°37, Yaoundé, Editions Monange, Mai 2023, pp.65-101.\n- 2019, Les Résistances africaines revisitées. Cas de la révolte des Ndengese en 1931 au Congo belge. Violences et Sociétés Vol.XIV/46 : 62-89.\n- 2015, Une Royauté sacrée. Cas de Bonkfum’etoci chez les Ndengese. Anamnèse, n° 10, L’Harmattan : 223-249.\n\n### Articles dans des revues scientifiques nationales avec Comité de lecture\n- 2000, Les causes et les conséquences des conflits du pouvoir coutumier à Dekese (RDC). Annales de l’ISP/ Kananga, Vol.X n°2 : 163-183.\n- 2000, De la juxtaposition des chefs traditionnels et modernes au Congo à la coexistence difficile (1891-1992). Annales de l’ISP/ Kananga, Vol.X n°2 : 145-162."
+            },
+            "offices": {
+                "indeka": "Local C30/B11, Bloc C/ Cave du Home 30, Université de Kinshasa"
             }
         },
         "documents": {

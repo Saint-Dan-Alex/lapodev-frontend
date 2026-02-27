@@ -30,17 +30,30 @@ interface Member {
     name: string;
     category: 'academic' | 'scientific' | 'administrative' | 'technical';
     grade?: string;
-    bio?: string;
+    biography?: string;
+    bibliography?: string;
     email?: string;
+    office?: string;
+    dossierUrl?: string;
 }
 
 export default function ResourcesPage() {
     const t = useTranslations('ResourcesPage');
     const [selectedMember, setSelectedMember] = useState<Member | null>(null);
+    const [activeModalTab, setActiveModalTab] = useState('identity');
 
     const members: Member[] = [
         // ACADEMIC
-        { id: 1, name: "Pr. INDEKA NKOSO Joseph", category: 'academic', grade: t('human_resources.grades.director'), email: "joseph.indeka@gmail.com", bio: t('human_resources.bios.indeka') },
+        {
+            id: 1,
+            name: "Pr. INDEKA NKOSO Joseph",
+            category: 'academic',
+            grade: t('human_resources.grades.director'),
+            email: "joseph.indeka@gmail.com",
+            biography: t('human_resources.bios.indeka'),
+            bibliography: t('human_resources.bibliographies.indeka'),
+            office: t('human_resources.offices.indeka')
+        },
         { id: 2, name: "Pr. OSOKONDA OKENGE Basile", category: 'academic', grade: t('human_resources.grades.president') },
         { id: 3, name: "Pr. MOTTIER Damien", category: 'academic', grade: t('human_resources.grades.deputy_scientific') },
         { id: 4, name: "Pr. MPERENG JERRY", category: 'academic', grade: t('human_resources.grades.media_head') },
@@ -51,7 +64,7 @@ export default function ResourcesPage() {
         { id: 9, name: "Pr. NEKA MBANGAZI Victorine", category: 'academic' },
         { id: 10, name: "Pr. EKALA BOKOSWA Pierre", category: 'academic' },
         { id: 11, name: "Pr. MULOMBA TSHITUMBA Elie", category: 'academic' },
-        { id: 12, name: "Pr. KAVIRA WANGAHEMUKA Julienne", category: 'academic', grade: t('human_resources.grades.assoc_prof'), bio: t('human_resources.bios.kavira') },
+        { id: 12, name: "Pr. KAVIRA WANGAHEMUKA Julienne", category: 'academic', grade: t('human_resources.grades.assoc_prof'), biography: t('human_resources.bios.kavira') },
         { id: 13, name: "Pr. BARAKA MUVUKA", category: 'academic' },
         { id: 14, name: "Pr. NGOY MUANA Emery", category: 'academic' },
         { id: 15, name: "Dr. TSHAMA KANUMBI", category: 'academic' },
@@ -167,7 +180,10 @@ export default function ResourcesPage() {
                                     {filterMembers(cat).map((member) => (
                                         <div
                                             key={member.id}
-                                            onClick={() => setSelectedMember(member)}
+                                            onClick={() => {
+                                                setSelectedMember(member);
+                                                setActiveModalTab('identity');
+                                            }}
                                             className="group bg-white border border-slate-200 p-5 rounded-2xl hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all cursor-pointer relative overflow-hidden"
                                         >
                                             <div className="flex flex-col h-full">
@@ -222,21 +238,21 @@ export default function ResourcesPage() {
             </div >
 
             {/* MEMBER MODAL */}
-            < Dialog open={!!selectedMember
-            } onOpenChange={(open) => !open && setSelectedMember(null)}>
-                <DialogContent className="sm:max-w-2xl p-0 overflow-hidden rounded-[2rem] border-none shadow-2xl">
+            <Dialog open={!!selectedMember} onOpenChange={(open) => !open && setSelectedMember(null)}>
+                <DialogContent className="sm:max-w-3xl p-0 overflow-hidden rounded-[2rem] border-none shadow-2xl flex flex-col max-h-[90vh]">
                     {selectedMember && (
-                        <div className="flex flex-col">
-                            {/* Header Gradient */}
-                            <div className="h-32 bg-gradient-to-br from-[#5b1887] to-[#8b2fc9] relative">
-                                <div className="absolute -bottom-12 left-8 p-1 bg-white rounded-3xl shadow-xl">
+                        <>
+                            {/* Header Gradient - Non-scrollable */}
+                            <div className="h-32 bg-gradient-to-br from-[#5b1887] to-[#8b2fc9] relative flex-none">
+                                <div className="absolute -bottom-12 left-8 p-1 bg-white rounded-3xl shadow-xl z-20">
                                     <div className="w-24 h-24 bg-slate-100 rounded-2xl flex items-center justify-center text-[#5b1887]">
                                         <User className="w-12 h-12" />
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="pt-16 pb-10 px-10">
+                            {/* Scrollable Body */}
+                            <div className="pt-16 pb-10 px-8 md:px-12 overflow-y-auto custom-scrollbar">
                                 <div className="mb-8">
                                     <div className="flex items-start justify-between gap-4 mb-2">
                                         <DialogTitle className="text-3xl font-black text-gray-900 tracking-tighter uppercase leading-tight">
@@ -246,9 +262,9 @@ export default function ResourcesPage() {
                                             Détails pour {selectedMember.name}
                                         </DialogDescription>
                                         {selectedMember.email && (
-                                            <Button variant="ghost" size="sm" asChild className="rounded-full h-8 text-primary">
+                                            <Button variant="ghost" size="sm" asChild className="rounded-full h-8 text-primary shrink-0 transition-transform hover:scale-110">
                                                 <a href={`mailto:${selectedMember.email}`} title={t('human_resources.modal.send_email')}>
-                                                    <ExternalLink className="h-4 w-4" />
+                                                    <Mail className="h-4 w-4" />
                                                 </a>
                                             </Button>
                                         )}
@@ -258,47 +274,124 @@ export default function ResourcesPage() {
                                     </div>
                                 </div>
 
-                                <div className="space-y-6">
-                                    <div>
-                                        <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
-                                            <div className="h-px bg-slate-100 flex-grow"></div>
-                                            {t('human_resources.modal.about')}
-                                            <div className="h-px bg-slate-100 flex-grow"></div>
-                                        </h4>
-                                        <DialogDescription className="text-gray-700 leading-relaxed font-serif italic text-lg opacity-80">
-                                            {selectedMember.bio || t('human_resources.modal.default_bio')}
-                                        </DialogDescription>
-                                    </div>
+                                <Tabs value={activeModalTab} onValueChange={setActiveModalTab} className="w-full">
+                                    <TabsList className="grid w-full grid-cols-3 mb-8 bg-slate-100/50 p-1.5 h-12 rounded-xl border border-slate-100">
+                                        <TabsTrigger value="identity" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm font-bold uppercase tracking-widest text-[10px]">
+                                            {t('human_resources.modal.identity')}
+                                        </TabsTrigger>
+                                        <TabsTrigger value="biography" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm font-bold uppercase tracking-widest text-[10px]">
+                                            {t('human_resources.modal.biography')}
+                                        </TabsTrigger>
+                                        <TabsTrigger value="bibliography" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm font-bold uppercase tracking-widest text-[10px]">
+                                            {t('human_resources.modal.bibliography')}
+                                        </TabsTrigger>
+                                    </TabsList>
 
-                                    {selectedMember.email && (
-                                        <div className="pt-4 flex items-center gap-4 text-sm font-medium text-slate-500">
-                                            <Mail className="h-4 w-4" />
-                                            {selectedMember.email}
+                                    {/* IDENTITÉ */}
+                                    <TabsContent value="identity" className="space-y-6 focus-visible:outline-none">
+                                        <div className="bg-slate-50/50 p-6 rounded-2xl border border-slate-100 space-y-4">
+                                            <div className="flex items-center gap-4">
+                                                <div className="h-10 w-10 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm border border-slate-100">
+                                                    <User className="h-5 w-5" />
+                                                </div>
+                                                <div>
+                                                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Nom Complet</span>
+                                                    <p className="font-bold text-gray-900">{selectedMember.name}</p>
+                                                </div>
+                                            </div>
+
+                                            <div className="flex items-center gap-4">
+                                                <div className="h-10 w-10 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm border border-slate-100">
+                                                    <GraduationCap className="h-5 w-5" />
+                                                </div>
+                                                <div>
+                                                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Grade / Fonction</span>
+                                                    <p className="font-bold text-gray-900">{selectedMember.grade || t('human_resources.modal.member_grade')}</p>
+                                                </div>
+                                            </div>
+
+                                            {selectedMember.email && (
+                                                <div className="flex items-center gap-4">
+                                                    <div className="h-10 w-10 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm border border-slate-100">
+                                                        <Mail className="h-5 w-5" />
+                                                    </div>
+                                                    <div>
+                                                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">Email</span>
+                                                        <p className="font-bold text-gray-900">{selectedMember.email}</p>
+                                                    </div>
+                                                </div>
+                                            )}
+
+                                            {selectedMember.office && (
+                                                <div className="flex items-center gap-4">
+                                                    <div className="h-10 w-10 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm border border-slate-100">
+                                                        <Briefcase className="h-5 w-5" />
+                                                    </div>
+                                                    <div>
+                                                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-0.5">{t('human_resources.modal.office')}</span>
+                                                        <p className="font-bold text-gray-900">{selectedMember.office}</p>
+                                                    </div>
+                                                </div>
+                                            )}
                                         </div>
-                                    )}
+                                    </TabsContent>
 
-                                    <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        <Button
-                                            onClick={() => alert(`${t('human_resources.download')} : ${selectedMember.name}`)}
-                                            className="h-14 rounded-2xl bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-widest gap-3 shadow-xl shadow-primary/20"
-                                        >
-                                            <Download className="h-5 w-5" />
-                                            {t('human_resources.modal.dossier')}
-                                        </Button>
-                                        <Button
-                                            onClick={() => alert(`${t('human_resources.modal.publications')} : ${selectedMember.name}`)}
-                                            variant="outline"
-                                            className="h-14 rounded-2xl border-slate-200 text-slate-500 font-bold uppercase tracking-widest"
-                                        >
-                                            {t('human_resources.modal.publications')}
-                                        </Button>
-                                    </div>
-                                </div>
+                                    {/* BIOGRAPHIE */}
+                                    <TabsContent value="biography" className="space-y-6 focus-visible:outline-none">
+                                        <div className="prose prose-slate max-w-none">
+                                            <p className="text-gray-700 leading-relaxed font-serif italic text-lg opacity-90 whitespace-pre-line">
+                                                {selectedMember.biography || t('human_resources.modal.default_bio')}
+                                            </p>
+                                        </div>
+                                    </TabsContent>
+
+                                    {/* BIBLIOGRAPHIE */}
+                                    <TabsContent value="bibliography" className="space-y-6 focus-visible:outline-none">
+                                        <div className="prose prose-sm prose-slate max-w-none">
+                                            {selectedMember.bibliography ? (
+                                                <div className="text-gray-700 leading-relaxed whitespace-pre-line bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                                    <div dangerouslySetInnerHTML={{
+                                                        __html: selectedMember.bibliography
+                                                            .replace(/^### (.*$)/gim, '<h4 className="font-black text-primary uppercase text-xs tracking-widest mt-6 first:mt-0 mb-3">$1</h4>')
+                                                            .replace(/^- (.*$)/gim, '<li className="mb-2">$1</li>')
+                                                    }} />
+                                                </div>
+                                            ) : (
+                                                <p className="text-slate-400 italic text-center py-8">
+                                                    {t('human_resources.modal.default_bio')}
+                                                </p>
+                                            )}
+                                        </div>
+                                    </TabsContent>
+                                </Tabs>
+
+                                {/* <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <Button
+                                        onClick={() => {
+                                            if (selectedMember.dossierUrl) {
+                                                window.open(selectedMember.dossierUrl, '_blank');
+                                            } else {
+                                                alert(t('human_resources.modal.dossier_not_available'));
+                                            }
+                                        }}
+                                        className="h-14 rounded-2xl bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-widest gap-3 shadow-xl shadow-primary/20 transition-all hover:-translate-y-1"
+                                    >
+                                        <Download className="h-5 w-5" />
+                                        {t('human_resources.modal.dossier')}
+                                    </Button>
+                                    <Button
+                                        onClick={() => setActiveModalTab('bibliography')}
+                                        variant="outline"
+                                        className="h-14 rounded-2xl border-slate-200 text-slate-500 font-bold uppercase tracking-widest hover:bg-slate-50 transition-all"
+                                    >
+                                        {t('human_resources.modal.publications')}
+                                    </Button>
+                                </div> */}
                             </div>
-                        </div>
+                        </>
                     )}
                 </DialogContent>
-            </Dialog >
+            </Dialog>
         </div >
     );
 }
