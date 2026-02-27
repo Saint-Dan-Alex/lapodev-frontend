@@ -82,19 +82,57 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Simple footer CTA or map if we had one */}
+            {/* MAP SECTION */}
             <section className="py-24 bg-slate-50 border-t border-slate-200">
-                <div className="container mx-auto px-4 md:px-8 text-center max-w-3xl">
-                    <div className="inline-flex p-1 px-3 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-6">
-                        {t('physical_addresses.title')}
+                <div className="container mx-auto px-4 md:px-8">
+                    <div className="text-center mb-14">
+                        <div className="inline-flex p-1 px-3 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-6">
+                            {t('physical_addresses.title')}
+                        </div>
+                        <h2 className="text-4xl font-black text-gray-900 mb-4 uppercase tracking-tighter leading-none italic">
+                            Nous trouver
+                        </h2>
+                        <p className="text-slate-500 font-medium max-w-lg mx-auto">
+                            Université de Kinshasa (UNIKIN) — Kinshasa XI, République Démocratique du Congo
+                        </p>
                     </div>
-                    <h2 className="text-4xl font-black text-gray-900 mb-8 uppercase tracking-tighter leading-none italic">
-                        {t('subtitle')}
-                    </h2>
-                    <div className="p-12 rounded-[3.5rem] bg-white border border-slate-100 shadow-xl flex flex-col items-center">
-                        <MapPin className="h-12 w-12 text-primary mb-6" />
-                        <p className="text-xl font-bold text-gray-900 tracking-tight">Université de Kinshasa (UNIKIN)</p>
-                        <p className="text-gray-500 font-medium">Kinshasa XI, République Démocratique du Congo</p>
+
+                    {/* Map Container */}
+                    <div className="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-purple-900/10 border border-slate-200">
+                        {/* Info Overlay Badge */}
+                        <div className="absolute top-6 left-6 z-10 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg flex items-center gap-4 max-w-xs">
+                            <div className="h-12 w-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                <MapPin className="h-6 w-6 text-white" />
+                            </div>
+                            <div>
+                                <p className="font-black text-gray-900 text-sm uppercase tracking-tight">UNIKIN</p>
+                                <p className="text-slate-500 text-xs font-medium">Kinshasa XI, RDC</p>
+                            </div>
+                        </div>
+
+                        {/* OpenStreetMap iframe — centré sur UNIKIN (lat: -4.3267, lon: 15.3225) */}
+                        <iframe
+                            title="Carte UNIKIN"
+                            width="100%"
+                            height="500"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=15.2925%2C-4.3567%2C15.3525%2C-4.2967&layer=mapnik&marker=-4.3267%2C15.3225"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                        />
+
+                        {/* Open in OSM button */}
+                        <div className="absolute bottom-6 right-6 z-10">
+                            <a
+                                href="https://www.openstreetmap.org/?mlat=-4.3267&mlon=15.3225#map=15/-4.3267/15.3225"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md text-[#5b1887] font-black uppercase tracking-widest text-[10px] px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl hover:bg-white transition-all hover:-translate-y-0.5"
+                            >
+                                <Globe className="h-4 w-4" />
+                                Ouvrir dans OpenStreetMap
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
