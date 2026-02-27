@@ -44,7 +44,6 @@ export default function ResourcesPage() {
     const t = useTranslations('ResourcesPage');
     const [selectedMember, setSelectedMember] = useState<Member | null>(null);
     const [activeModalTab, setActiveModalTab] = useState('identity');
-    const [selectedGalleryImage, setSelectedGalleryImage] = useState<{ title: string; image: string; category: string } | null>(null);
 
     const members: Member[] = [
         // ACADEMIC
@@ -289,8 +288,8 @@ export default function ResourcesPage() {
                                 {filteredGallery.map((item) => (
                                     <div
                                         key={item.id}
-                                        onClick={() => setSelectedGalleryImage(item)}
-                                        className="group relative aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100 shadow-xl shadow-slate-200/40 cursor-zoom-in"
+                                        onClick={() => window.open(item.image, '_blank')}
+                                        className="group relative aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100 shadow-xl shadow-slate-200/40 cursor-pointer"
                                     >
                                         <Image
                                             src={item.image}
@@ -321,45 +320,7 @@ export default function ResourcesPage() {
                 </Tabs >
             </div >
 
-            {/* GALLERY LIGHTBOX */}
-            <Dialog open={!!selectedGalleryImage} onOpenChange={(open) => !open && setSelectedGalleryImage(null)}>
-                <DialogContent className="max-w-[95vw] md:max-w-5xl p-0 overflow-hidden rounded-[2rem] border-none bg-black/95 shadow-2xl">
-                    {selectedGalleryImage && (
-                        <div className="relative group">
-                            <div className="relative aspect-[16/10] w-full">
-                                <Image
-                                    src={selectedGalleryImage.image}
-                                    alt={selectedGalleryImage.title}
-                                    fill
-                                    className="object-contain"
-                                    priority
-                                />
-                            </div>
 
-                            {/* Overlay Info */}
-                            <div className="absolute bottom-0 inset-x-0 p-8 pt-20 bg-gradient-to-t from-black via-black/40 to-transparent">
-                                <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em] mb-2 block animate-in fade-in slide-in-from-bottom-2 duration-500">
-                                    {t(`gallery.categories.${selectedGalleryImage.category}`)}
-                                </span>
-                                <DialogTitle className="text-white text-2xl md:text-3xl font-black uppercase tracking-tighter animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-                                    {selectedGalleryImage.title}
-                                </DialogTitle>
-                                <DialogDescription className="sr-only">
-                                    Vue agrandie de {selectedGalleryImage.title}
-                                </DialogDescription>
-                            </div>
-
-                            {/* Close hint */}
-                            <button
-                                onClick={() => setSelectedGalleryImage(null)}
-                                className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all hover:rotate-90"
-                            >
-                                <Settings className="w-5 h-5 rotate-45" /> {/* Use settings for an X-like look if X is missing, but better X later */}
-                            </button>
-                        </div>
-                    )}
-                </DialogContent>
-            </Dialog>
 
             {/* MEMBER MODAL */}
             <Dialog open={!!selectedMember} onOpenChange={(open) => !open && setSelectedMember(null)}>
