@@ -176,82 +176,81 @@
         "subtitle": "Research & Consultancy",
         "tagline": "Expertise & Innovation",
         "research": {
-            "title": "Specialization Domains",
-            "goals_label": "Research Objectives",
-            "axes_label": "Intervention Axes",
-            "analysis_label": "Analysis Objectives",
+            "title": "Domains of specialization",
             "politics": {
                 "title": "Political Domain",
                 "subtitle": "Homo politicus - Elucidation of the political object",
-                "intro": "Political anthropology at LAPODEV explores the forms and foundations of power in contemporary societies.",
+                "intro": "Given the extraordinary semantic fluidity of the word \"politics\", this concept is understood here in a broad sense, both according to its Greek etymology \"politicus\" (relating to the State) and according to the three Anglo-Saxon terms:",
                 "concepts": {
-                    "polity": "Reflection on the political community, identities and living together.",
-                    "politics": "Analysis of processes, power struggles and local political life.",
-                    "policy": "Study of public policies, their implementation and impact."
+                    "polity": "Spaces of activities and conflicts around the question of government and the governance of society, political field or arena depending on the case.",
+                    "politics": "Political activity, commitment, and exercise of the political profession; capacity of certain groups of individuals to direct life in society and to produce rules that apply to everyone.",
+                    "policy": "Public action, public policy in a particular sector, and decisions taken by those who exercise the functions of government."
                 },
                 "goals": [
-                    "Elucidate the political object in its historical and contemporary forms",
-                    "Analyze the metamorphoses of politics and democracy",
-                    "Study interactions between formal and informal institutions",
-                    "Explore dynamics of citizenship and participation",
-                    "Understand local and national governance logics"
+                    "Study power structures, modes of governance, and relations between the State and society through a cultural and historical perspective",
+                    "Analyze how beliefs, practices, and institutions influence power and authority in different societies and contexts",
+                    "Understand real and daily political functioning through contextualized analysis of multiple actor interactions from local to global",
+                    "Examine the dynamics of political power relations based on ethnographic observation of practices and public policies",
+                    "Understand the diversity of political organizational forms and the dynamics of social and political change"
                 ]
             },
             "development": {
-                "title": "Development Anthropology",
-                "intro": "Critical analysis of social change processes and development interventions.",
-                "quote": "Political and development anthropology offers a unique perspective for analyzing interactions between political institutions, social actors and development processes.",
+                "title": "Domain of Sustainable and Inclusive Development",
+                "intro": "LAPODEV, as an Interface between the academic world and Congolese society, is relevant for understanding the dynamics that influence sustainable development.",
+                "quote": "Political and development anthropology offers a unique perspective for analyzing the interactions between political institutions, social actors, and development processes.",
                 "goals": [
-                    "Analyze development actors' logics",
-                    "Study social impact of projects and programs",
-                    "Understand local resistance and reappropriation",
-                    "Evaluate sustainability and inclusivity of interventions",
-                    "Submit approaches based on sociocultural realities"
+                    "Understand the root causes and problems of underdevelopment (inequalities, conflicts, corruption, governance)",
+                    "Design more appropriate and acceptable development strategies, projects, and programs for local populations",
+                    "Strengthen civic participation by involving local communities in design and implementation",
+                    "Evaluate the real impact of development projects and programs on local populations",
+                    "Contribute to the consolidation of peace and security through conflict prevention and the promotion of good governance"
                 ]
             },
             "vulnerabilities": {
-                "title": "Vulnerability Analysis",
-                "intro": "Study of precaritization processes and social exclusion mechanisms.",
-                "groups": {
-                    "children": "Children in difficult situations (street, conflict)",
-                    "minorities": "Minorities and marginalized groups",
-                    "women": "Gender issues and women's rights",
-                    "handicap_hiv_lgbt": "People living with disabilities, HIV or discrimination",
-                    "displaced": "Internally displaced persons and refugees"
-                },
+                "title": "Domain of Vulnerability Analysis",
+                "intro": "LAPODEV analyzes vulnerability factors for holistic management and a better understanding of inequalities.",
                 "goals": [
-                    "Identify factors of multidimensional vulnerability",
-                    "Analyze survival and resilience strategies",
-                    "Evaluate effectiveness of social protection policies"
-                ]
+                    "Analyze and take vulnerability into account for holistic management via a participatory approach",
+                    "Better understand inequalities and factors that increase risks for certain populations",
+                    "Identify and study so-called \"vulnerable\" social groups and community resilience",
+                    "Promote social participation, emancipation, and empowerment of vulnerable groups",
+                    "Design targeted interventions to reduce vulnerability and promote inclusion"
+                ],
+                "groups": {
+                    "children": "Children in difficult situations (abandoned, street children, disabled, associated with armed conflict, or in conflict with the law)",
+                    "minorities": "Indigenous peoples, ethnic, racial, or religious minorities victims of discrimination",
+                    "women": "Teenage mothers, battered women, divorced, raped, sexual slaves, or widows with children",
+                    "handicap_hiv_lgbt": "People living with disabilities (barriers to services), with HIV (stigmatization), and LGBT+ people (discrimination and violence)",
+                    "displaced": "Internally displaced persons, refugees, people in extreme poverty, homeless, or victims of disasters and wars"
+                }
             }
         },
         "axes": {
             "title": "Research Axes & Themes",
-            "description": "Ten axes and research themes on which the Center's researchers work.",
+            "description": "Ten central axes arising from the three initial domains of specialization:",
             "items": [
                 "Political Object",
                 "Inclusive and Sustainable Development",
-                "Children and Youth",
-                "Migration and Displacement",
-                "Health and Society",
-                "Gender and Women's Rights",
-                "Environment and Resources",
-                "Governance and Citizenship",
-                "Technology and Society",
-                "Culture and Identities"
+                "Vulnerabilities",
+                "Health and Education",
+                "Cultural/Artistic Heritage, Environment and Biodiversity",
+                "Gender and Sexuality",
+                "Land Issues and Natural Resources",
+                "Communication, Media and Language",
+                "Legal and Customary Issues",
+                "Philosophical and Religious Issues"
             ]
         },
         "consultancy": {
             "title": "Consultancy",
-            "description": "LAPODEV offers specialized consultancy services to national and international organizations.",
+            "description": "LAPODEV offers specialized expertise in the following areas:",
             "items": [
-                "Development projects and programs, humanitarian aid",
-                "Public policies and political governance, legal advice",
-                "Surveys, polls and field data analysis",
-                "Social and environmental audits",
-                "Specialized training and capacity building",
-                "Sociocultural impact studies"
+                "Development projects and programs, humanitarian aid, and social reintegration",
+                "Public policies and political governance, legal advice, and political decision-making",
+                "Analysis of vulnerabilities and community resilience",
+                "Communication, media and language",
+                "Professional ethics, family and psycho-social support",
+                "Protection of peoples' cultural heritage, environment, and biodiversity"
             ]
         }
     },

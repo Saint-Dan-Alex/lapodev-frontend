@@ -177,81 +177,80 @@
         "tagline": "Expertise & Innovation",
         "research": {
             "title": "Domaines de spécialisation",
-            "goals_label": "Objectifs de recherche",
-            "axes_label": "Axes d'intervention",
-            "analysis_label": "Objectifs d'analyse",
             "politics": {
                 "title": "Domaine politique",
                 "subtitle": "Homo politicus - Elucidation de l’objet politique",
-                "intro": "L'anthropologie politique au LAPODEV explore les formes et les fondements du pouvoir dans les sociétés contemporaines.",
+                "intro": "Etant donné l’extraordinaire fluidité sémantique du mot \"politique\", ce concept est ici entendu au sens large, à la fois selon son étymologie grecque « politicus » (ce qui a trait à l’Etat) et suivant les trois termes anglo-saxons :",
                 "concepts": {
-                    "polity": "Réflexion sur la communauté politique, les identités et le vivre-ensemble.",
-                    "politics": "Analyse des processus, des luttes de pouvoir et de la vie politique locale.",
-                    "policy": "Étude des politiques publiques, de leur mise en œuvre et de leur impact."
+                    "polity": "Espaces des activités et des conflits autour de la question du gouvernement et de la gouvernance de la société, champ politique ou arène selon le cas.",
+                    "politics": "Activité politique, engagement et exercice de la profession politique ; capacité de certains groupes d’individus de diriger la vie en société et de produire des règles qui s’appliquent à tous.",
+                    "policy": "Action publique, politique publique dans un secteur particulier, et décisions prises par ceux qui exercent les fonctions de gouvernement."
                 },
                 "goals": [
-                    "Élucider l’Objet politique dans ses formes historiques et contemporaines",
-                    "Analyser les métamorphoses du politique et de la démocratie",
-                    "Étudier les interactions entre institutions formelles et informelles",
-                    "Explorer les dynamiques de citoyenneté et de participation",
-                    "Comprendre les logiques de gouvernance locale et nationale"
+                    "Etudier les structures de pouvoir, les modes de gouvernance et les relations entre l’Etat et la société à travers une perspective culturelle et historique",
+                    "Analyser comment les croyances, les pratiques et les institutions influencent le pouvoir et l’autorité dans différentes sociétés et différents contextes",
+                    "Comprendre le fonctionnement politique réel et quotidien par l’analyse contextualisée d’interactions d’acteurs multiples du local au global",
+                    "Examiner la dynamique des rapports de force politique à partir d’une observation ethnographique des pratiques et des politiques publiques",
+                    "Comprendre la diversité des formes d’organisations politiques et les dynamiques de changement social et politique"
                 ]
             },
             "development": {
-                "title": "Anthropologie du Développement",
-                "intro": "Analyse critique des processus de changement social et des interventions de développement.",
+                "title": "Domaine du développement durable et inclusif",
+                "intro": "Le LAPODEV en tant qu’Interface entre le Monde universitaire et la Société congolaise est pertinent pour comprendre les dynamiques qui influencent le développement durable.",
                 "quote": "L’anthropologie politique et du développement offre une perspective unique pour analyser les interactions entre les institutions politiques, les acteurs sociaux et les processus de développement.",
                 "goals": [
-                    "Analyser les logiques des acteurs du développement",
-                    "Étudier l'impact social des projets et programmes",
-                    "Comprendre les résistances et les réappropriations locales",
-                    "Évaluer la durabilité et l'inclusivité des interventions",
-                    "Proposer des approches fondées sur les réalités socioculturelles"
+                    "Comprendre les causes profondes et problèmes du sous-développement (inégalités, conflits, corruption, gouvernance)",
+                    "Concevoir des stratégies, projets et programmes de développement plus adaptés et acceptables pour les populations locales",
+                    "Renforcer la participation citoyenne en impliquant les communautés locales dans la conception et la mise en œuvre",
+                    "Evaluer l’impact réel des projets et programmes de développement sur les populations locales",
+                    "Contribuer à la consolidation de la paix et de la sécurité par la prévention des conflits et la promotion de la bonne gouvernance"
                 ]
             },
             "vulnerabilities": {
-                "title": "Analyse des Vulnérabilités",
-                "intro": "Étude des processus de précarisation et des mécanismes d'exclusion sociale.",
-                "groups": {
-                    "children": "Enfants en situation difficile (rue, conflits)",
-                    "minorities": "Minorités et groupes marginalisés",
-                    "women": "Questions de genre et droits des femmes",
-                    "handicap_hiv_lgbt": "Personnes vivant avec handicap, VIH ou discriminations",
-                    "displaced": "Déplacés internes et réfugiés"
-                },
+                "title": "Domaine de l’Analyse des Vulnérabilités",
+                "intro": "Le LAPODEV analyse les facteurs de vulnérabilité pour une prise en charge holistique et une meilleure compréhension des inégalités.",
                 "goals": [
-                    "Identifier les facteurs de vulnérabilité multidimensionnelle",
-                    "Analyser les stratégies de survie et de résilience",
-                    "Évaluer l'efficacité des politiques de protection sociale"
-                ]
+                    "Analyser et prendre en compte la vulnérabilité pour une prise en charge holistique via une approche participative",
+                    "Mieux comprendre les inégalités et les facteurs qui augmentent les risques pour certaines populations",
+                    "Identifier et étudier les groupes sociaux dits « vulnérables » et la résilience communautaire",
+                    "Promouvoir la participation sociale, l’émancipation et l’autonomisation des groupes vulnérables",
+                    "Concevoir des interventions ciblées pour réduire la vulnérabilité et promouvoir l'inclusion"
+                ],
+                "groups": {
+                    "children": "Enfants en situation difficile (abandonnés, de la rue, handicapés, associés aux conflits armés ou en conflit avec la loi)",
+                    "minorities": "Peuples autochtones, minorités ethniques, raciales ou religieuses victimes de discrimination",
+                    "women": "Filles-mères, femmes battues, divorcées, violées, esclaves sexuelles ou veuves avec charge d'enfants",
+                    "handicap_hiv_lgbt": "Personnes vivant avec handicap (obstacles aux services), avec VIH (stigmatisation) et personnes LGBT+ (discriminations et violences)",
+                    "displaced": "Déplacés internes, réfugiés, personnes en pauvreté extrême, sans-abri ou victimes de catastrophes et guerres"
+                }
             }
         },
         "axes": {
             "title": "Axes & Thèmes de Recherches",
-            "description": "Dix axes et thèmes de recherches sur lesquels travaillent les chercheur-e-s du Centre.",
+            "description": "Dix axes centraux découlant des trois domaines initiaux de spécialisation :",
             "items": [
                 "Objet politique",
                 "Développement inclusif et durable",
-                "Enfants et Jeunesse",
-                "Migrations et Déplacements",
-                "Santé et Société",
-                "Genre et Droits des femmes",
-                "Environnement et Ressources",
-                "Gouvernance et Citoyenneté",
-                "Technologie et Société",
-                "Culture et Identités"
+                "Vulnérabilités",
+                "Santé et Education",
+                "Patrimoine culturel/artistique, Environnement et Biodiversité",
+                "Genre et Sexualité",
+                "Questions foncières et ressources naturelles",
+                "Communication, médias et langage",
+                "Questions juridiques et coutumières",
+                "Questions philosophiques et religieuses"
             ]
         },
         "consultancy": {
             "title": "Consultance",
-            "description": "Le LAPODEV propose ses services de consultance spécialisée aux organisations nationales et internationales.",
+            "description": "Le LAPODEV propose une expertise spécialisée dans les domaines suivants :",
             "items": [
-                "Projets et programmes de développement, aide humanitaire",
-                "Politiques publiques et gouvernance politique, conseils juridiques",
-                "Enquêtes, sondages et analyse des données de terrain",
-                "Audits sociaux et environnementaux",
-                "Formations spécialisées et renforcement des capacités",
-                "Études d'impact socioculturel"
+                "Projets et programmes de développement, aide humanitaire et réinsertion sociale",
+                "Politiques publiques et gouvernance politique, conseils juridiques et décision politique",
+                "Analyse des vulnérabilités et des résiliences communautaires",
+                "Communication, médias et langage",
+                "Éthique professionnelle, accompagnement familial et psycho-social",
+                "Protection du patrimoine culturel des peuples, de l’environnement et de la biodiversité"
             ]
         }
     },
