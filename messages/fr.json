@@ -132,11 +132,11 @@
             "title": "Direction Générale",
             "director": "Directeur",
             "director_name": "Pr. Joseph Indeka",
-            "secretary": "Secrétaire Administratif",
+            "secretary": "Secrétaire de direction",
             "secretary_name": "Junior Bampembe"
         },
         "advisory_council": {
-            "title": "Conseil des Sages",
+            "title": "Conseil des Sages et contentieux",
             "president": "Président",
             "president_name": "Pr. Basile Osokonda",
             "advisor": "Conseillère",
@@ -145,18 +145,18 @@
             "member_name": "Mte Delphin Ituku"
         },
         "scientific_committee": {
-            "title": "Comité Scientifique",
-            "director": "Directeur Scientifique",
+            "title": "Direction du Comité scientifique",
+            "director": "Directeur du Comité scientifique",
             "director_name": "Pr. Bertin Beya",
-            "deputy_director": "Directeur Scientifique Adjoint",
+            "deputy_director": "Directeur adjoint",
             "deputy_director_name": "Pr. Damien Mottier",
-            "editor_in_chief": "Rédacteur en chef",
+            "editor_in_chief": "Rédacteur en Chef",
             "editor_in_chief_name": "Pr. Grégoire Ngalamulume",
-            "diffusion_marketing": "Diffusion & Marketing",
+            "diffusion_marketing": "Chargée de Diffusion & marketing",
             "diffusion_marketing_name": "Mne Nicole Mpwekela",
-            "media_library_doc": "Médiathèque & Documentation",
+            "media_library_doc": "Chef de la Médiathèque et Documentation",
             "media_library_doc_name": "Pr. Jerry Mpereng",
-            "media_library_doc_deputy": "Médiathèque - Adjoint",
+            "media_library_doc_deputy": "Chef adjoint de la Médiathèque et Documentation",
             "media_library_doc_deputy_name": "Pr. François Momindo"
         },
         "admin_finance": {
@@ -168,7 +168,7 @@
         },
         "general_assembly": {
             "title": "Assemblée Générale",
-            "content": "L’Assemblée Générale est l’organe suprême du LAPODEV. Elle définit la politique générale, approuve les programmes de recherche et élit les membres des différents organes de gestion. Elle assure la cohésion et l'intégrité de la vision du laboratoire."
+            "content": "L’Assemblée Générale est l’organe suprême du LAPODEV. Elle est composée des Enseignants-chercheurs, chercheur-s-ses, post-doctorant-e-s, doctorant-e-s, expert-e-s, partenaires, sympathisant-e-s et étudiant-e-s. Elle définit la politique générale, approuve les programmes de recherche et élit les membres des différents organes de gestion."
         }
     },
     "ExpertisePage": {

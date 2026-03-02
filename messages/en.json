@@ -132,11 +132,11 @@
             "title": "General Direction",
             "director": "Director",
             "director_name": "Pr. Joseph Indeka",
-            "secretary": "Administrative Secretary",
+            "secretary": "Executive Secretary",
             "secretary_name": "Junior Bampembe"
         },
         "advisory_council": {
-            "title": "Advisory Council",
+            "title": "Advisory and Litigation Council",
             "president": "President",
             "president_name": "Pr. Basile Osokonda",
             "advisor": "Advisor",
@@ -145,18 +145,18 @@
             "member_name": "Mte Delphin Ituku"
         },
         "scientific_committee": {
-            "title": "Scientific Committee",
-            "director": "Scientific Director",
+            "title": "Scientific Committee Directorate",
+            "director": "Scientific Committee Director",
             "director_name": "Pr. Bertin Beya",
-            "deputy_director": "Deputy Scientific Director",
+            "deputy_director": "Deputy Director",
             "deputy_director_name": "Pr. Damien Mottier",
-            "editor_in_chief": "Editor-in-chief",
+            "editor_in_chief": "Editor-in-Chief",
             "editor_in_chief_name": "Pr. Grégoire Ngalamulume",
-            "diffusion_marketing": "Diffusion & Marketing",
+            "diffusion_marketing": "Diffusion & Marketing Lead",
             "diffusion_marketing_name": "Mne Nicole Mpwekela",
-            "media_library_doc": "Media Library & Documentation",
+            "media_library_doc": "Head of Media Library and Documentation",
             "media_library_doc_name": "Pr. Jerry Mpereng",
-            "media_library_doc_deputy": "Media Library - Deputy",
+            "media_library_doc_deputy": "Deputy Head of Media Library and Documentation",
             "media_library_doc_deputy_name": "Pr. François Momindo"
         },
         "admin_finance": {
@@ -168,7 +168,7 @@
         },
         "general_assembly": {
             "title": "General Assembly",
-            "content": "The General Assembly is the supreme body of LAPODEV. It defines the general policy, approves research programs and elects members of the various management bodies. It ensures the cohesion and integrity of the laboratory's vision."
+            "content": "The General Assembly is the supreme body of LAPODEV. It is composed of Teacher-researchers, researchers, post-doctoral fellows, doctoral students, experts, partners, supporters, and students. It defines the general policy, approves research programs, and elects members of the various management bodies."
         }
     },
     "ExpertisePage": {
