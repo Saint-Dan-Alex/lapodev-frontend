@@ -1,7 +1,7 @@
 {
     "Metadata": {
-        "title": "LAPODEV - Laboratory of Politics and Development",
-        "description": "Research center at the University of Kinshasa (UNIKIN) specialized in politics, development, governance and consultancy.",
+        "title": "LAPODEV - Laboratory of Political Anthropology, Development & Vulnerability Analysis",
+        "description": "Research center at the University of Kinshasa (UNIKIN) specialized in political anthropology, development, vulnerability analysis and consultancy.",
         "about": "About - LAPODEV",
         "expertise": "Expertise - LAPODEV",
         "governance": "Governance - LAPODEV",
@@ -76,7 +76,7 @@
         "join": "Join us"
     },
     "Footer": {
-        "description": "The Laboratory of Politics and Development (LAPODEV) is a research and consultancy structure of the University of Kinshasa.",
+        "description": "The Laboratory of Political Anthropology, Development & Vulnerability Analysis (LAPODEV) is a research and consultancy structure of the University of Kinshasa.",
         "nav_title": "Navigation",
         "labels": {
             "address": "Address",
