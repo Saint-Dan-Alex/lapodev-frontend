@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import {
     ShieldCheck,
     Globe2,
-    Scale,
+    Landmark,
     Lightbulb,
     Microscope,
     Briefcase,
@@ -67,7 +67,7 @@ export default function ExpertisePage() {
                         <div id="politics" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                             <div className="space-y-6">
                                 <div className="inline-flex p-4 bg-primary/5 rounded-2xl text-primary mb-2">
-                                    <Scale className="h-10 w-10" />
+                                    <Landmark className="h-10 w-10" />
                                 </div>
                                 <h3 className="text-3xl font-black text-gray-900 uppercase leading-none">
                                     {t('research.politics.title')}

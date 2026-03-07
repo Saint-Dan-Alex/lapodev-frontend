@@ -129,7 +129,7 @@ export function Header() {
                     </Link>
                 </div>
 
-                <div className="hidden flex-1 justify-center lg:flex ml-1 w-full overflow-hidden">
+                <div className="hidden flex-1 justify-center lg:flex ml-1 w-full">
                     <NavigationMenu viewport={false}>
                         <NavigationMenuList className="gap-0 xl:gap-1">
                             {/* Home */}
