@@ -17,9 +17,12 @@ import HeroCarousel from '@/components/home/HeroCarousel';
 import StatsCounter from '@/components/home/StatsCounter';
 import AutoScrollCarousel from '@/components/home/AutoScrollCarousel';
 
+import { LabEvent, LabPublication } from '@/types/lab';
+import { motion } from 'framer-motion';
+
 interface HomePageClientProps {
-    newsData: any[];
-    pubsData: any[];
+    newsData: LabEvent[];
+    pubsData: LabPublication[];
 }
 
 export default function HomePageClient({ newsData, pubsData }: HomePageClientProps) {

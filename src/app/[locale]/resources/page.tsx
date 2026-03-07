@@ -25,94 +25,16 @@ import {
     DialogDescription
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from '@/components/ui/button';
-import { cn } from "@/lib/utils";
-
-interface Member {
-    id: number;
-    name: string;
-    category: 'academic' | 'scientific' | 'administrative' | 'technical';
-    grade?: string;
-    biography?: string;
-    bibliography?: string;
-    email?: string;
-    office?: string;
-    dossierUrl?: string;
-}
+import { Link, useRouter } from '@/i18n/routing';
+import { getMembers } from '@/lib/data/members';
 
 export default function ResourcesPage() {
     const t = useTranslations('ResourcesPage');
-    const [selectedMember, setSelectedMember] = useState<Member | null>(null);
+    const router = useRouter();
+    const [selectedMember, setSelectedMember] = useState<any | null>(null);
     const [activeModalTab, setActiveModalTab] = useState('identity');
 
-    const members: Member[] = [
-        // ACADEMIC
-        {
-            id: 1,
-            name: "Pr. INDEKA NKOSO Joseph",
-            category: 'academic',
-            grade: t('human_resources.grades.director'),
-            email: "joseph.indeka@gmail.com",
-            biography: t('human_resources.bios.indeka'),
-            bibliography: t('human_resources.bibliographies.indeka'),
-            office: t('human_resources.offices.indeka')
-        },
-        { id: 2, name: "Pr. OSOKONDA OKENGE Basile", category: 'academic', grade: t('human_resources.grades.president') },
-        { id: 3, name: "Pr. MOTTIER Damien", category: 'academic', grade: t('human_resources.grades.deputy_scientific') },
-        { id: 4, name: "Pr. MPERENG JERRY", category: 'academic', grade: t('human_resources.grades.media_head') },
-        { id: 5, name: "Pr. BEYA MALENGU BERTIN", category: 'academic', grade: t('human_resources.grades.scientific_director') },
-        { id: 6, name: "Pr. NGALAMULUME Grégoire", category: 'academic', grade: t('human_resources.grades.editor_in_chief') },
-        { id: 7, name: "Pr. MOMINDO François", category: 'academic', grade: t('human_resources.grades.media_deputy') },
-        { id: 8, name: "Pr. MUMBEMBELE SANGER Placide", category: 'academic' },
-        { id: 9, name: "Pr. NEKA MBANGAZI Victorine", category: 'academic' },
-        { id: 10, name: "Pr. EKALA BOKOSWA Pierre", category: 'academic' },
-        { id: 11, name: "Pr. MULOMBA TSHITUMBA Elie", category: 'academic' },
-        { id: 12, name: "Pr. KAVIRA WANGAHEMUKA Julienne", category: 'academic', grade: t('human_resources.grades.assoc_prof'), biography: t('human_resources.bios.kavira') },
-        { id: 13, name: "Pr. BARAKA MUVUKA", category: 'academic' },
-        { id: 14, name: "Pr. NGOY MUANA Emery", category: 'academic' },
-        { id: 15, name: "Dr. TSHAMA KANUMBI", category: 'academic' },
-
-        // SCIENTIFIC
-        { id: 101, name: "LUNDUKU MASANDA Bauer", category: 'scientific' },
-        { id: 102, name: "MUAMBA Victor", category: 'scientific', grade: t('human_resources.grades.daf') },
-        { id: 103, name: "GATO MBONEZA Rose", category: 'scientific', grade: t('human_resources.grades.advisor') },
-        { id: 104, name: "MPWEKELA KALALA Nicole", category: 'scientific', grade: t('human_resources.grades.marketing') },
-        { id: 105, name: "BOPEDJI ITUKU Delphin", category: 'scientific', grade: t('human_resources.grades.board_member') },
-        { id: 106, name: "MOSSI SEZENE Gradi", category: 'scientific' },
-        { id: 107, name: "LIKENGO BONKONDO Nathalie", category: 'scientific' },
-        { id: 108, name: "MBOLO BELAMBO Jean Bosco", category: 'scientific' },
-        { id: 109, name: "BAMPEMBE BOTUNDULU Junior", category: 'scientific', grade: t('human_resources.grades.secretary') },
-        { id: 110, name: "MBAY Serge", category: 'scientific' },
-        { id: 111, name: "KINDAMBU Paulin", category: 'scientific' },
-        { id: 112, name: "LUBINGA MULENGA Patrick", category: 'scientific' },
-        { id: 113, name: "BAKENGA Wa BAKENGA PI-Cretsh", category: 'scientific' },
-        { id: 114, name: "INDEKA NKOSO Grings", category: 'scientific' },
-        { id: 115, name: "KASEREKA WANGAHEMUKA Shamba", category: 'scientific' },
-        { id: 116, name: "LOOLA ESINGI Hervé", category: 'scientific' },
-        { id: 117, name: "MBALE BASA Michel", category: 'scientific' },
-        { id: 118, name: "MUSHANGALUSA BULEMPWE Prosper", category: 'scientific' },
-        { id: 119, name: "TSHOMBE KABWIT Samuel", category: 'scientific' },
-        { id: 120, name: "NUNGENDA ILONGOLONGO Romain", category: 'scientific' },
-        { id: 121, name: "TSHIMANGA MAKENGA Alexr", category: 'scientific' },
-        { id: 122, name: "MANENG Sandrine", category: 'scientific' },
-        { id: 123, name: "LILEMBO KOLI Willy", category: 'scientific' },
-        { id: 124, name: "EPOMI NKOSO Jean-Pierre", category: 'scientific' },
-        { id: 125, name: "BAONDJE BELEMBE Hilaire", category: 'scientific' },
-
-        // ADMINISTRATIVE
-        { id: 201, name: "TIBA RAJABU Merveille", category: 'administrative', grade: t('human_resources.grades.admin_assistant') },
-        { id: 202, name: "BELEMO NSIMBA", category: 'administrative' },
-        { id: 203, name: "NGONGA DJESE Marie", category: 'administrative' },
-        { id: 204, name: "BOPENDA BENGOYA Chardelle", category: 'administrative' },
-        { id: 205, name: "TSHILOMBA Marie", category: 'administrative' },
-
-        // TECHNICAL
-        { id: 301, name: "MPEMBE LOKENYE Patrick", category: 'technical' },
-        { id: 302, name: "IBINDA Menacé", category: 'technical' },
-        { id: 303, name: "BASA DJONGWA Pierre", category: 'technical' },
-        { id: 304, name: "MUBWISA Micheline", category: 'technical' },
-        { id: 305, name: "KABONGO KABANGA Trésor", category: 'technical' },
-    ];
+    const members = getMembers(t);
 
     const documents = [
         { title: t('documents.items.0'), category: t('documents.categories.official') },
@@ -195,13 +117,10 @@ export default function ResourcesPage() {
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {filterMembers(cat).map((member) => (
-                                        <div
+                                    {filterMembers(cat).map((member: any) => (
+                                        <Link
                                             key={member.id}
-                                            onClick={() => {
-                                                setSelectedMember(member);
-                                                setActiveModalTab('identity');
-                                            }}
+                                            href={`/resources/${member.id}`}
                                             className="group bg-white border border-slate-200 p-5 rounded-2xl hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all cursor-pointer relative overflow-hidden"
                                         >
                                             <div className="flex flex-col h-full">
@@ -213,12 +132,12 @@ export default function ResourcesPage() {
                                                 </h4>
                                                 <div className="mt-4 pt-4 border-t border-slate-50 flex items-center justify-between">
                                                     <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest flex items-center gap-1 group-hover:text-gray-900">
-                                                        {t('human_resources.download')} <ChevronRight className="h-3 w-3" />
+                                                        {t('human_resources.view_profile')} <ChevronRight className="h-3 w-3" />
                                                     </span>
-                                                    <Download className="h-4 w-4 text-slate-300 group-hover:text-primary transition-colors" />
+                                                    <User className="h-4 w-4 text-slate-300 group-hover:text-primary transition-colors" />
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>

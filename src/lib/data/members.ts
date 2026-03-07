@@ -1,0 +1,70 @@
+import { Member } from '@/types/lab';
+
+export const getMembers = (t: any): Member[] => [
+    // ACADEMIC
+    {
+        id: 'indeka-nkoso-joseph',
+        name: "Pr. INDEKA NKOSO Joseph",
+        category: 'academic',
+        grade: t('human_resources.grades.director'),
+        email: "joseph.indeka@gmail.com",
+        bio: t('human_resources.bios.indeka'),
+        bibliography: t('human_resources.bibliographies.indeka'),
+        office: t('human_resources.offices.indeka')
+    },
+    { id: 'osokonda-okenge-basile', name: "Pr. OSOKONDA OKENGE Basile", category: 'academic', grade: t('human_resources.grades.president') },
+    { id: 'mottier-damien', name: "Pr. MOTTIER Damien", category: 'academic', grade: t('human_resources.grades.deputy_scientific') },
+    { id: 'mpereng-jerry', name: "Pr. MPERENG JERRY", category: 'academic', grade: t('human_resources.grades.media_head') },
+    { id: 'beya-malengu-bertin', name: "Pr. BEYA MALENGU BERTIN", category: 'academic', grade: t('human_resources.grades.scientific_director') },
+    { id: 'ngalamulume-gregoire', name: "Pr. NGALAMULUME Grégoire", category: 'academic', grade: t('human_resources.grades.editor_in_chief') },
+    { id: 'momindo-francois', name: "Pr. MOMINDO François", category: 'academic', grade: t('human_resources.grades.media_deputy') },
+    { id: 'mumbembele-sanger-placide', name: "Pr. MUMBEMBELE SANGER Placide", category: 'academic' },
+    { id: 'neka-mbangazi-victorine', name: "Pr. NEKA MBANGAZI Victorine", category: 'academic' },
+    { id: 'ekala-bokoswa-pierre', name: "Pr. EKALA BOKOSWA Pierre", category: 'academic' },
+    { id: 'mulomba-tshitumba-elie', name: "Pr. MULOMBA TSHITUMBA Elie", category: 'academic' },
+    { id: 'kavira-wangahemuka-julienne', name: "Pr. KAVIRA WANGAHEMUKA Julienne", category: 'academic', grade: t('human_resources.grades.assoc_prof'), bio: t('human_resources.bios.kavira') },
+    { id: 'baraka-muvuka', name: "Pr. BARAKA MUVUKA", category: 'academic' },
+    { id: 'ngoy-muana-emery', name: "Pr. NGOY MUANA Emery", category: 'academic' },
+    { id: 'tshama-kanumbi', name: "Dr. TSHAMA KANUMBI", category: 'academic' },
+
+    // SCIENTIFIC
+    { id: 'lunduku-masanda-bauer', name: "LUNDUKU MASANDA Bauer", category: 'scientific' },
+    { id: 'muamba-victor', name: "MUAMBA Victor", category: 'scientific', grade: t('human_resources.grades.daf') },
+    { id: 'gato-mboneza-rose', name: "GATO MBONEZA Rose", category: 'scientific', grade: t('human_resources.grades.advisor') },
+    { id: 'mpwekela-kalala-nicole', name: "MPWEKELA KALALA Nicole", category: 'scientific', grade: t('human_resources.grades.marketing') },
+    { id: 'bopedji-ituku-delphin', name: "BOPEDJI ITUKU Delphin", category: 'scientific', grade: t('human_resources.grades.board_member') },
+    { id: 'mossi-sezene-gradi', name: "MOSSI SEZENE Gradi", category: 'scientific' },
+    { id: 'likengo-bonkondo-nathalie', name: "LIKENGO BONKONDO Nathalie", category: 'scientific' },
+    { id: 'mbolo-belambo-jean-bosco', name: "MBOLO BELAMBO Jean Bosco", category: 'scientific' },
+    { id: 'bampembe-botundulu-junior', name: "BAMPEMBE BOTUNDULU Junior", category: 'scientific', grade: t('human_resources.grades.secretary') },
+    { id: 'mbay-serge', name: "MBAY Serge", category: 'scientific' },
+    { id: 'kindambu-paulin', name: "KINDAMBU Paulin", category: 'scientific' },
+    { id: 'lubinga-mulenga-patrick', name: "LUBINGA MULENGA Patrick", category: 'scientific' },
+    { id: 'bakenga-wa-bakenga-pi-cretsh', name: "BAKENGA Wa BAKENGA PI-Cretsh", category: 'scientific' },
+    { id: 'indeka-nkoso-grings', name: "INDEKA NKOSO Grings", category: 'scientific' },
+    { id: 'kasereka-wangahemuka-shamba', name: "KASEREKA WANGAHEMUKA Shamba", category: 'scientific' },
+    { id: 'loola-esingi-herve', name: "LOOLA ESINGI Hervé", category: 'scientific' },
+    { id: 'mbale-basa-michel', name: "MBALE BASA Michel", category: 'scientific' },
+    { id: 'mushangalusa-bulempwe-prosper', name: "MUSHANGALUSA BULEMPWE Prosper", category: 'scientific' },
+    { id: 'tshombe-kabwit-samuel', name: "TSHOMBE KABWIT Samuel", category: 'scientific' },
+    { id: 'nungenda-ilongolongo-romain', name: "NUNGENDA ILONGOLONGO Romain", category: 'scientific' },
+    { id: 'tshimanga-makenga-alexr', name: "TSHIMANGA MAKENGA Alexr", category: 'scientific' },
+    { id: 'maneng-sandrine', name: "MANENG Sandrine", category: 'scientific' },
+    { id: 'lilembo-koli-willy', name: "LILEMBO KOLI Willy", category: 'scientific' },
+    { id: 'epomi-nkoso-jean-pierre', name: "EPOMI NKOSO Jean-Pierre", category: 'scientific' },
+    { id: 'baondje-belembe-hilaire', name: "BAONDJE BELEMBE Hilaire", category: 'scientific' },
+
+    // ADMINISTRATIVE
+    { id: 'tiba-rajabu-merveille', name: "TIBA RAJABU Merveille", category: 'administrative', grade: t('human_resources.grades.admin_assistant') },
+    { id: 'belemo-nsimba', name: "BELEMO NSIMBA", category: 'administrative' },
+    { id: 'ngonga-djese-marie', name: "NGONGA DJESE Marie", category: 'administrative' },
+    { id: 'bopenda-bengoya-chardelle', name: "BOPENDA BENGOYA Chardelle", category: 'administrative' },
+    { id: 'tshilomba-marie', name: "TSHILOMBA Marie", category: 'administrative' },
+
+    // TECHNICAL
+    { id: 'mpembe-lokenye-patrick', name: "MPEMBE LOKENYE Patrick", category: 'technical' },
+    { id: 'ibinda-menace', name: "IBINDA Menacé", category: 'technical' },
+    { id: 'basa-djongwa-pierre', name: "BASA DJONGWA Pierre", category: 'technical' },
+    { id: 'mubwisa-micheline', name: "MUBWISA Micheline", category: 'technical' },
+    { id: 'kabongo-kabanga-tresor', name: "KABONGO KABANGA Trésor", category: 'technical' },
+];

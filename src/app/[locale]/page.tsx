@@ -16,6 +16,8 @@ export async function generateMetadata({
     };
 }
 
+import { LabEvent, LabPublication } from '@/types/lab';
+
 export default async function HomePage({
     params
 }: {
@@ -24,9 +26,9 @@ export default async function HomePage({
     const { locale } = await params;
     const newsT = await getTranslations({ locale, namespace: 'NewsPage' });
 
-    // Fetch raw data from translations on the server
-    const newsData = newsT.raw('data.events') as any[];
-    const pubsData = newsT.raw('data.publications') as any[];
+    // Fetch raw data from translations on the server with correct types
+    const newsData = (newsT.raw('data.events') as LabEvent[]) || [];
+    const pubsData = (newsT.raw('data.publications') as LabPublication[]) || [];
 
     return (
         <HomePageClient

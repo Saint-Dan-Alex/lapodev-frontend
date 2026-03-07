@@ -92,11 +92,11 @@ export default function ExpertisePage() {
                             <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100">
                                 <h4 className="text-lg font-bold text-gray-900 mb-8 uppercase tracking-wider">{t('research.goals_label')}</h4>
                                 <ul className="space-y-6">
-                                    {[0, 1, 2, 3, 4].map((i) => (
+                                    {(t.raw('research.politics.goals') as string[]).map((goal, i) => (
                                         <li key={i} className="flex gap-4 group">
                                             <CheckCircle2 className="h-6 w-6 text-primary shrink-0 group-hover:scale-110 transition-transform" />
                                             <p className="text-gray-700 leading-relaxed font-medium">
-                                                {t(`research.politics.goals.${i}`)}
+                                                {goal}
                                             </p>
                                         </li>
                                     ))}
@@ -126,13 +126,13 @@ export default function ExpertisePage() {
                             <div className="lg:order-1 bg-slate-50 p-10 rounded-[3rem] border border-slate-100">
                                 <h4 className="text-lg font-bold text-gray-900 mb-8 uppercase tracking-wider">{t('research.axes_label')}</h4>
                                 <ul className="space-y-6">
-                                    {[0, 1, 2, 3, 4].map((i) => (
+                                    {(t.raw('research.development.goals') as string[]).map((goal, i) => (
                                         <li key={i} className="flex gap-4 group">
                                             <div className="flex-none w-8 h-8 rounded-full bg-[#fdb913] flex items-center justify-center text-white font-black">
                                                 {i + 1}
                                             </div>
                                             <p className="text-gray-700 leading-relaxed font-medium">
-                                                {t(`research.development.goals.${i}`)}
+                                                {goal}
                                             </p>
                                         </li>
                                     ))}
@@ -172,11 +172,11 @@ export default function ExpertisePage() {
                             <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100">
                                 <h4 className="text-lg font-bold text-gray-900 mb-8 uppercase tracking-wider">{t('research.analysis_label')}</h4>
                                 <ul className="space-y-6">
-                                    {[0, 1, 2].map((i) => (
+                                    {(t.raw('research.vulnerabilities.goals') as string[]).map((goal, i) => (
                                         <li key={i} className="flex gap-4 group">
                                             <div className="w-2 h-10 bg-[#ee1c25] shrink-0 rounded-full opacity-30 group-hover:opacity-100 transition-opacity"></div>
                                             <p className="text-gray-700 leading-relaxed font-medium">
-                                                {t(`research.vulnerabilities.goals.${i}`)}
+                                                {goal}
                                             </p>
                                         </li>
                                     ))}
@@ -196,15 +196,15 @@ export default function ExpertisePage() {
                             <h2 className="text-4xl lg:text-5xl font-black mb-6 uppercase tracking-tight italic text-[#fdb913]">
                                 {t('axes.title')}
                             </h2>
-                            <p className="text-white/60 leading-relaxed">
+                            <h3 className="text-white/60 leading-relaxed">
                                 {t('axes.description')}
-                            </p>
+                            </h3>
                         </div>
                         <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-                            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
+                            {(t.raw('axes.items') as string[]).map((item, i) => (
                                 <div key={i} className="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group">
                                     <span className="text-2xl font-black text-white/20 group-hover:text-[#fdb913] transition-colors">{(i + 1).toString().padStart(2, '0')}</span>
-                                    <span className="font-bold text-sm tracking-wide">{t(`axes.items.${i}`)}</span>
+                                    <span className="font-bold text-sm tracking-wide">{item}</span>
                                 </div>
                             ))}
                         </div>
@@ -223,21 +223,22 @@ export default function ExpertisePage() {
                             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 uppercase tracking-tight leading-none">
                                 {t('consultancy.title')}
                             </h2>
-                            <p className="text-gray-600 leading-relaxed">
+                            <h3 className="text-gray-600 leading-relaxed">
                                 {t('consultancy.description')}
-                            </p>
+                            </h3>
                         </div>
                         <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                            {[0, 1, 2, 3, 4, 5].map((i) => (
+                            {(t.raw('consultancy.items') as string[]).map((item, i) => (
                                 <div key={i} className="flex gap-5 p-8 rounded-3xl bg-white shadow-xl shadow-slate-200/50 border border-slate-100 group hover:-translate-y-1 transition-all">
                                     <div className="w-1.5 h-full bg-primary/20 group-hover:bg-primary transition-colors shrink-0 rounded-full"></div>
-                                    <p className="text-gray-800 font-bold leading-relaxed">{t(`consultancy.items.${i}`)}</p>
+                                    <p className="text-gray-800 font-bold leading-relaxed">{item}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
             </section>
+
         </div>
     );
 }
