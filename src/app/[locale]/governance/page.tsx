@@ -25,12 +25,41 @@ export default function GovernancePage() {
             <section className="relative pt-32 pb-20 bg-[#5b1887] text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
-                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-black mb-4 tracking-tighter uppercase italic">
+                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-black mb-12 tracking-tighter uppercase italic">
                         {t('title')}
                     </h1>
-                    <p className="text-base md:text-lg lg:text-xl font-serif font-light text-white/80 max-w-2xl mx-auto">
-                        {t('subtitle')}
-                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left mt-8">
+                        {/* Conseil d'Administration */}
+                        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-xl">
+                            <h2 className="text-xl md:text-2xl font-bold mb-6 text-white border-b border-white/20 pb-4">
+                                {t('organigram.board_of_directors')}
+                            </h2>
+                            <ul className="space-y-4">
+                                {t.raw('organigram.bod_items').map((item: string, idx: number) => (
+                                    <li key={idx} className="flex items-start gap-3 text-white/90">
+                                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white/60 shrink-0"></span>
+                                        <span className="text-sm md:text-base font-medium">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Assemblée Générale */}
+                        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-xl">
+                            <h2 className="text-xl md:text-2xl font-bold mb-6 text-white border-b border-white/20 pb-4">
+                                {t('organigram.general_assembly')}
+                            </h2>
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {t.raw('organigram.ga_items').map((item: string, idx: number) => (
+                                    <li key={idx} className="flex items-start gap-3 text-white/90">
+                                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white/40 shrink-0"></span>
+                                        <span className="text-sm">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
 

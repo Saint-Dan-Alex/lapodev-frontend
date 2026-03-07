@@ -127,7 +127,26 @@
     },
     "GovernancePage": {
         "title": "Gouvernance",
-        "subtitle": "Une structure organisée pour l'excellence scientifique",
+        "organigram": {
+            "board_of_directors": "Conseil d'Administration :",
+            "bod_items": [
+                "Direction Générale",
+                "Conseil des Sages & des Contentieux",
+                "Direction du Comité Scientifique",
+                "Direction Administrative & Financière"
+            ],
+            "general_assembly": "Assemblée Générale :",
+            "ga_items": [
+                "Enseignant-e-s- chercheurs- euses",
+                "Post-doctorant-e-s",
+                "Chercheuses & chercheurs",
+                "Doctorant-e-s",
+                "Expert-e-s",
+                "Sympathisant-e-s",
+                "Bienfaitrices & bienfaiteurs",
+                "Etudiant-e-s"
+            ]
+        },
         "general_direction": {
             "title": "Direction Générale",
             "director": "Directeur",

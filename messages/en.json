@@ -127,7 +127,26 @@
     },
     "GovernancePage": {
         "title": "Governance",
-        "subtitle": "An organized structure for scientific excellence",
+        "organigram": {
+            "board_of_directors": "Board of Directors:",
+            "bod_items": [
+                "General Direction",
+                "Advisory and Litigation Council",
+                "Scientific Committee Directorate",
+                "Administrative & Financial Direction"
+            ],
+            "general_assembly": "General Assembly:",
+            "ga_items": [
+                "Teacher-researchers",
+                "Post-doctoral fellows",
+                "Researchers",
+                "Doctoral students",
+                "Experts",
+                "Supporters",
+                "Benefactors",
+                "Students"
+            ]
+        },
         "general_direction": {
             "title": "General Direction",
             "director": "Director",
