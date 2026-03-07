@@ -121,7 +121,7 @@ export function Header() {
                 ? "bg-white/95 backdrop-blur-md shadow-2xl border-b border-slate-200 text-gray-900 py-2"
                 : "bg-transparent text-white"
         )}>
-            <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
+            <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-6 xl:px-8">
                 {/* Logo Section */}
                 <div className="flex items-center gap-4 xl:gap-8">
                     <Link href="/" className="transition-transform hover:scale-105 active:scale-95 shrink-0">
@@ -129,17 +129,16 @@ export function Header() {
                     </Link>
                 </div>
 
-                {/* Center Navigation - Desktop */}
-                <div className="hidden flex-1 justify-center xl:flex ml-1">
+                <div className="hidden flex-1 justify-center lg:flex ml-1 w-full overflow-hidden">
                     <NavigationMenu viewport={false}>
-                        <NavigationMenuList className="gap-2">
+                        <NavigationMenuList className="gap-0 xl:gap-1">
                             {/* Home */}
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
                                     <Link
                                         href="/"
                                         className={cn(
-                                            "group inline-flex h-11 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[13px] font-black uppercase tracking-widest transition-all duration-300 focus:outline-none relative overflow-hidden",
+                                            "group inline-flex h-11 w-max items-center justify-center rounded-md bg-transparent px-2 xl:px-3 py-2 text-[12px] font-black uppercase tracking-widest transition-all duration-300 focus:outline-none relative overflow-hidden",
                                             isScrolled ? "text-slate-700 hover:text-primary" : "text-white hover:text-white/80"
                                         )}
                                     >
@@ -156,7 +155,7 @@ export function Header() {
                             {menuItems.map((menu) => (
                                 <NavigationMenuItem key={menu.title}>
                                     <NavigationMenuTrigger className={cn(
-                                        "bg-transparent h-11 px-4 transition-all duration-300 uppercase text-[13px] font-black tracking-widest group relative",
+                                        "bg-transparent h-11 px-2 xl:px-3 transition-all duration-300 uppercase text-[12px] font-black tracking-widest group relative",
                                         isScrolled
                                             ? "text-slate-700 hover:text-primary data-[state=open]:text-primary"
                                             : "text-white hover:text-white/80 data-[state=open]:text-white/100"
@@ -191,13 +190,12 @@ export function Header() {
                             ))}
 
                             {/* Contact */}
-
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
                                     <Link
                                         href="/contact"
                                         className={cn(
-                                            "group inline-flex h-11 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[13px] font-black uppercase tracking-widest transition-all duration-300 focus:outline-none relative overflow-hidden",
+                                            "group inline-flex h-11 w-max items-center justify-center rounded-md bg-transparent px-2 xl:px-3 py-2 text-[12px] font-black uppercase tracking-widest transition-all duration-300 focus:outline-none relative overflow-hidden",
                                             isScrolled ? "text-slate-700 hover:text-primary" : "text-white hover:text-white/80"
                                         )}
                                     >
