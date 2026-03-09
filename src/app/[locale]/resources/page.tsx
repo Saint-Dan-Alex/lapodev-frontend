@@ -26,6 +26,8 @@ import {
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link, useRouter } from '@/i18n/routing';
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { getMembers } from '@/lib/data/members';
 
 export default function ResourcesPage() {

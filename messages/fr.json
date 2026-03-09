@@ -73,7 +73,8 @@
             "publications": "Publications"
         },
         "contact": "Contact",
-        "join": "Nous rejoindre"
+        "join": "Nous rejoindre",
+        "login": "Connexion"
     },
     "Footer": {
         "description": "Le Laboratoire d’Anthropologie Politique, du Développement & d’Analyse des Vulnérabilités (LAPODEV) est une structure de recherche et de consultance de l'Université de Kinshasa. C'est un Établissement d'utilité publique.",
@@ -473,6 +474,7 @@
     "JoinPage": {
         "title": "Adhérez au LAPODEV",
         "subtitle": "Bulletin d'adhésion pour devenir membre",
+        "login": "Connexion Administrateur",
         "form": {
             "identity": {
                 "title": "1. Identité",

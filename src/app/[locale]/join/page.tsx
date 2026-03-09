@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -255,10 +256,19 @@ export default function JoinPage() {
                                             </Label>
                                         </div>
 
-                                        <Button type="submit" size="lg" className="w-full md:w-auto h-16 px-12 bg-white text-primary hover:bg-white/90 rounded-2xl font-black uppercase tracking-widest text-sm flex items-center justify-center gap-3 transition-all">
-                                            <span>{t('form.submit')}</span>
-                                            <Send className="h-5 w-5" />
-                                        </Button>
+                                        <div className="flex flex-col md:flex-row items-center gap-6">
+                                            <Button type="submit" size="lg" className="w-full md:w-auto h-16 px-12 bg-white text-primary hover:bg-white/90 rounded-2xl font-black uppercase tracking-widest text-sm flex items-center justify-center gap-3 transition-all">
+                                                <span>{t('form.submit')}</span>
+                                                <Send className="h-5 w-5" />
+                                            </Button>
+
+                                            <Button type="button" size="lg" className="w-full md:w-auto h-16 px-12 bg-transparent border-2 border-white/20 text-white hover:bg-white/10 rounded-2xl font-black uppercase tracking-widest text-sm transition-all" asChild>
+                                                <Link href="/login" className="flex items-center justify-center gap-3">
+                                                    <span>{t('login')}</span>
+                                                    <User className="h-5 w-5" />
+                                                </Link>
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
