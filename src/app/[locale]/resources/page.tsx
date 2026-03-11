@@ -46,6 +46,8 @@ export default function ResourcesPage() {
         { title: t('documents.items.4'), category: t('documents.categories.membership') },
         { title: t('documents.items.5'), category: t('documents.categories.support') },
         { title: t('documents.items.6'), category: t('documents.categories.publications') },
+        { title: t('documents.items.7'), category: t('documents.categories.archives') },
+        { title: t('documents.items.8'), category: t('documents.categories.archives') },
     ];
 
     const galleryItems = [
