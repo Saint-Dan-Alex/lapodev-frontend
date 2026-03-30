@@ -310,7 +310,9 @@
                 "marketing": "Diffusion & Marketing",
                 "board_member": "Board Member",
                 "secretary": "Administrative Secretary",
-                "admin_assistant": "Administrative Assistant"
+                "admin_assistant": "Administrative Assistant",
+                "research_assistant": "Research Assistant",
+                "research_assistant_f": "Research Assistant"
             },
             "bios": {
                 "indeka": "Joseph Indeka Nkoso is a Full Professor in the Department of Anthropology and Director of LAPODEV. Aggregated in history, he holds a PhD in Political and Social Sciences from the Université Libre de Bruxelles. His research reconciles multidisciplinarity, scale variation, and long duration.",
