@@ -51,12 +51,18 @@ export default function ResourcesPage() {
     ];
 
     const galleryItems = [
-        { id: 1, title: "Session de Travail", category: "team", image: "/Carousel/1.jpeg" },
-        { id: 2, title: "Mission de Recherche", category: "research", image: "/Carousel/2.jpeg" },
-        { id: 3, title: "Assemblée Générale", category: "events", image: "/Carousel/3.jpeg" },
-        { id: 4, title: "Conférence Scientifique", category: "events", image: "/Carousel/1.jpeg" },
-        { id: 5, title: "Analyse de Terrain", category: "research", image: "/Carousel/2.jpeg" },
-        { id: 6, title: "Réunion DG", category: "team", image: "/Carousel/3.jpeg" },
+        // Siège de LAPODEV, UNIKIN
+        { id: 1, title: "Siège de LAPODEV, UNIKIN (Home 30)", category: "events", image: "/1/WhatsApp%20Image%202026-03-29%20at%2007.54.44%20(1).jpeg" },
+        { id: 2, title: "Siège de LAPODEV, UNIKIN (Home 30)", category: "events", image: "/1/WhatsApp%20Image%202026-03-29%20at%2007.54.45%20(1).jpeg" },
+        { id: 3, title: "Siège de LAPODEV, UNIKIN (Home 30)", category: "events", image: "/1/WhatsApp%20Image%202026-03-29%20at%2007.54.46%20(1).jpeg" },
+        { id: 4, title: "Siège de LAPODEV, UNIKIN (Home 30)", category: "events", image: "/1/WhatsApp%20Image%202026-03-29%20at%2007.54.47%20(1).jpeg" },
+        { id: 5, title: "Siège de LAPODEV, UNIKIN (Home 30)", category: "events", image: "/1/WhatsApp%20Image%202026-03-29%20at%2007.54.48%20(1).jpeg" },
+        // Espace LAPODEV au Home 30
+        { id: 6, title: "Espace LAPODEV au Home 30", category: "events", image: "/3/WhatsApp%20Image%202026-03-29%20at%2008.17.18%20(1).jpeg" },
+        { id: 7, title: "Espace LAPODEV au Home 30", category: "events", image: "/3/WhatsApp%20Image%202026-03-29%20at%2008.17.19%20(1).jpeg" },
+        { id: 8, title: "Espace LAPODEV au Home 30", category: "events", image: "/3/WhatsApp%20Image%202026-03-29%20at%2008.17.20%20(1).jpeg" },
+        { id: 9, title: "Espace LAPODEV au Home 30", category: "events", image: "/3/WhatsApp%20Image%202026-03-29%20at%2008.17.21%20(1).jpeg" },
+        { id: 10, title: "Espace LAPODEV au Home 30", category: "events", image: "/3/WhatsApp%20Image%202026-03-29%20at%2008.17.22%20(1).jpeg" },
     ];
 
     const [galleryFilter, setGalleryFilter] = useState('all');
