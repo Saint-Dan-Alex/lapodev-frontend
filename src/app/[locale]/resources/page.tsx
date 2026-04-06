@@ -52,17 +52,20 @@ export default function ResourcesPage() {
 
     const galleryItems = [
         // Siège de LAPODEV, UNIKIN
-        { id: 1, title: "Siège de LAPODEV, UNIKIN (Home 30)", category: "events", image: "/1/WhatsApp%20Image%202026-03-29%20at%2007.54.44%20(1).jpeg" },
-        { id: 2, title: "Siège de LAPODEV, UNIKIN (Home 30)", category: "events", image: "/1/WhatsApp%20Image%202026-03-29%20at%2007.54.45%20(1).jpeg" },
-        { id: 3, title: "Siège de LAPODEV, UNIKIN (Home 30)", category: "events", image: "/1/WhatsApp%20Image%202026-03-29%20at%2007.54.46%20(1).jpeg" },
-        { id: 4, title: "Siège de LAPODEV, UNIKIN (Home 30)", category: "events", image: "/1/WhatsApp%20Image%202026-03-29%20at%2007.54.47%20(1).jpeg" },
-        { id: 5, title: "Siège de LAPODEV, UNIKIN (Home 30)", category: "events", image: "/1/WhatsApp%20Image%202026-03-29%20at%2007.54.48%20(1).jpeg" },
+        { id: 1, title: "Localisation physique du siège de LAPODEV à l'Université de Kinshasa, Home 30", category: "events", image: "/1/WhatsApp_Image_2026-03-29_at_07.54.44__1_.jpeg" },
+        { id: 2, title: "Localisation physique du siège de LAPODEV à l'Université de Kinshasa, Home 30", category: "events", image: "/1/WhatsApp_Image_2026-03-29_at_07.54.45__1_.jpeg" },
+        { id: 3, title: "Localisation physique du siège de LAPODEV à l'Université de Kinshasa, Home 30", category: "events", image: "/1/WhatsApp_Image_2026-03-29_at_07.54.46__1_.jpeg" },
+        { id: 4, title: "Localisation physique du siège de LAPODEV à l'Université de Kinshasa, Home 30", category: "events", image: "/1/WhatsApp_Image_2026-03-29_at_07.54.47__1_.jpeg" },
+        { id: 5, title: "Localisation physique du siège de LAPODEV à l'Université de Kinshasa, Home 30", category: "events", image: "/1/WhatsApp_Image_2026-03-29_at_07.54.48__1_.jpeg" },
         // Espace LAPODEV au Home 30
-        { id: 6, title: "Espace LAPODEV au Home 30", category: "events", image: "/3/WhatsApp%20Image%202026-03-29%20at%2008.17.18%20(1).jpeg" },
-        { id: 7, title: "Espace LAPODEV au Home 30", category: "events", image: "/3/WhatsApp%20Image%202026-03-29%20at%2008.17.19%20(1).jpeg" },
-        { id: 8, title: "Espace LAPODEV au Home 30", category: "events", image: "/3/WhatsApp%20Image%202026-03-29%20at%2008.17.20%20(1).jpeg" },
-        { id: 9, title: "Espace LAPODEV au Home 30", category: "events", image: "/3/WhatsApp%20Image%202026-03-29%20at%2008.17.21%20(1).jpeg" },
-        { id: 10, title: "Espace LAPODEV au Home 30", category: "events", image: "/3/WhatsApp%20Image%202026-03-29%20at%2008.17.22%20(1).jpeg" },
+        { id: 6, title: "L'Espace LAPODEV au Home 30, Université de Kinshasa", category: "events", image: "/3/WhatsApp_Image_2026-03-29_at_08.17.18__1_.jpeg" },
+        { id: 7, title: "L'Espace LAPODEV au Home 30, Université de Kinshasa", category: "events", image: "/3/WhatsApp_Image_2026-03-29_at_08.17.19__1_.jpeg" },
+        { id: 8, title: "L'Espace LAPODEV au Home 30, Université de Kinshasa", category: "events", image: "/3/WhatsApp_Image_2026-03-29_at_08.17.20__1_.jpeg" },
+        { id: 9, title: "L'Espace LAPODEV au Home 30, Université de Kinshasa", category: "events", image: "/3/WhatsApp_Image_2026-03-29_at_08.17.21__1_.jpeg" },
+        { id: 10, title: "L'Espace LAPODEV au Home 30, Université de Kinshasa", category: "events", image: "/3/WhatsApp_Image_2026-03-29_at_08.17.22__1_.jpeg" },
+        // Assemblée générale du LAPODEV
+        { id: 11, title: "Photos de l'Assemblée générale du LAPODEV, tenue le 25 octobre 2025 au Centre Catholique Liloba à Lemba", category: "events", image: "/WhatsApp_Image_2026-03-29_at_14.08.27.jpeg" },
+        { id: 12, title: "Photos de l'Assemblée générale du LAPODEV, tenue le 25 octobre 2025 au Centre Catholique Liloba à Lemba", category: "events", image: "/WhatsApp_Image_2026-03-29_at_14.08.28.jpeg" },
     ];
 
     const [galleryFilter, setGalleryFilter] = useState('all');
