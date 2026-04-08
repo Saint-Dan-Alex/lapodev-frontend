@@ -9,24 +9,28 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ className, variant = 'default' }) => {
     return (
-        <div className={cn("flex items-center gap-2 lg:gap-3", className)}>
-            <Image
-                src="/logo.png"
-                alt="Lapodev Logo"
-                width={150}
-                height={50}
-                className="h-9 lg:h-10 w-auto object-contain"
-                priority
-            />
-            <div className="w-px h-6 lg:h-8 bg-current opacity-20"></div>
-            <Image
-                src="/unikin.png"
-                alt="UNIKIN Logo"
-                width={100}
-                height={50}
-                className="h-8 lg:h-9 w-auto object-contain"
-                priority
-            />
+        <div className={cn("flex items-center gap-4 lg:gap-6 bg-white px-4 py-2 rounded-2xl shadow-xl shadow-black/10 border border-white/20", className)}>
+            <div className="relative group">
+                <Image
+                    src="/logo.png"
+                    alt="Lapodev Logo"
+                    width={180}
+                    height={60}
+                    className="h-10 lg:h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                    priority
+                />
+            </div>
+            <div className="w-px h-8 lg:h-10 bg-slate-200"></div>
+            <div className="relative group">
+                <Image
+                    src="/unikin.png"
+                    alt="UNIKIN Logo"
+                    width={120}
+                    height={60}
+                    className="h-9 lg:h-11 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                    priority
+                />
+            </div>
         </div>
     );
 };

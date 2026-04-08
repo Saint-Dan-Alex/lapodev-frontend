@@ -168,18 +168,15 @@ export function Header() {
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         <ul className={cn(
-                                            "grid gap-1 p-3 transition-all duration-500 rounded-xl overflow-hidden shadow-2xl border w-[280px]",
-                                            menu.items.length > 4 ? "md:w-[500px] md:grid-cols-2 lg:w-[600px]" : "md:w-[320px] grid-cols-1",
-                                            isScrolled
-                                                ? "bg-white border-slate-200 text-slate-900"
-                                                : "bg-[#4c1d95]/98 backdrop-blur-xl border-white/10 text-white"
+                                            "grid gap-1 p-3 transition-all duration-500 rounded-2xl overflow-hidden shadow-xl shadow-black/10 border border-slate-100 bg-white w-[280px]",
+                                            menu.items.length > 4 ? "md:w-[500px] md:grid-cols-2 lg:w-[600px]" : "md:w-[320px] grid-cols-1"
                                         )}>
                                             {menu.items.map((item) => (
                                                 <ListItem
                                                     key={item.title}
                                                     title={item.title}
                                                     href={item.href}
-                                                    isScrolled={isScrolled}
+                                                    isScrolled={true}
                                                 >
                                                     {(item as any).description}
                                                 </ListItem>

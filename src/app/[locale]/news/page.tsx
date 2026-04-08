@@ -306,16 +306,26 @@ export default function NewsPage() {
                                             {filteredEvents.map((event) => (
                                                 <div key={event.id} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_50%] pl-6 first:pl-0 min-w-0">
                                                     <div className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 transition-all duration-500 flex flex-col h-full">
-                                                        {/* Image Placeholder */}
+                                                        {/* Image Section */}
                                                         <div className="h-52 bg-slate-100 relative overflow-hidden">
-                                                            <div className="absolute inset-0 bg-gradient-to-br from-[#5b1887]/5 to-[#8b2fc9]/20 group-hover:scale-110 transition-transform duration-700"></div>
-                                                            <div className="absolute top-6 left-6">
+                                                            {event.image ? (
+                                                                <img
+                                                                    src={event.image}
+                                                                    alt={event.title}
+                                                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                                />
+                                                            ) : (
+                                                                <>
+                                                                    <div className="absolute inset-0 bg-gradient-to-br from-[#5b1887]/5 to-[#8b2fc9]/20 group-hover:scale-110 transition-transform duration-700"></div>
+                                                                    <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity">
+                                                                        <CalendarIcon className="w-24 h-24 text-slate-900" />
+                                                                    </div>
+                                                                </>
+                                                            )}
+                                                            <div className="absolute top-6 left-6 z-10">
                                                                 <Badge className={cn("px-4 py-1.5 border backdrop-blur-md font-black uppercase tracking-widest text-[10px]", getStatusColor(event.category))}>
                                                                     {t(`events.${event.category}`)}
                                                                 </Badge>
-                                                            </div>
-                                                            <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity">
-                                                                <CalendarIcon className="w-24 h-24 text-slate-900" />
                                                             </div>
                                                         </div>
 
