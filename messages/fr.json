@@ -100,7 +100,7 @@
             "title": "Identité et Objet Social",
             "social_object_title": "Objet Social",
             "poche_label": "Lapodev en poche",
-            "content": "Le LAPODEV est un Centre de recherche de pointe en sciences humaines et sociales se positionnant en tant qu’Interface entre le monde universitaire et la société. C’est un pôle d’excellence qui rassemble sur base volontaire, des enseignants-chercheurs, des chercheur-e-s et des expert-e-s venu-e-s de différents horizons disciplinaires pour se mettre au service de l’Homme et de la société. Le Centre jouit d’une autonomie et d’une indépendance administrative et financière.",
+            "content": "Le LAPODEV est un Centre de recherche de pointe en sciences humaines et sociales se positionnant en tant qu’Interface entre le monde universitaire et la société. C’est un pôle d’excellence qui rassemble sur base volontaire, des enseignant-e-s-chercheur-euse-s, des chercheur-e-s et des expert-e-s venu-e-s de différents horizons disciplinaires pour se mettre au service de l’Homme et de la société. Le Centre jouit d’une autonomie et d’une indépendance administrative et financière.",
             "social_object": "L’Objet social du LAPODEV est la recherche fondamentale et la recherche-action dans une perspective interdisciplinaire/ pluridisciplinaire et holistique."
         },
         "values": {
@@ -138,7 +138,7 @@
             ],
             "general_assembly": "Assemblée Générale :",
             "ga_items": [
-                "Enseignant-e-s- chercheurs- euses",
+                "Enseignant-e-s-chercheur-euse-s",
                 "Post-doctorant-e-s",
                 "Chercheuses & chercheurs",
                 "Doctorant-e-s",
@@ -188,7 +188,7 @@
         },
         "general_assembly": {
             "title": "Assemblée Générale",
-            "content": "L’Assemblée Générale est l’organe suprême du LAPODEV. Elle est composée des Enseignants-chercheurs, chercheur-s-ses, post-doctorant-e-s, doctorant-e-s, expert-e-s, partenaires, sympathisant-e-s et étudiant-e-s. Elle définit la politique générale, approuve les programmes de recherche et élit les membres des différents organes de gestion."
+            "content": "L’Assemblée Générale est l’organe suprême du LAPODEV. Elle est composée des enseignant-e-s-chercheur-euse-s, chercheur-e-s, post-doctorant-e-s, doctorant-e-s, expert-e-s, partenaires, sympathisant-e-s et étudiant-e-s. Elle définit la politique générale, approuve les programmes de recherche et élit les membres des différents organes de gestion."
         }
     },
     "ExpertisePage": {
@@ -279,7 +279,7 @@
         "human_resources": {
             "title": "Ressources Humaines",
             "subtitle": "Notre Capital Scientifique",
-            "description": "Une communauté interdisciplinaire de chercheurs engagés pour le progrès social.",
+            "description": "Une communauté interdisciplinaire de chercheurs et chercheuses engagé(e)s pour le progrès social.",
             "download": "Télécharger le CV",
             "view_profile": "Voir Profil",
             "categories": {
@@ -295,11 +295,12 @@
                 "bibliography": "Bibliographie",
                 "dossier": "Dossier Complet",
                 "publications": "Publications",
-                "default_bio": "Découvrez le profil de ce membre en téléchargeant son dossier complet. Ce chercheur est activement impliqué dans les projets du LAPODEV.",
+                "default_bio": "Découvrez le profil de ce membre en téléchargeant son dossier complet. Ce membre est activement impliqué dans les projets du LAPODEV.",
                 "member_grade": "Chercheur LAPODEV",
+                "member_grade_f": "Chercheuse LAPODEV",
                 "send_email": "Envoyer un email",
                 "office": "Bureau",
-                "dossier_not_available": "Le dossier complet n'est pas encore disponible en ligne pour ce chercheur."
+                "dossier_not_available": "Le dossier complet n'est pas encore disponible en ligne pour ce membre."
             },
             "grades": {
                 "director": "Professeur Full / Directeur LAPODEV",
@@ -403,7 +404,7 @@
         },
         "publications": {
             "title": "Publications",
-            "description": "Retrouvez ici les travaux récents et contributions scientifiques de nos chercheurs.",
+            "description": "Retrouvez ici les travaux récents et contributions scientifiques de nos membres.",
             "download": "Télécharger le PDF",
             "no_publications": "Aucune publication disponible pour le moment.",
             "author": "Auteur",
@@ -412,7 +413,7 @@
         "search": "Rechercher...",
         "cta": {
             "title": "Contribuez à la recherche scientifique",
-            "description": "Vous êtes chercheur ou expert ? Proposez vos travaux pour une publication sur notre plateforme.",
+            "description": "Vous êtes chercheur/chercheuse ou expert/experte ? Proposez vos travaux pour une publication sur notre plateforme.",
             "button": "Proposer une publication"
         },
         "data": {

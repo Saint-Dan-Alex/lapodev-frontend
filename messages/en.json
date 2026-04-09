@@ -294,6 +294,7 @@
                 "publications": "Publications",
                 "default_bio": "Discover this member's profile by downloading their full dossier. This researcher is actively involved in LAPODEV projects.",
                 "member_grade": "LAPODEV Researcher",
+                "member_grade_f": "LAPODEV Researcher",
                 "send_email": "Send an email"
             },
             "grades": {
