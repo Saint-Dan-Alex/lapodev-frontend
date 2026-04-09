@@ -44,7 +44,7 @@ export const getMembers = (t: any): Member[] => [
     { id: 'kasereka-wangahemuka-shamba', name: "KASEREKA WANGAHEMUKA Shamba", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
     { id: 'loola-esingi-herve', name: "LOOLA ESINGI Hervé", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
     { id: 'mbale-basa-michel', name: "MBALE BASA Michel", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
-    { id: 'mushangalusa-bulempwe-prosper', name: "MUSHANGALUSA BULEMPWE Prosper", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
+    { id: 'mushagalusa-bulembwe-prosper', name: "MUSHAGALUSA BULEMBWE Prosper", category: 'scientific', grade: t('human_resources.grades.research_assistant_phd') },
     { id: 'tshombe-kabwit-samuel', name: "TSHOMBE KABWIT Samuel", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
     { id: 'nungenda-ilongolongo-romain', name: "NUNGENDA ILONGOLONGO Romain", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
     { id: 'tshimanga-makenga-alexr', name: "TSHIMANGA MAKENGA Alexr", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
