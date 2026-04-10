@@ -90,14 +90,14 @@ export default function ResourcesPage() {
 
             <div className="container mx-auto px-4 md:px-8 py-16">
                 <Tabs defaultValue="members" className="w-full">
-                    <TabsList className="flex flex-row overflow-x-auto w-full mb-12 bg-slate-100 p-1 !h-auto sm:!h-14 rounded-xl sm:rounded-2xl gap-1 no-scrollbar items-stretch border border-slate-200 shadow-inner">
-                        <TabsTrigger value="members" className="flex-1 shrink-0 rounded-lg sm:rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 px-4 sm:py-0">
+                    <TabsList className="flex overflow-x-auto sm:grid w-full sm:grid-cols-3 mb-12 bg-slate-100 p-1 !h-auto sm:!h-14 rounded-2xl gap-1 no-scrollbar items-stretch border border-slate-200 shadow-inner">
+                        <TabsTrigger value="members" className="min-w-[180px] sm:min-w-0 flex-1 rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3.5 px-4 sm:py-0 whitespace-nowrap">
                             {t('human_resources.title')}
                         </TabsTrigger>
-                        <TabsTrigger value="documents" className="flex-1 shrink-0 rounded-lg sm:rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 px-4 sm:py-0">
+                        <TabsTrigger value="documents" className="min-w-[180px] sm:min-w-0 flex-1 rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3.5 px-4 sm:py-0 whitespace-nowrap">
                             {t('documents.title')}
                         </TabsTrigger>
-                        <TabsTrigger value="gallery" className="flex-1 shrink-0 rounded-lg sm:rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 px-4 sm:py-0 text-center">
+                        <TabsTrigger value="gallery" className="min-w-[180px] sm:min-w-0 flex-1 rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3.5 px-4 sm:py-0 text-center whitespace-nowrap">
                             {t('gallery.title')}
                         </TabsTrigger>
                     </TabsList>
@@ -292,14 +292,14 @@ export default function ResourcesPage() {
                                 </div>
 
                                 <Tabs value={activeModalTab} onValueChange={setActiveModalTab} className="w-full">
-                                    <TabsList className="grid w-full grid-cols-3 mb-8 bg-slate-100/50 p-1.5 h-12 rounded-xl border border-slate-100">
-                                        <TabsTrigger value="identity" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm font-bold uppercase tracking-widest text-[10px]">
+                                    <TabsList className="flex overflow-x-auto sm:grid w-full sm:grid-cols-3 mb-8 bg-slate-100/50 p-1.5 !h-auto sm:!h-12 rounded-xl border border-slate-100 no-scrollbar gap-1">
+                                        <TabsTrigger value="identity" className="min-w-[120px] sm:min-w-0 flex-1 py-2 sm:py-0 rounded-lg data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm font-bold uppercase tracking-widest text-[9px] sm:text-[10px]">
                                             {t('human_resources.modal.identity')}
                                         </TabsTrigger>
-                                        <TabsTrigger value="biography" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm font-bold uppercase tracking-widest text-[10px]">
+                                        <TabsTrigger value="biography" className="min-w-[120px] sm:min-w-0 flex-1 py-2 sm:py-0 rounded-lg data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm font-bold uppercase tracking-widest text-[9px] sm:text-[10px]">
                                             {t('human_resources.modal.biography')}
                                         </TabsTrigger>
-                                        <TabsTrigger value="bibliography" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm font-bold uppercase tracking-widest text-[10px]">
+                                        <TabsTrigger value="bibliography" className="min-w-[120px] sm:min-w-0 flex-1 py-2 sm:py-0 rounded-lg data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm font-bold uppercase tracking-widest text-[9px] sm:text-[10px]">
                                             {t('human_resources.modal.bibliography')}
                                         </TabsTrigger>
                                     </TabsList>
