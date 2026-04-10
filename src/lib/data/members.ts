@@ -54,20 +54,20 @@ export const getMembers = (t: any): Member[] => [
     { id: 'baondje-belembe-hilaire', name: "BAONDJE BELEMBE Hilaire", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
     { id: 'kangudia-jean-aime', name: "KANGUDIA Jean-Aimé", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
     { id: 'alakani-basket-yogi-jean-martin', name: "ALAKANI BASKET YOGI Jean-Martin", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
-    { id: 'lombe-lombok-charles', name: "LOMBE LOMBOK Charles", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
+    { id: 'lombe-lombo-charles', name: "LOMBE LOMBO Charles", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
     { id: 'kipulu-kwibisi-archange', name: "KIPULU KWIBISI Archange", category: 'scientific', grade: t('human_resources.grades.research_assistant') },
 
     // ADMINISTRATIVE
     { id: 'tiba-rajabu-merveille', name: "TIBA RAJABU Merveille", category: 'administrative', grade: t('human_resources.grades.admin_assistant') },
     { id: 'belemo-nsimba', name: "BELEMO NSIMBA", category: 'administrative' },
-    { id: 'ngonga-djese-marie', name: "NGONGA DJESE Marie", category: 'administrative', grade: t('human_resources.modal.member_grade_f') },
-    { id: 'bopenda-bengoya-chardelle', name: "BOPENDA BENGOYA Chardelle", category: 'administrative', grade: t('human_resources.modal.member_grade_f') },
-    { id: 'tshilomba-marie', name: "TSHILOMBA Marie", category: 'administrative', grade: t('human_resources.modal.member_grade_f') },
+    { id: 'ngonga-djese-marie', name: "NGONGA DJESE Marie", category: 'administrative' },
+    { id: 'bopenda-bengoya-chardelle', name: "BOPENDA BENGOYA Chardelle", category: 'administrative' },
+    { id: 'tshilomba-marie', name: "TSHILOMBA Marie", category: 'administrative' },
 
     // TECHNICAL
-    { id: 'mpembe-lokenye-patrick', name: "MPEMBE LOKENYE Patrick", category: 'technical' },
-    { id: 'ibinda-menace', name: "IBINDA Menacé", category: 'technical' },
-    { id: 'basa-djongwa-pierre', name: "BASA DJONGWA Pierre", category: 'technical' },
-    { id: 'mubwisa-micheline', name: "MUBWISA Micheline", category: 'technical', grade: t('human_resources.modal.member_grade_f') },
-    { id: 'kabongo-kabanga-tresor', name: "KABONGO KABANGA Trésor", category: 'technical' },
+    { id: 'mpembe-lokenye-patrick', name: "MPEMBE LOKENYE Patrick", category: 'technical', grade: t('human_resources.grades.research_technician') },
+    { id: 'ibinda-menace', name: "IBINDA Menacé", category: 'technical', grade: t('human_resources.grades.research_technician') },
+    { id: 'basa-djongwa-pierre', name: "BASA DJONGWA Pierre", category: 'technical', grade: t('human_resources.grades.research_technician') },
+    { id: 'mubwisa-micheline', name: "MUBWISA Micheline", category: 'technical', grade: t('human_resources.grades.research_technician_f') },
+    { id: 'kabongo-kabanga-tresor', name: "KABONGO KABANGA Trésor", category: 'technical', grade: t('human_resources.grades.research_technician') },
 ];

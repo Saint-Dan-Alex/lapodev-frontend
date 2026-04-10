@@ -90,14 +90,14 @@ export default function ResourcesPage() {
 
             <div className="container mx-auto px-4 md:px-8 py-16">
                 <Tabs defaultValue="members" className="w-full">
-                    <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 mb-12 bg-slate-100 p-1 h-auto sm:h-14 rounded-2xl gap-1">
-                        <TabsTrigger value="members" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 sm:py-0">
+                    <TabsList className="flex flex-row overflow-x-auto w-full mb-12 bg-slate-100 p-1 !h-auto sm:!h-14 rounded-xl sm:rounded-2xl gap-1 no-scrollbar items-stretch border border-slate-200 shadow-inner">
+                        <TabsTrigger value="members" className="flex-1 shrink-0 rounded-lg sm:rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 px-4 sm:py-0">
                             {t('human_resources.title')}
                         </TabsTrigger>
-                        <TabsTrigger value="documents" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 sm:py-0">
+                        <TabsTrigger value="documents" className="flex-1 shrink-0 rounded-lg sm:rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 px-4 sm:py-0">
                             {t('documents.title')}
                         </TabsTrigger>
-                        <TabsTrigger value="gallery" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 sm:py-0 text-center">
+                        <TabsTrigger value="gallery" className="flex-1 shrink-0 rounded-lg sm:rounded-xl data-[state=active]:bg-primary data-[state=active]:text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-all py-3 px-4 sm:py-0 text-center">
                             {t('gallery.title')}
                         </TabsTrigger>
                     </TabsList>
@@ -137,8 +137,8 @@ export default function ResourcesPage() {
                                             className="group bg-white border border-slate-200 p-5 rounded-2xl hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all cursor-pointer relative overflow-hidden"
                                         >
                                             <div className="flex flex-col h-full">
-                                                <span className="text-xs font-black text-primary/40 uppercase mb-2 group-hover:text-primary/60 transition-colors">
-                                                    {member.grade || t('human_resources.modal.member_grade')}
+                                                <span className="text-xs font-black text-primary/40 uppercase mb-2 group-hover:text-primary/60 transition-colors empty:after:content-['\00a0']">
+                                                    {member.grade || (cat === 'academic' || cat === 'scientific' ? t('human_resources.modal.member_grade') : '')}
                                                 </span>
                                                 <h4 className="font-bold text-gray-900 group-hover:text-primary transition-colors leading-tight">
                                                     {member.name}
