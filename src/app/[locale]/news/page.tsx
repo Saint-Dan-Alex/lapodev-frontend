@@ -449,22 +449,29 @@ export default function NewsPage() {
 
             {/* EVENT DETAIL MODAL */}
             <Dialog open={!!selectedEvent} onOpenChange={(open) => !open && setSelectedEvent(null)}>
-                <DialogContent className="sm:max-w-2xl p-0 overflow-hidden rounded-[2.5rem] border-none shadow-2xl">
+                <DialogContent className="sm:max-w-2xl p-0 overflow-hidden rounded-[2.5rem] border-none shadow-2xl flex flex-col max-h-[90vh]">
                     {selectedEvent && (
-                        <div className="flex flex-col">
+                        <>
                             {/* Header Image/Gradient */}
-                            <div className="h-48 bg-gradient-to-br from-[#5b1887] to-[#8b2fc9] relative">
-                                <div className="absolute top-8 left-8">
-                                    <Badge className={cn("px-4 py-1.5 border backdrop-blur-md font-black uppercase tracking-widest text-[10px]", getStatusColor(selectedEvent.category))}>
+                            <div
+                                className={cn(
+                                    "h-64 md:h-72 relative flex-none",
+                                    !selectedEvent.image && "bg-gradient-to-br from-[#5b1887] to-[#8b2fc9]"
+                                )}
+                                style={selectedEvent.image ? { backgroundImage: `url('${selectedEvent.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
+                            >
+                                {selectedEvent.image && <div className="absolute inset-0 bg-black/20"></div>}
+                                <div className="absolute top-8 left-8 z-10">
+                                    <Badge className={cn("px-4 py-1.5 border backdrop-blur-md font-black uppercase tracking-widest text-[10px]", selectedEvent.image ? "bg-white/90 text-slate-900 border-white/20 shadow-lg" : getStatusColor(selectedEvent.category))}>
                                         {t(`events.${selectedEvent.category}`)}
                                     </Badge>
                                 </div>
-                                <div className="absolute -bottom-8 right-12 w-20 h-20 bg-white rounded-3xl shadow-xl flex items-center justify-center text-[#5b1887]">
+                                <div className="absolute -bottom-8 right-12 w-20 h-20 bg-white rounded-3xl shadow-xl flex items-center justify-center text-[#5b1887] z-20">
                                     <CalendarIcon className="w-10 h-10" />
                                 </div>
                             </div>
 
-                            <div className="p-10 pt-12">
+                            <div className="p-10 pt-12 overflow-y-auto custom-scrollbar">
                                 <div className="flex items-center gap-2 text-[#5b1887] font-black text-xs uppercase tracking-[0.3em] mb-4">
                                     <Clock className="h-4 w-4" />
                                     {selectedEvent.date}
@@ -485,7 +492,7 @@ export default function NewsPage() {
                                     </DialogDescription>
                                 </div>
 
-                                <div className="flex justify-end gap-4">
+                                <div className="flex justify-end gap-4 mt-auto">
                                     <Button
                                         className="h-14 px-8 rounded-2xl bg-[#5b1887] hover:bg-[#8b2fc9] text-white font-black uppercase tracking-widest text-xs transition-all shadow-xl shadow-purple-900/20"
                                         onClick={() => setSelectedEvent(null)}
@@ -494,7 +501,7 @@ export default function NewsPage() {
                                     </Button>
                                 </div>
                             </div>
-                        </div>
+                        </>
                     )}
                 </DialogContent>
             </Dialog>

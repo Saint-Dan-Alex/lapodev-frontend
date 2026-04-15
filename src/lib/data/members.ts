@@ -22,7 +22,7 @@ export const getMembers = (t: any): Member[] => [
     { id: 'ekala-bokoswa-pierre', name: "Pr. EKALA BOKOSWA Pierre", category: 'academic' },
     { id: 'mulomba-tshitumba-elie', name: "Pr. MULOMBA TSHITUMBA Elie", category: 'academic' },
     { id: 'kavira-wangahemuka-julienne', name: "Pr. KAVIRA WANGAHEMUKA Julienne", category: 'academic', grade: t('human_resources.modal.member_grade_f'), bio: t('human_resources.bios.kavira') },
-    { id: 'baraka-muvuka', name: "Pr. BARAKA MUVUKA", category: 'academic' },
+    { id: 'baraka-muvuka', name: "Pr. BARAKA MUVUKA", category: 'academic', grade: t('human_resources.modal.member_grade_f') },
     { id: 'ngoy-muana-emery', name: "Pr. NGOY MUANA Emery", category: 'academic' },
     { id: 'tshama-kanumbi', name: "Pr. TSHAMA KANUMBI", category: 'academic' },
 
@@ -66,7 +66,7 @@ export const getMembers = (t: any): Member[] => [
 
     // TECHNICAL
     { id: 'mpembe-lokenye-patrick', name: "MPEMBE LOKENYE Patrick", category: 'technical', grade: t('human_resources.grades.research_technician') },
-    { id: 'ibinda-menace', name: "IBINDA Menacé", category: 'technical', grade: t('human_resources.grades.research_technician') },
+    { id: 'ibinda-manasse', name: "IBINDA Manasse", category: 'technical', grade: t('human_resources.grades.research_technician') },
     { id: 'basa-djongwa-pierre', name: "BASA DJONGWA Pierre", category: 'technical', grade: t('human_resources.grades.research_technician') },
     { id: 'mubwisa-micheline', name: "MUBWISA Micheline", category: 'technical', grade: t('human_resources.grades.research_technician_f') },
     { id: 'kabongo-kabanga-tresor', name: "KABONGO KABANGA Trésor", category: 'technical', grade: t('human_resources.grades.research_technician') },
